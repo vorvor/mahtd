@@ -26,14 +26,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8"/>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!--  <script src="./js/script.js"></script>  -->
 </head>
 <body class="<?php print $body_class; ?>">
     <?php if (isset($messages)): ?>
       <div id="messages"><?php print $messages; ?></div>
     <?php endif; ?>
-    <div id="mobile-menu-block">
+    <div id="mobile-menu-block" class="invisible">
         <div id="mobile-menu-close-wrapper">
             <div id="mobile-menu-close"></div>
         </div>
@@ -47,7 +47,7 @@
         <header>
            <h1 id="logo-wrapper">
               <a id="logo" href="/" title="Mah Zrt. - tesla.hu">
-                  Mah Zrt. - tesla.hu
+                  <img src="/<?php print $theme_path; ?>/images/logo.png">
               </a>
            </h1>  
         </header>

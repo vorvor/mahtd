@@ -1,12 +1,19 @@
+<?php
+    $theme_path = drupal_get_path('theme', 'tesla');
+?>
+
 <div class="index-row-wrapper" id="index-first-row">
         <div id="spacer">
         </div>
         <div class="index-row">
+            <?php
+                $node = node_load(2);
+            ?>
             <div id="data-1" class="index-row-data">
                 <div class="data">
                     <div class="data-text">
                         <div>gyorsulás 0 - 100 km/h</div>
-                        <div><span class="large-font">2,6 mp</span>-től</div>
+                        <div><span class="large-font"><?php print $node->field_index_acceleration['und'][0]['value']; ?> mp</span>-től</div>
                     </div>
                 </div>
             </div>
@@ -14,7 +21,7 @@
                 <div class="data">
                     <div class="data-text">
                         <div>hatótávolság</div>
-                        <div><span class="large-font">610 km</span>-ig</div>
+                        <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km</span>-ig</div>
                     </div>
                 </div>
             </div>
@@ -30,11 +37,12 @@
             <div id="spacer">
             </div>
             <div class="index-row">
+                <?php $node = node_load(1); ?>
                 <div id="data-1" class="index-row-data">
                     <div class="data">
                         <div class="data-text">
                             <div>gyorsulás 0 - 100 km/h</div>
-                            <div><span class="large-font">2,6 mp</span>-től</div>
+                            <div><span class="large-font"><?php print $node->field_index_acceleration['und'][0]['value']; ?> mp</span>-től</div>
                         </div>
                     </div>
                 </div>
@@ -42,7 +50,7 @@
                     <div class="data">
                         <div class="data-text">
                             <div>hatótávolság</div>
-                            <div><span class="large-font">610 km</span>-ig</div>
+                            <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km</span>-ig</div>
                         </div>
                     </div>
                 </div>
@@ -58,11 +66,12 @@
             <div id="spacer">
             </div>
             <div class="index-row">
+                <?php $node = node_load(3); ?>
                 <div id="data-1" class="index-row-data">
                     <div class="data">
                         <div class="data-text">
                             <div>gyorsulás 0 - 100 km/h</div>
-                            <div><span class="large-font">2,6 mp</span>-től</div>
+                            <div><span class="large-font"><?php print $node->field_index_acceleration['und'][0]['value']; ?> mp</span>-től</div>
                         </div>
                     </div>
                 </div>
@@ -70,7 +79,7 @@
                     <div class="data">
                         <div class="data-text">
                             <div>hatótávolság</div>
-                            <div><span class="large-font">610 km</span>-ig</div>
+                            <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km</span>-ig</div>
                         </div>
                     </div>
                 </div>
@@ -84,12 +93,13 @@
     </div>
     <div class="index-row-wrapper" id="index-fourth-row">
         <div class="index-row">
+            <?php $node = node_load(5); ?>
             <div class="index-col index-col-left">
                 <div class="col-block year-model">
-                    <div class="year"><img src="./images/2019.png"></div>
+                    <div class="year"><img src="/<?php print $theme_path; ?>/images/2019.png"></div>
                     <div class="name-model">
                         <div class="name">Tesla</div>
-                        <div class="model">model Y</div>
+                        <div class="model">Roadster</div>
                     </div>
                 </div>
                 <div class="col-block col-data">
@@ -97,23 +107,34 @@
                         <div class="data">
                             <div class="data-text">
                                 <div>gyorsulás 0 - 100 km/h</div>
-                                <div><span class="large-font">3,7 mp</span>-től</div>
+                                <div><span class="large-font"><?php print $node->field_index_acceleration['und'][0]['value']; ?> mp</span>-től</div>
                             </div>
                         </div>
                     </div>
                     <div id="data-2" class="index-row-data">
                         <div class="data">
                             <div class="data-text">
-                                <div>hatótávolság</div>
-                                <div><span class="large-font">888 km</span>-ig</div>
+                                <div>végsebesség</div>
+                                <div><span class="large-font"><?php print $node->field_index_topspeed['und'][0]['value']; ?>  km</span>-ig</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-block col-extra">
-                    <div class="extra">AWD kétmotoros hajtásrendszer</div>
-                    <div class="extra">15’-os érintőképernyős központi kijelzős rendszer</div>
-                    <div class="extra">7 ülés lehetősége</div>
+                    <?php 
+                    foreach ($node->field_index_extras[LANGUAGE_NONE] as $item) { 
+                        $paragraph = entity_load('paragraphs_item', array($item['value']));
+                        $paragraph = reset($paragraph);
+                        ?>
+                        <div class="extra">
+                            <div class="extra-icon">
+                                <img src="<?php print file_create_url($paragraph->field_image['und'][0]['uri']); ?>">
+                            </div>
+                            <div class="extra-desc">
+                                <?php print $paragraph->field_title['und'][0]['value']; ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
                 <div class="col-block col-order">
                     <div class="red-button">
@@ -121,9 +142,11 @@
                     </div>
                 </div>
             </div>
+
+            <?php $node = node_load(4); ?>
             <div class="index-col index-col-right">
                 <div class="col-block year-model">
-                    <div class="year"><img src="./images/2020.png"></div>
+                    <div class="year"><img src="/<?php print $theme_path; ?>/images/2020.png"></div>
                     <div class="name-model">
                         <div class="name">Tesla</div>
                         <div class="model">model Y</div>
@@ -134,7 +157,7 @@
                         <div class="data">
                             <div class="data-text">
                                 <div>gyorsulás 0 - 100 km/h</div>
-                                <div><span class="large-font">3,7 mp</span>-től</div>
+                                <div><span class="large-font"><?php print $node->field_index_acceleration['und'][0]['value']; ?> mp</span>-től</div>
                             </div>
                         </div>
                     </div>
@@ -142,15 +165,26 @@
                         <div class="data">
                             <div class="data-text">
                                 <div>hatótávolság</div>
-                                <div><span class="large-font">888 km</span>-ig</div>
+                                <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km</span>-ig</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-block col-extra">
-                    <div class="extra">AWD kétmotoros hajtásrendszer</div>
-                    <div class="extra">15’-os érintőképernyős központi kijelzős rendszer</div>
-                    <div class="extra">7 ülés lehetősége</div>
+                    <?php 
+                    foreach ($node->field_index_extras[LANGUAGE_NONE] as $item) { 
+                        $paragraph = entity_load('paragraphs_item', array($item['value']));
+                        $paragraph = reset($paragraph);
+                        ?>
+                        <div class="extra">
+                            <div class="extra-icon">
+                                <img src="<?php print file_create_url($paragraph->field_image['und'][0]['uri']); ?>">
+                            </div>
+                            <div class="extra-desc">
+                                <?php print $paragraph->field_title['und'][0]['value']; ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
                 <div class="col-block col-order">
                     <div class="red-button">

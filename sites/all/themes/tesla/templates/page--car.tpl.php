@@ -57,28 +57,30 @@
         
             <div id="third-row-right">
             
+            <?php if (isset($facilities)): ?>
             <div class="config-block" id="facility-block">
                 <div class="config-block-top">
                     <div class="config-title">Felszereltség</div>
-                    <div class="config-price"><span class="price">87 425</span> EUR</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
                 </div>
 
                 <div class="config-options config-buttons">
-                	<?php foreach ($facilities as $facility) { ?>
+                	<?php foreach ($facilities as $item) { ?>
                 	  <div class="config-button" 
-                	  data-price="<?php print $facility['price']; ?>" 
-                	  data-range="<?php print $facility['range']; ?>"
-                	  data-topspeed="<?php print $facility['top_speed']; ?>"
-                	  data-acceleration="<?php print $facility['acceleration']; ?>"
+                	  data-price="<?php print $item['price']; ?>" 
+                	  data-range="<?php print $item['range']; ?>"
+                	  data-topspeed="<?php print $item['top_speed']; ?>"
+                	  data-acceleration="<?php print $item['acceleration']; ?>"
                 	  data-wrapper="facility">
-                	  <?php print $facility['title']; ?></div>
+                	  <?php print $item['title']; ?></div>
                 	<?php } ?>
                 </div>
-
-                
             </div>
+        	<?php endif; ?>
+
+        	<?php if (isset($exteriors)): ?>
             <div class="config-block" id="exterior-block">
                 <div class="config-block-top">
                     <div class="config-title">Külső szín</div>
@@ -89,18 +91,19 @@
                 </div>
 
                 <div class="config-options config-berries berries-5">
-                	<?php foreach ($exteriors as $exterior) { ?>
+                	<?php foreach ($exteriors as $item) { ?>
                 		<div class="config-berry" 
-                		data-title="<?php print $exterior['title']; ?>"
-                		data-price="<?php print $exterior['price']; ?>"
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="exterior">
-                			<img src="<?php print file_create_url($exterior['image']) ?>">
+                			<img src="<?php print file_create_url($item['image']) ?>">
                 		</div>
                 	<?php } ?>
                 </div>
-
-                
             </div>
+            <?php endif; ?>
+
+            <?php if (isset($exteriors)): ?>
             <div class="config-block" id="rim-block">
                 <div class="config-block-top">
                     <div class="config-title">Felni</div>
@@ -111,21 +114,91 @@
                 </div>
 
                 <div class="config-options config-berries berries-5">
-                	<?php foreach ($rims as $rim) { ?>
+                	<?php foreach ($rims as $item) { ?>
                 		<div class="config-berry" 
-                		data-title="<?php print $rim['title']; ?>"
-                		data-price="<?php print $rim['price']; ?>"
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="rim">
-                			<img src="<?php print file_create_url($rim['image']) ?>">
+                			<img src="<?php print file_create_url($item['image']) ?>">
                 		</div>
                 	<?php } ?>
                 </div>
-
-                
             </div>
+            <?php endif; ?>
+
+            <?php if (isset($winter_wheels)): ?>
+            <div class="config-block" id="winter-wheel-block">
+                <div class="config-block-top">
+                    <div class="config-title">Téli garnitúra Pirelli gumival</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
+                </div>
+                <div class="config-block-desc">
+                    
+                </div>
+
+                <div class="config-options config-berries berries-5">
+                	<?php foreach ($winter_wheels as $item) { ?>
+                		<div class="config-berry" 
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
+                		data-wrapper="winter-wheel">
+                			<img src="<?php print file_create_url($item['image']) ?>">
+                		</div>
+                	<?php } ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($winter_wheels)): ?>
+            <div class="config-block" id="winter-wheel-block">
+                <div class="config-block-top">
+                    <div class="config-title">Téli garnitúra Pirelli gumival</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
+                </div>
+                <div class="config-block-desc">
+                    
+                </div>
+
+                <div class="config-options config-berries berries-5">
+                	<?php foreach ($winter_wheels as $item) { ?>
+                		<div class="config-berry" 
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
+                		data-wrapper="winter-wheel">
+                			<img src="<?php print file_create_url($item['image']) ?>">
+                		</div>
+                	<?php } ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($extras)): ?>
+            <div class="config-block" id="extra-block">
+                <div class="config-block-top">
+                    <div class="config-title">Extra</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
+                </div>
+                <div class="config-block-desc">
+                    
+                </div>
+
+                <div class="config-options config-berries berries-5">
+                	<?php foreach ($extras as $item) { ?>
+                		<div class="config-berry" 
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
+                		data-wrapper="extra">
+                			<img src="<?php print file_create_url($item['image']) ?>">
+                		</div>
+                	<?php } ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($interiors)): ?>
             <div class="config-block" id="interior-block">
                 <div class="config-block-top">
-                    <div class="config-title">Felni</div>
+                    <div class="config-title">Belső szín</div>
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
@@ -133,18 +206,42 @@
                 </div>
 
                 <div class="config-options config-berries berries-5">
-                	<?php foreach ($interiors as $interior) { ?>
+                	<?php foreach ($interiors as $item) { ?>
                 		<div class="config-berry" 
-                		data-title="<?php print $interior['title']; ?>"
-                		data-price="<?php print $interior['price']; ?>"
+                		data-title="<?php print $item['title']; ?>"
+                		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="interior">
-                			<img src="<?php print file_create_url($interior['image']) ?>">
+                			<img src="<?php print file_create_url($item['image']) ?>">
                 		</div>
                 	<?php } ?>
                 </div>
-
-                
             </div>
+            <?php endif; ?>
+
+            <?php if (isset($seats)): ?>
+            <div class="config-block" id="seat-block">
+                <div class="config-block-top">
+                    <div class="config-title">Felszereltség</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
+                </div>
+                <div class="config-block-desc">
+                </div>
+
+                <div class="config-options config-buttons">
+                	<?php foreach ($seats as $item) { ?>
+                	  <div class="config-button" 
+                	  data-price="<?php print $item['price']; ?>" 
+                	  data-range="<?php print $item['range']; ?>"
+                	  data-topspeed="<?php print $item['top_speed']; ?>"
+                	  data-acceleration="<?php print $item['acceleration']; ?>"
+                	  data-wrapper="seat">
+                	  <?php print $item['title']; ?></div>
+                	<?php } ?>
+                </div>
+            </div>
+        	<?php endif; ?>
+
+            <?php if (isset($autopilot)): ?>
             <div class="config-block" id="autopilot-block">
                 <div class="config-block-top">
                     <div class="config-title">Önvezetés</div>
@@ -154,26 +251,26 @@
                 </div>
 
                 <div class="config-options config-buttons">
-                	<?php foreach ($autopilots as $autopilot) { ?>
+                	<?php foreach ($autopilots as $item) { ?>
                 	  <div class="config-button" 
-                	  data-price="<?php print $autopilot['price']; ?>" 
+                	  data-price="<?php print $item['price']; ?>" 
                 	  data-wrapper="autopilot">
-                	  <?php print $autopilot['title']; ?></div>
+                	  <?php print $item['title']; ?></div>
                 	<?php } ?>
                 </div>
-
-                
             </div>
-            <div class="config-block">
+            <?php endif; ?>
+
+            <div class="config-block" id="shipping-block">
                 <div class="config-block-top">
                     <div class="config-title">Szállítás</div>
-                    <div class="config-price">990 EUR</div>
+                    <div class="config-price price">990 EUR</div>
                 </div>
             </div>
             <div class="config-block">
-                <div class="config-block-top">
+                <div class="config-block-top" id="tr-val-block">
                     <div class="config-title">Forgalomba helyezés</div>
-                    <div class="config-price">0 EUR</div>
+                    <div class="config-price price">0 EUR</div>
                 </div>
             </div>
             <div class="config-block">

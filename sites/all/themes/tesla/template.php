@@ -47,9 +47,16 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['body_class'] = 'front';
   $node = menu_get_object();
   if ($node && $node->nid) {
-    ddl($node);
     if ($node->type == 'car') {
       $variables['body_class'] = 'inner ' . preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
+    }
+    
+    if ($node->type == 'page' && $node->nid == 6) {
+      $variables['body_class'] = 'contact';
+    }
+
+    if ($node->type == 'page' && $node->nid == 7) {
+      $variables['body_class'] = 'services';
     }
   }
 
@@ -78,73 +85,136 @@ function tesla_preprocess_page(&$variables, $hook) {
   //$variables['sample_variable'] = t('Lorem ipsum.');
   if (isset($variables['node'])) {
     $variables['theme_hook_suggestion'] = 'page__' . $variables['node']->type;
+    $variables['theme_hook_suggestion'] = preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
 
     if ($variables['node']->type == 'car') {
       $node = node_load($variables['node']->nid);
 
-      $variables['technical_details'] = $node->field_technical_details['und'][0]['value']; 
+      $variables['technical_details'] = $node->field_index_range['und'][0]['value'];
+      $variables['range'] = $node->field_technical_details['und'][0]['value'];
+      $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
+      $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
 
-      foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
-        $paragraph = entity_load('paragraphs_item', array($facility['value']));
-        $paragraph = reset($paragraph);
-        $facilities[] = array(
-          'title' => $paragraph->field_title['und'][0]['value'],
-          'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-          'range' => $paragraph->field_range['und'][0]['value'],
-          'top_speed' => $paragraph->field_top_speed['und'][0]['value'],
-          'acceleration' => $paragraph->field_acceleration['und'][0]['value'],
-        );
+
+      // facilities
+      if (!empty($node->field_facilities)) {
+        foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
+          $paragraph = entity_load('paragraphs_item', array($facility['value']));
+          $paragraph = reset($paragraph);
+          $facilities[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'range' => $paragraph->field_range['und'][0]['value'],
+            'top_speed' => $paragraph->field_top_speed['und'][0]['value'],
+            'acceleration' => $paragraph->field_acceleration['und'][0]['value'],
+          );
+        }
+        $variables['facilities'] = $facilities;
       }
 
-      $variables['facilities'] = $facilities;
-
-      foreach ($node->field_exterior[LANGUAGE_NONE] as $exterior) {
-        $paragraph = entity_load('paragraphs_item', array($exterior['value']));
-        $paragraph = reset($paragraph);
-        $exteriors[] = array(
-          'title' => $paragraph->field_title['und'][0]['value'],
-          'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-          'image' => $paragraph->field_image['und'][0]['uri'],
-        );
+      // exterior
+      if (!empty($node->field_exterior)) {
+        foreach ($node->field_exterior[LANGUAGE_NONE] as $exterior) {
+          $paragraph = entity_load('paragraphs_item', array($exterior['value']));
+          $paragraph = reset($paragraph);
+          $exteriors[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
+        $variables['exteriors'] = $exteriors;
       }
 
-      $variables['exteriors'] = $exteriors;
+      // rim
+      if (!empty($node->field_rim)) {
+        foreach ($node->field_rim[LANGUAGE_NONE] as $rim) {
+          $paragraph = entity_load('paragraphs_item', array($rim['value']));
+          $paragraph = reset($paragraph);
+          $rims[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
 
-      foreach ($node->field_rim[LANGUAGE_NONE] as $rim) {
-        $paragraph = entity_load('paragraphs_item', array($rim['value']));
-        $paragraph = reset($paragraph);
-        $rims[] = array(
-          'title' => $paragraph->field_title['und'][0]['value'],
-          'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-          'image' => $paragraph->field_image['und'][0]['uri'],
-        );
+        $variables['rims'] = $rims;
       }
 
-      $variables['rims'] = $rims;
+      // interior
+      if (!empty($node->field_interior)) {
+        foreach ($node->field_interior[LANGUAGE_NONE] as $interior) {
+          $paragraph = entity_load('paragraphs_item', array($interior['value']));
+          $paragraph = reset($paragraph);
+          $interiors[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
 
-      foreach ($node->field_interior[LANGUAGE_NONE] as $interior) {
-        $paragraph = entity_load('paragraphs_item', array($interior['value']));
-        $paragraph = reset($paragraph);
-        $interiors[] = array(
-          'title' => $paragraph->field_title['und'][0]['value'],
-          'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-          'image' => $paragraph->field_image['und'][0]['uri'],
-        );
+        $variables['interiors'] = $interiors;
       }
 
-      $variables['interiors'] = $interiors;
+      // autopilot
+      if (!empty($node->field_autopilot)) {
+        foreach ($node->field_autopilot[LANGUAGE_NONE] as $autopilot) {
+          $paragraph = entity_load('paragraphs_item', array($autopilot['value']));
+          $paragraph = reset($paragraph);
+          $autopilots[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
 
-      foreach ($node->field_autopilot[LANGUAGE_NONE] as $autopilot) {
-        $paragraph = entity_load('paragraphs_item', array($autopilot['value']));
-        $paragraph = reset($paragraph);
-        $autopilots[] = array(
-          'title' => $paragraph->field_title['und'][0]['value'],
-          'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-          'image' => $paragraph->field_image['und'][0]['uri'],
-        );
+        $variables['autopilots'] = $autopilots;
       }
 
-      $variables['autopilots'] = $autopilots;
+      // winter wheels
+      if (!empty($node->field_winter_wheels)) {
+        foreach ($node->field_winter_wheels[LANGUAGE_NONE] as $winter_wheel) {
+          $paragraph = entity_load('paragraphs_item', array($winter_wheel['value']));
+          $paragraph = reset($paragraph);
+          $winter_wheels[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
+
+        $variables['winter_wheels'] = $winter_wheels;
+      }
+
+      // extras
+      if (!empty($node->field_extras)) {
+        foreach ($node->field_extras[LANGUAGE_NONE] as $extra) {
+          $paragraph = entity_load('paragraphs_item', array($extra['value']));
+          $paragraph = reset($paragraph);
+          $extras[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
+
+        $variables['extras'] = $extras;
+      }
+
+      // seats
+      if (!empty($node->field_seats)) {
+        foreach ($node->field_seats[LANGUAGE_NONE] as $seat) {
+          $paragraph = entity_load('paragraphs_item', array($seat['value']));
+          $paragraph = reset($paragraph);
+          $seats[] = array(
+            'title' => $paragraph->field_title['und'][0]['value'],
+            'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'image' => $paragraph->field_image['und'][0]['uri'],
+          );
+        }
+
+        $variables['seats'] = $seats;
+      }
     }
   }
 }

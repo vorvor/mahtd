@@ -60,16 +60,10 @@ a#logo {
     width: 100%;
     height: 100%;
     display: block;
-    text-indent: -999em;
 }
 
-a#logo::before {
-    content: "";
-    display: block;
-    background-image: url(../images/logo.png);
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
+a#logo img {
+    max-width: 100%;
 }
 
 /* main menu */
@@ -87,12 +81,15 @@ ol#menu li {
     line-height: 30px;
 }
 
-ol#menu li a {
+ol#menu li a,
+ol#menu li a:hover,
+ol#menu li a:visited {
     margin: 0 10px;
     font-size: 18px;
     font-weight: 800;
     text-transform: uppercase;
     white-space: nowrap;
+    color: #fff;
 }
 
 #mobile-menu {
@@ -143,7 +140,7 @@ ol#menu li a {
 #first-row #data-2 .data::before {
     content: "";
     display: block;
-    background-image: url(images/accelerating.png);
+    background-image: url(../images/accelerating.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     width: 57px;
@@ -152,7 +149,7 @@ ol#menu li a {
 }
 
 #first-row #data-2 .data::before {
-    background-image: url(images/plug.png);
+    background-image: url(../images/plug.png);
     height: 55px;
 }
 
@@ -229,7 +226,7 @@ h3.row-title {
 
 #second-row-left {
     width: 550px;
-    padding: 47px 39px;
+    padding: 47px 39px 10px;
     float: lef†;
     box-sizing: border-box;
     background: #fff;
@@ -362,26 +359,6 @@ h3.row-title {
     margin-right: 3vw;
 }
 
-.config-berry:nth-child(1) {
-    background-image: url(../images/color-black.png);
-}
-
-.config-berry:nth-child(2) {
-    background-image: url(../images/color-grey.png);
-}
-
-.config-berry:nth-child(3) {
-    background-image: url(../images/color-blue.png);
-}
-
-.config-berry:nth-child(4) {
-    background-image: url(../images/color-white.png);
-}
-
-.config-berry:nth-child(5) {
-    background-image: url(../images/color-red.png);
-}
-
 .config-berry.selected {
     width: 59px;
     height: 59px;
@@ -447,19 +424,19 @@ footer {
 /* */
 
 #index-first-row {
-    background: url(../images/front-1.jpg);
+    background: url(../images/model-3.jpg);
     background-size: cover;
     background-position: center -30px;
     margin-top: -50px;
 } 
 
 #index-second-row {
-    background: url(../images/front-2.jpg);
+    background: url(../images/model-s.jpg);
     background-size: cover;
 } 
 
 #index-third-row {
-    background: url(../images/front-3.jpg);
+    background: url(../images/model-x.jpg);
     background-size: cover;
 } 
 
@@ -490,7 +467,7 @@ footer {
 .index-row #data-2 .data::before {
     content: "";
     display: block;
-    background-image: url(images/accelerating.png);
+    background-image: url(../images/accelerating.png);
     background-size: 100% auto;
     background-repeat: no-repeat;
     width: 57px;
@@ -499,7 +476,7 @@ footer {
 }
 
 .index-row #data-2 .data::before {
-    background-image: url(images/plug.png);
+    background-image: url(../images/plug.png);
     height: 55px;
 }
 
@@ -578,33 +555,6 @@ footer {
     text-align: center;
     font-size: 24px;
     margin: 40px 0;
-}
-
-#index-fourth-row .extra:nth-child(1)::before {
-    content: "";
-    background-image: url(../images/motor.png);
-    width: 25px;
-    height: 25px;
-    display: block;
-    margin: 0 auto 25px;
-}
-
-#index-fourth-row .extra:nth-child(2)::before {
-    content: "";
-    background-image: url(../images/touch.png);
-    width: 26px;
-    height: 20px;
-    display: block;
-    margin: 0 auto 25px;
-}
-
-#index-fourth-row .extra:nth-child(3)::before {
-    content: "";
-    background-image: url(../images/seat.png);
-    width: 22px;
-    height: 35px;
-    display: block;
-    margin: 0 auto 25px;
 }
 
 #index-fifth-row.index-row-wrapper {
@@ -693,8 +643,26 @@ body.contact #first-row-wrapper {
     height: 80px;
 }
 
+body.contact #second-row-wrapper {
+    background: #fff;
+    padding: 47px 39px;
+    overflow: hidden;
+}
+
 body.contact #second-row-left {
     color: #000;
+    float: left;
+    padding: 0;
+}
+
+body.contact #second-row-right {
+    color: #000;
+    padding-left: 40px;
+    float: left;
+}
+
+body.contact #second-row-right h2 {
+    margin-top: 0;
 }
 
 body.contact .contact-row-1 .mah {
@@ -716,6 +684,37 @@ body.contact .contact-row-2 .open-hours-label {
 
 body.contact .contact-row-2 .contact-part {
     margin-bottom: 20px;
+}
+
+body.contact #contact-form label {
+  display: none;
+}
+
+body.contact #contact-form input,
+body.contact #contact-form textarea {
+    background-color: #fff;
+    border-color: #bbb;
+    border: 1px solid #ccc;
+    transition: background-color .2s linear;
+    height: 55px;
+    font-size: 18px;
+    padding: 20px 32px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+
+body.contact #contact-form textarea {
+    height: 330px;
+}
+
+body.contact #contact-form .contact-name,
+body.contact #contact-form .contact-email,
+body.contact #contact-form .contact-phone {
+    width: 30%;
+    float: left;
 }
 
 
@@ -851,8 +850,6 @@ body.services #fourth-row-wrapper #fourth-row-button {
 }
 
 
-
-
 #mobile-menu-block {
     width: 400px;
     background: #fff;
@@ -860,6 +857,19 @@ body.services #fourth-row-wrapper #fourth-row-button {
     top: 0;
     right: 0;
     color: #000;
+    z-index: 1;
+    -moz-box-shadow:    -5px 5px 25px 4px #777;
+    -webkit-box-shadow: -5px 5px 25px 4px #777;
+    box-shadow:         -5px 5px 25px 4px #777;
+}
+
+#mobile-menu-block ol#menu li a,
+#mobile-menu-block ol#menu li a:hover,
+#mobile-menu-block ol#menu li a:visited {
+    color: #000;
+}
+
+#mobile-menu-block.invisible {
     display: none;
 }
 
@@ -877,6 +887,10 @@ body.services #fourth-row-wrapper #fourth-row-button {
     border-bottom: 1px solid #ccc;
 }
 
+#mobile-menu-block ol li:last-child {
+    border: none;
+}
+
 #mobile-menu-block #mobile-menu-close-wrapper {
     overflow: hidden;
 }
@@ -889,4 +903,5 @@ body.services #fourth-row-wrapper #fourth-row-button {
     background-position: left bottom;
     overflow: hidden;
     float: right;
+    cursor: pointer;
 }
