@@ -40,6 +40,8 @@
         <nav>
           <ol id="menu">
             <?php print $main_menu; ?>
+            <li><a href="/node/7">Szolgáltatásaink</a></li>
+            <li><a href="/node/6">Kapcsolat</a></li>
           </ol>
         </nav>
     </div>

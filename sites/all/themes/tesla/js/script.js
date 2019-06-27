@@ -47,6 +47,15 @@
                 $('#mobile-menu-block').addClass('invisible');
             }
         })
+
+        // send order form
+        $('#send-order-button').click(function() {
+            if ($('.send-order').hasClass('invisible')) {
+                $('.send-order').removeClass('invisible');
+            } else {
+                $('.send-order').addClass('invisible');
+            }
+        })
   
     }};
 }(jQuery));

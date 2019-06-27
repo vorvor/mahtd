@@ -27,7 +27,7 @@
             </div>
             <div id="data-3" class="index-row-data">
                 <div class="red-button">
-                    <a href="#" class="">Megrendelem</a>
+                    <a href="/tesla/tesla-model-3" class="">Részletek</a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 </div>
                 <div id="data-3" class="index-row-data">
                     <div class="red-button">
-                        <a href="#" class="">Megrendelem</a>
+                        <a href="/tesla/tesla-model-s" class="">Részletek</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                 </div>
                 <div id="data-3" class="index-row-data">
                     <div class="red-button">
-                        <a href="#" class="">Megrendelem</a>
+                        <a href="/tesla/tesla-model-x" class="">Részletek</a>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@
                 </div>
                 <div class="col-block col-order">
                     <div class="red-button">
-                        <a href="#" class="">Részletek</a>
+                        <a href="/tesla/tesla-roadster" class="">Részletek</a>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@
                 </div>
                 <div class="col-block col-order">
                     <div class="red-button">
-                        <a href="#" class="">Részletek</a>
+                        <a href="/tesla/tesla-model-y" class="">Részletek</a>
                     </div>
                 </div>
             </div>

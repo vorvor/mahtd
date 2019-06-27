@@ -20,7 +20,7 @@
                 </div>
                 <div id="data-3" class="first-row-data">
                     <div class="red-button">
-                        <a href="#" class="">Megrendelem</a>
+                        <a href="#third-row-wrapper" class="">Megrendelem</a>
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@
             <?php if (isset($seats)): ?>
             <div class="config-block" id="seat-block">
                 <div class="config-block-top">
-                    <div class="config-title">Felszereltség</div>
+                    <div class="config-title">Ülések száma</div>
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
@@ -231,9 +231,6 @@
                 	<?php foreach ($seats as $item) { ?>
                 	  <div class="config-button" 
                 	  data-price="<?php print $item['price']; ?>" 
-                	  data-range="<?php print $item['range']; ?>"
-                	  data-topspeed="<?php print $item['top_speed']; ?>"
-                	  data-acceleration="<?php print $item['acceleration']; ?>"
                 	  data-wrapper="seat">
                 	  <?php print $item['title']; ?></div>
                 	<?php } ?>
@@ -281,7 +278,17 @@
             </div>
             <div class="config-block config-block-with-button">
                 <div class="red-button red-button-wide">
-                    <a href="#" class="">Megrendelés véglegesítése</a>
+                    <a id="send-order-button">Megrendelés véglegesítése</a>
+                </div>
+            </div>
+            <div class="config-block">
+                <div class="send-order invisible">
+                    <?php
+                        $nid = 9; //node id of the webform node
+                        $node = node_load($nid);
+                        $form = drupal_get_form('webform_client_form_' . $nid, $node);
+                        print drupal_render($form);
+                    ?>
                 </div>
             </div>
             <div class="config-block">

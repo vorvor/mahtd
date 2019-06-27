@@ -169,7 +169,7 @@ ol#menu li a:visited {
 .red-button {
     width: 23vw;
     height: 56px;
-    box-shadow: 0 34px 57px 0px rgba(0,0,0,0.17);
+    box-shadow: 0 34px 30px 0px rgba(0,0,0,0.17);
     background: var(--red-text);
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
@@ -177,11 +177,14 @@ ol#menu li a:visited {
     border-radius: 100px;
     margin: auto;
     text-align: center;
+    cursor: pointer;
 }
 
-.config-block-with-button {
+.config-block.config-block-with-button {
     clear: both;
-    margin-top: 40px
+    margin-top: 40px;
+    padding-bottom: 64px;
+    margin-bottom: 0;
 }
 
 .red-button a {
@@ -192,10 +195,8 @@ ol#menu li a:visited {
     font-weight: 600;
 }
 
-#test {
-    background: red;
-    width: 50px;
-    height: 50px;
+.config-block .config-note {
+    text-transform: none;
 }
 
 /* */
@@ -338,7 +339,7 @@ h3.row-title {
 .config-button {
     width: 202px;
     height: 56px;
-    border: 3px solid var(--red-text);
+    border: 3px solid #ccc;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     -khtml-border-radius: 100px;
@@ -348,6 +349,14 @@ h3.row-title {
     font-size: 16px;
     font-weight: bold;
     box-sizing: border-box;
+}
+
+.config-button.selected {
+    border-color: var(--red-text);
+}
+
+.config-block#seat-block .config-button {
+    width: 56px;
 }
 
 .config-berry {
@@ -505,6 +514,10 @@ footer {
 
 #index-fourth-row .index-col-right {
     background-image: url(../images/roadster.png);
+}
+
+#index-fourth-row .col-extra {
+    min-height: 300px;
 }
 
 #index-fourth-row .col-data {
@@ -690,8 +703,27 @@ body.contact #contact-form label {
   display: none;
 }
 
+body.inner .send-order {
+    padding: 0 40px;
+}
+
+body.inner .send-order.invisible {
+    display: none;
+}
+
+body.inner .send-order .webform-component--description {
+    font-weight: bold;
+}
+
+body.inner .send-order label {
+    margin-left: 20px;
+    line-height: 26px;
+}
+
 body.contact #contact-form input,
-body.contact #contact-form textarea {
+body.contact #contact-form textarea,
+body.inner .send-order input,
+body.inner .send-order textarea {
     background-color: #fff;
     border-color: #bbb;
     border: 1px solid #ccc;
@@ -704,17 +736,48 @@ body.contact #contact-form textarea {
     -khtml-border-radius: 100px;
     border-radius: 100px;
     box-sizing: border-box;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-body.contact #contact-form textarea {
+body.contact #contact-form textarea,
+body.inner .send-order textarea {
     height: 330px;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -khtml-border-radius: 32px;
+    border-radius: 32px;
+}
+
+body.inner .send-order .p93854759563 {
+    width: 100%;
 }
 
 body.contact #contact-form .contact-name,
-body.contact #contact-form .contact-email,
-body.contact #contact-form .contact-phone {
+body.contact #contact-form .ce87325643,
+body.contact #contact-form .cp876453235 {
     width: 30%;
     float: left;
+}
+
+body.contact #contact-form .webform-submit,
+body.inner .send-order .webform-submit {
+    width: 23vw;
+    height: 56px;
+    box-shadow: 0 34px 57px 0px rgba(0,0,0,0.17);
+    background: var(--red-text);
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    text-transform: uppercase;
+    float: right;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 

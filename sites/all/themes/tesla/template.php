@@ -85,13 +85,12 @@ function tesla_preprocess_page(&$variables, $hook) {
   //$variables['sample_variable'] = t('Lorem ipsum.');
   if (isset($variables['node'])) {
     $variables['theme_hook_suggestion'] = 'page__' . $variables['node']->type;
-    $variables['theme_hook_suggestion'] = preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
 
     if ($variables['node']->type == 'car') {
       $node = node_load($variables['node']->nid);
 
-      $variables['technical_details'] = $node->field_index_range['und'][0]['value'];
-      $variables['range'] = $node->field_technical_details['und'][0]['value'];
+      $variables['technical_details'] = $node->field_technical_details['und'][0]['value'];
+      $variables['range'] = $node->field_index_range['und'][0]['value'];
       $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
       $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
 
