@@ -1,0 +1,892 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #fff;
+    background: #ccc;
+    background-image: url(../images/tesla_model_s.jpg);
+    background-repeat:no-repeat;
+    background-size: 100% auto;
+    background-color: #000;
+
+    font-family: Montserrat;
+}
+
+body.inner.model-3 {
+    background-image: url(../images/tesla_model_s.jpg);
+}
+
+body.front {
+    background: #fff;
+}
+
+h1 {
+    width: 200px;
+    margin: 0;
+    margin-left: 41px;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#top {
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+}
+
+#top header{
+    width: 270px;
+    float: left;
+}
+
+#top nav {
+    text-align: center;
+    float: left;
+    width: 60%;
+}
+
+a#logo {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -999em;
+}
+
+a#logo::before {
+    content: "";
+    display: block;
+    background-image: url(../images/logo.png);
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+/* main menu */
+
+ol#menu {
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+ol#menu li {
+    list-style: none;
+    text-align: center;
+    line-height: 30px;
+}
+
+ol#menu li a {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#mobile-menu {
+    display: block;
+    background: url(../images/hamburger.png) no-repeat 50% 50%;
+    width: 22px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 56px;
+    float: right;
+}
+
+
+
+#first-row-wrapper {
+    width: 100%;
+    height: 583px;
+}
+
+#spacer {
+    height: 500px;
+}
+
+/* */
+#first-row {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.first-row-data {
+    float: left;
+    width: 33%;
+}
+
+#first-row #data-1 .data {
+    width: 250px;
+    width: 22vw;
+    margin: 0 auto;
+}
+
+#first-row #data-2 .data {
+    width: 210px;
+    width: 21vw;
+    margin: 0 auto;
+}
+
+#first-row #data-1 .data::before,
+#first-row #data-2 .data::before {
+    content: "";
+    display: block;
+    background-image: url(images/accelerating.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 57px;
+    height: 58px;
+    float: left;
+}
+
+#first-row #data-2 .data::before {
+    background-image: url(images/plug.png);
+    height: 55px;
+}
+
+.first-row-data .large-font {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.first-row-data .data-text {
+    padding-left: 18px;
+    float: left;
+}
+
+/*
+*/
+
+.red-button {
+    width: 23vw;
+    height: 56px;
+    box-shadow: 0 34px 57px 0px rgba(0,0,0,0.17);
+    background: var(--red-text);
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    margin: auto;
+    text-align: center;
+}
+
+.config-block-with-button {
+    clear: both;
+    margin-top: 40px
+}
+
+.red-button a {
+    color: #fff;
+    line-height: 56px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#test {
+    background: red;
+    width: 50px;
+    height: 50px;
+}
+
+/* */
+h2.row-title {
+    color: var(--red-text);
+    margin-top:0;
+    padding-top: 0;
+}
+
+h3.row-title {
+    color: var(--black-text);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: Din;
+}
+/* */
+#second-row-wrapper {
+    background: url(../images/S_interior.png) no-repeat #fff;
+    background-position:550px 0;
+    width: 100%;
+}
+
+#second-row-wrapper ul li {
+    color: #000;
+    line-height: 32px;
+}
+
+#second-row-left {
+    width: 550px;
+    padding: 47px 39px;
+    float: lef†;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#third-row-wrapper {
+    background: #fff;
+}
+
+#third-row-wrapper #third-row-left {
+    height: 1370px;
+}
+
+#third-row-left {
+    background: url(../images/S.png) no-repeat #fff;
+    background-position:-1300px 100%;
+    width: 100%;
+    float: left;
+    position: relative;
+    overflow: visible;
+    height: auto;
+    padding: 47px 0 0 39px;
+}
+
+#third-row-left {
+    text-transform: uppercase;
+    color: #000;
+    box-sizing: border-box;
+}
+
+#third-row-left .config-calc-row {
+    font-family: Din;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+#third-row-left .config-calc-label {
+    width: 270px;
+    float: left;
+    padding-top: 8px;
+}
+
+#third-row-left .config-calc-data {
+    width: 150px;
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: none;
+    text-align: right;
+    width: 470px;
+}
+
+#third-row-left .config-calc-desc {
+    font-size: 25px;
+    color: var(--red-text);
+    text-transform: none;
+    margin-top: -10px;
+    clear: both;
+}
+
+#third-row-right {
+    width: 58%;
+    float: right;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 45px 45px 45px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.config-block {
+    color: #000;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.config-block .config-block-desc {
+    color: var(--red-text);
+}
+
+.config-block-top {
+    font-size: 24px;
+    font-weight: bold;
+    clear: both;
+}
+
+.config-title {
+    float: left;
+}
+
+.config-price {
+    float: right;
+}
+
+.config-block-desc {
+    clear: both;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.config-buttons, .config-berries {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    min-height: 68px;
+}
+
+.config-button {
+    width: 202px;
+    height: 56px;
+    border: 3px solid var(--red-text);
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.config-berry {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 56px;
+    height: 56px;
+    background-size: contain;
+    margin-right: 3vw;
+}
+
+.config-berry:nth-child(1) {
+    background-image: url(../images/color-black.png);
+}
+
+.config-berry:nth-child(2) {
+    background-image: url(../images/color-grey.png);
+}
+
+.config-berry:nth-child(3) {
+    background-image: url(../images/color-blue.png);
+}
+
+.config-berry:nth-child(4) {
+    background-image: url(../images/color-white.png);
+}
+
+.config-berry:nth-child(5) {
+    background-image: url(../images/color-red.png);
+}
+
+.config-berry.selected {
+    width: 59px;
+    height: 59px;
+}
+
+.config-berry.selected::after {
+    border: 3px solid var(--red-text);
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    content: "";
+    width: 66px;
+    height: 66px;
+    display: block;
+    margin: -6px -6px;
+}
+
+.config-note {
+    color: var(--red-text);
+    font-weight: 600;
+    line-height: 2em;
+}
+
+.config-sum-price {
+    padding-top: 43px;
+    border-top: 1px solid #000;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config-sum-price .config-price {
+    color: var(--red-text);
+    font-size: 48px;
+}
+
+.red-button-wide {
+    width: 356px;
+}
+
+footer {
+    background: #fff;
+    color: #000;
+    width: 100%;
+    clear: both;
+    padding: 0 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#footer-inner {
+    border-top: 1px solid #000;
+    padding: 67px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* */
+
+#index-first-row {
+    background: url(../images/front-1.jpg);
+    background-size: cover;
+    background-position: center -30px;
+    margin-top: -50px;
+} 
+
+#index-second-row {
+    background: url(../images/front-2.jpg);
+    background-size: cover;
+} 
+
+#index-third-row {
+    background: url(../images/front-3.jpg);
+    background-size: cover;
+} 
+
+/* */
+.index-row {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.index-row-data {
+    float: left;
+    width: 33%;
+}
+
+.index-row #data-1 .data {
+    width: 250px;
+    width: 22vw;
+    margin: 0 auto;
+}
+
+.index-row #data-2 .data {
+    width: 210px;
+    width: 21vw;
+    margin: 0 auto;
+}
+
+.index-row #data-1 .data::before,
+.index-row #data-2 .data::before {
+    content: "";
+    display: block;
+    background-image: url(images/accelerating.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 57px;
+    height: 58px;
+    float: left;
+}
+
+.index-row #data-2 .data::before {
+    background-image: url(images/plug.png);
+    height: 55px;
+}
+
+.index-row-data .large-font {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.index-row-data .data-text {
+    padding-left: 18px;
+    float: left;
+}
+
+#index-fourth-row {
+    color: #000;
+}
+
+#index-fourth-row .index-col-left,
+#index-fourth-row .index-col-right {
+    background-image: url(../images/modelY.png);
+    background-repeat:  no-repeat;
+    background-size: 100%;
+    background-position: center 10%;
+    padding-top: 45%;
+}
+
+#index-fourth-row .index-col-right {
+    background-image: url(../images/roadster.png);
+}
+
+#index-fourth-row .col-data {
+    overflow: hidden;
+}
+
+#index-fourth-row .col-data #data-1 .data::before {
+    background-image: url(../images/accelerating-grey.png);
+}
+
+#index-fourth-row .index-col-left .col-data #data-2 .data::before {
+    background-image: url(../images/speed-grey.png);
+}
+
+#index-fourth-row .index-col-right .col-data #data-2 .data::before {
+    background-image: url(../images/plug-grey.png);
+}
+
+#index-fourth-row .year-model {
+    text-align: center;
+}
+
+#index-fourth-row .name-model {
+    text-transform: uppercase;
+    height: 150px;
+    margin-top: -140px;
+}
+
+#index-fourth-row .year {
+    font-size: 150px;
+    font-weight: 900;
+    font-family: Din;
+    color: var(--red-text)
+}
+
+#index-fourth-row .name {
+    font-size: 30px;
+    font-family: Din;
+}
+
+#index-fourth-row .model {
+    font-size: 48px;
+    font-family: Din;
+    font-weight: bold;
+}
+
+#index-fourth-row .extra {
+    text-align: center;
+    font-size: 24px;
+    margin: 40px 0;
+}
+
+#index-fourth-row .extra:nth-child(1)::before {
+    content: "";
+    background-image: url(../images/motor.png);
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+#index-fourth-row .extra:nth-child(2)::before {
+    content: "";
+    background-image: url(../images/touch.png);
+    width: 26px;
+    height: 20px;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+#index-fourth-row .extra:nth-child(3)::before {
+    content: "";
+    background-image: url(../images/seat.png);
+    width: 22px;
+    height: 35px;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+#index-fifth-row.index-row-wrapper {
+    padding-top: 70px;
+    height: auto;
+}
+
+#index-fifth-row .index-row {
+    width: 100%;
+}
+
+#index-sixth-row .index-row {
+    width: 100%;
+    color: #000;
+    display: flex;
+    align-content: space-around;
+    padding-top:72px;
+}
+
+#index-sixth-row .index-row .col-block {
+    width: 30%;
+}
+
+#index-sixth-row .index-row .col-block.col-1 {
+    text-transform: uppercase;
+}
+
+.mah {
+    color: var(--red-text);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#index-sixth-row .index-row .col-block .mah {
+    
+    
+    margin-bottom: 28px;
+}
+
+#index-sixth-row .index-row .col-block .contact-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #000;
+}
+
+#index-sixth-row .index-row .col-block.col-2 {
+    line-height: 30px;
+}
+
+#index-sixth-row .index-row .contact-first-part {
+    margin-bottom: 30px;
+}
+
+#index-sixth-row .index-row .col-block.col-3 {
+    font-size: 24px;
+}
+
+#index-sixth-row .index-row .col-block.col-3 .open-hours-label {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+/* contact page
+*/
+
+body.contact {
+    background-image: url(../images/contact.png);
+    background-position: center 0;
+    background-size: 130%;
+}
+
+body.contact .contact-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 800;
+    font-family: Din;
+    letter-spacing: 10px;
+}
+
+body.contact #first-row-wrapper {
+    height: 80px;
+}
+
+body.contact #second-row-left {
+    color: #000;
+}
+
+body.contact .contact-row-1 .mah {
+    font-family: Din;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 27px 0;
+}
+
+body.contact .contact-row-2 {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+body.contact .contact-row-2 .open-hours-label {
+    font-weight: 800;
+}
+
+body.contact .contact-row-2 .contact-part {
+    margin-bottom: 20px;
+}
+
+
+/* services page
+*/
+
+body.services {
+    background-image: url(../images/services.png);
+    background-position: center 0;
+    background-size: 130%;
+    background-color: #fff;
+}
+
+body.services .services-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 120px 0;
+    font-weight: 800;
+    font-family: Din;
+    letter-spacing: 10px;
+}
+
+body.services .services-description {
+    font-size: 24px;
+    text-align: center;
+    padding: 100px 0;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 30px;
+}
+
+body.services #second-row-wrapper {
+    color: #000;
+    clear: both;
+    background-image: url(../images/financing.png);
+    background-position: center bottom;
+    height: 700px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body.services #second-row-wrapper #second-row {
+    width: 90%;
+    margin: 0 auto;
+}
+
+body.services #second-row-wrapper .row-title {
+    font-family: Din;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+body.services #second-row-wrapper #second-row-left {
+    background: none;
+    float: left;
+    width: 40%;
+}
+
+body.services #second-row-wrapper #second-row-right {
+    padding: 50px 0;
+    line-height: 30px;
+    float: left;
+    width: 58%;
+}
+
+body.services #third-row-wrapper {
+    color: #000;
+}
+
+body.services #third-row-wrapper #third-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+body.services #third-row-wrapper .third-row-col {
+    width: 30%;
+}
+
+body.services #third-row-wrapper #third-row .col-title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: Montserrat;
+    margin-bottom: 37px;
+    min-height: 80px;
+}
+
+body.services #third-row-wrapper #third-row .col-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--red-text);
+    margin-top: 17px;
+}
+
+body.services #third-row-wrapper .col-row {
+    margin-bottom: 20px;
+}
+
+body.services #third-row-wrapper .col-row-label {
+    display: block;
+    width: 150px;
+    font-size: 14px;
+}
+
+body.services #third-row-wrapper .col-row-content {
+    display: block;
+    font-size: 18px;
+}
+
+body.services #fourth-row-wrapper {
+    background-image: url(../images/services-contact-block.png);
+    height: 670px;
+}
+
+body.services #fourth-row-wrapper #fourth-row-title {
+    font-size: 48px;
+    width: 1000px;
+    margin: 0 auto;
+    font-family: Din;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 200px 0 70px;
+}
+
+body.services #fourth-row-wrapper #fourth-row-button {
+
+}
+
+
+
+
+#mobile-menu-block {
+    width: 400px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #000;
+    display: none;
+}
+
+#mobile-menu-block ol {
+    display: block;
+    padding: 0 40px;
+    width: 320px;
+}
+
+#mobile-menu-block ol li {
+    text-align: left;
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #ccc;
+}
+
+#mobile-menu-block #mobile-menu-close-wrapper {
+    overflow: hidden;
+}
+
+#mobile-menu-block #mobile-menu-close {
+    width: 64px;
+    height: 40px;
+    background-image: url(../images/mobile-menu-close.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    overflow: hidden;
+    float: right;
+}
