@@ -6,7 +6,6 @@ body, html {
 body {
     color: #fff;
     background: #ccc;
-    background-image: url(../images/tesla_model_s.jpg);
     background-repeat:no-repeat;
     background-size: 100% auto;
     background-color: #000;
@@ -14,12 +13,31 @@ body {
     font-family: Montserrat;
 }
 
-body::before {
-    display: none !important;
+body.model-s {
+    background-image: url(../images/tesla-model-s.jpg);
 }
 
-body.inner.model-3 {
-    background-image: url(../images/tesla_model_s.jpg);
+body.model-x {
+    background-image: url(../images/tesla-model-x.jpg);
+}
+
+body.model-y {
+    background-image: url(../images/tesla-model-y.jpg);
+}
+
+body.roadster {
+    background-image: url(../images/tesla-model-roadster.jpg);
+}
+
+#video-bg {
+    float: left;
+    z-index: -1;
+    position: absolute;
+    top: -300px;
+}
+
+body::before {
+    d isplay: none !important;
 }
 
 body.front {
@@ -242,8 +260,8 @@ h3.row-title {
     background: #fff;
 }
 
-#third-row-wrapper #third-row-left {
-    height: 1370px;
+#third-row-wrapper #third-row-left #third-row-left-block {
+    float: left;
 }
 
 #third-row-left {
@@ -298,10 +316,7 @@ h3.row-title {
     float: right;
     background: #fff;
     box-sizing: border-box;
-    padding: 45px 45px 45px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding: 0px 45px 45px 0;
 }
 
 .config-block {
@@ -312,6 +327,7 @@ h3.row-title {
 
 .config-block .config-block-desc {
     color: var(--red-text);
+    height: 20px;
 }
 
 .config-block-top {
@@ -337,7 +353,7 @@ h3.row-title {
 .config-buttons, .config-berries {
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 10px;
     min-height: 68px;
 }
 

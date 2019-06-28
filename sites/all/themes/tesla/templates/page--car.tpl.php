@@ -28,7 +28,7 @@
     </div>
     <div id="second-row-wrapper">
         <div id="second-row-left">
-            <h2 class="row-title">Tesla Model S</h2>
+            <h2 class="row-title">Tesla <?php print $title; ?></h2>
             <h3 class="row-title">Technikai adatok</h3>
             <?php print $technical_details; ?>
         </div>
@@ -36,22 +36,24 @@
     </div>
     <div id="third-row-wrapper">
         <div id="third-row-left">
-            <h2 class="row-title">Tesla Model S</h2>
-            <h3 class="row-title">Konfigurátor</h3>
-            <div id="config-calc">
-                <div class="config-calc-row">
-                    <div class="config-calc-label">Hatótávolság:</div>
-                    <div class="config-calc-data"><span id="range">200</span> km</div>
-                    <div class="config-calc-desc">(WLTP számolás alapján)</div>
-                </div>
-                <div class="config-calc-row">
-                    <div class="config-calc-label">Végsebesség:</div>
-                    <div class="config-calc-data"><span id="topspeed">250</span> km/h</div>
-                </div>
-                <div class="config-calc-row">
-                    <div class="config-calc-label">Gyorsulás:</div>
-                    <div class="config-calc-data"><span id="acceleration">4,6</span> mp</div>
-                    <div class="config-calc-desc">(0-100 km/h)</div>
+            <div id="third-row-left-block">
+                <h2 class="row-title">Tesla <?php print $title; ?></h2>
+                <h3 class="row-title">Konfigurátor</h3>
+                <div id="config-calc">
+                    <div class="config-calc-row">
+                        <div class="config-calc-label">Hatótávolság:</div>
+                        <div class="config-calc-data"><span id="range">200</span> km</div>
+                        <div class="config-calc-desc">(WLTP számolás alapján)</div>
+                    </div>
+                    <div class="config-calc-row">
+                        <div class="config-calc-label">Végsebesség:</div>
+                        <div class="config-calc-data"><span id="topspeed">250</span> km/h</div>
+                    </div>
+                    <div class="config-calc-row">
+                        <div class="config-calc-label">Gyorsulás:</div>
+                        <div class="config-calc-data"><span id="acceleration">4,6</span> mp</div>
+                        <div class="config-calc-desc">(0-100 km/h)</div>
+                    </div>
                 </div>
             </div>
         
@@ -68,7 +70,7 @@
 
                 <div class="config-options config-buttons">
                 	<?php foreach ($facilities as $item) { ?>
-                	  <div class="config-button" 
+                	  <div class="config-button config-option config-option-notnull" 
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-range="<?php print $item['range']; ?>"
                 	  data-topspeed="<?php print $item['top_speed']; ?>"
@@ -87,12 +89,11 @@
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
-                    Mélykék metál fényezés
                 </div>
 
                 <div class="config-options config-berries berries-5">
                 	<?php foreach ($exteriors as $item) { ?>
-                		<div class="config-berry" 
+                		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="exterior">
@@ -110,12 +111,11 @@
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
-                    Mélykék metál fényezés
                 </div>
 
                 <div class="config-options config-berries berries-5">
                 	<?php foreach ($rims as $item) { ?>
-                		<div class="config-berry" 
+                		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="rim">
@@ -138,7 +138,7 @@
 
                 <div class="config-options config-berries berries-5">
                 	<?php foreach ($winter_wheels as $item) { ?>
-                		<div class="config-berry" 
+                		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="winter-wheel">
@@ -161,7 +161,7 @@
 
                 <div class="config-options config-berries berries-5">
                 	<?php foreach ($extras as $item) { ?>
-                		<div class="config-berry" 
+                		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="extra">
@@ -179,12 +179,11 @@
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
-                    Mélykék metál fényezés
                 </div>
 
                 <div class="config-options config-berries berries-5">
                 	<?php foreach ($interiors as $item) { ?>
-                		<div class="config-berry" 
+                		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="interior">
@@ -206,7 +205,7 @@
 
                 <div class="config-options config-buttons">
                 	<?php foreach ($seats as $item) { ?>
-                	  <div class="config-button" 
+                	  <div class="config-button config-option" 
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-wrapper="seat">
                 	  <?php print $item['title']; ?></div>
@@ -226,7 +225,7 @@
 
                 <div class="config-options config-buttons">
                 	<?php foreach ($autopilots as $item) { ?>
-                	  <div class="config-button" 
+                	  <div class="config-button config-option" 
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-wrapper="autopilot">
                 	  <?php print $item['title']; ?></div>
@@ -274,3 +273,8 @@
         </div>
         </div>
     </div>
+    <?php if (isset($video)): ?>
+        <div id="video-bg">
+          <video id="mahtesla" muted="muted" autoplay="autoplay" loop="loop" preload="auto" title="MAH Tesla Modell 3"><source src="<?php print file_create_url($video); ?>" type="video/mp4"></source></video>
+        </div>
+    <?php endif; ?>

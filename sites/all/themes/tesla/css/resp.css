@@ -226,12 +226,13 @@
     }
 
     body.services {
-        background-size: 200%;
+        background-size: 690px;
     }
 
     body.services #first-row-wrapper {
         height: auto;
         padding-bottom: 20px;
+        min-height: 314px;
     }
 
     body.services #first-row-wrapper .services-title {
@@ -285,6 +286,19 @@
         width: auto;
     }
 
+    body.services #fourth-row-wrapper {
+        height: 260px;
+        padding: 0 20px;
+    }
+
+    body.services #fourth-row-wrapper #fourth-row-title {
+        font-size: 24px;
+        padding: 40px 0 20px;
+    }
+
+    body.services #fourth-row-wrapper .red-button {
+        width: 170px;
+    }
 
     /* contact */
 
@@ -292,7 +306,24 @@
         padding: 20px 20px;
     }
 
+    body.contact #second-row-right {
+        display: block;
+        padding: 0;
+    }
 
+    body.contact #contact-form .contact-name,
+    body.contact #contact-form .ce87325643,
+    body.contact #contact-form .cp876453235,
+    body.contact #contact-form textarea {
+        width: 100%;
+    }
+
+    body.contact #contact-form .webform-submit {
+        width: 140px;
+        float: none;
+        margin: 0 auto;
+        display: block;
+    }
     
 }
 /*375-800*/
@@ -559,6 +590,26 @@
     
     #index-sixth-row .index-row .col-block {
         margin-bottom: 50px;
+    }
+
+    body.contact #second-row-right {
+        display: block;
+    }
+
+    body.contact #second-row-right {
+        padding: 0;
+    }
+
+    body.services {
+        background-size: 142%;
+    }
+
+    body.services #first-row-wrapper {
+        height: 600px;
+    }
+
+    body.services #second-row-wrapper {
+        height: 610px;
     }
 }
 
@@ -964,27 +1015,27 @@
     /* INDEX */
     
     #index-first-row {
-        background-position: center -83vw;
+        background-position: center -1650px;
     }
     
     #index-first-row #spacer {
-        height: 750px;
+        height: 790px;
     }
     
     #index-second-row {
-        background-position: center -83vw;
+        background-position: center -1650px;
     }
     
     #index-second-row #spacer {
-        height: 750px;
+        height: 790px;
     }
     
     #index-third-row {
-        background-position: center -83vw;
+        background-position: center -1650px;
     }
     
     #index-third-row #spacer {
-        height: 750px;
+        height: 790px;
     }
 }
 

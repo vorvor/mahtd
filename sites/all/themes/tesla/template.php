@@ -93,7 +93,8 @@ function tesla_preprocess_page(&$variables, $hook) {
       $variables['range'] = $node->field_index_range['und'][0]['value'];
       $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
       $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
-
+      $variables['video'] = $node->field_video['und'][0]['uri'];
+      $variables['title'] = $node->title;
 
       // facilities
       if (!empty($node->field_facilities)) {
