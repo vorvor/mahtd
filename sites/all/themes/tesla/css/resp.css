@@ -224,6 +224,75 @@
     #index-sixth-row .index-row .col-block {
         margin-bottom: 50px;
     }
+
+    body.services {
+        background-size: 200%;
+    }
+
+    body.services #first-row-wrapper {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    body.services #first-row-wrapper .services-title {
+        font-size: 22px;
+        letter-spacing: 7px;
+        padding: 24px 0;
+    }
+
+    body.services #first-row-wrapper .services-description {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 20px;
+        padding: 0;
+    }
+
+    body.services #second-row-wrapper,
+    body.services #third-row-wrapper {
+        background: none;
+        height: auto;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    body.services #second-row-wrapper #second-row,
+    body.services #second-row-wrapper #second-row-left {
+        width: 100%;
+        padding: 0;
+    }
+
+    body.services #second-row-left .row-title {
+        font-size: 42px;
+        
+    }
+
+    body.services #third-row-wrapper #third-row {
+        display: block;
+        padding: 0;
+    }
+
+    body.services #third-row-wrapper #third-row .third-row-col {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    body.services #third-row-wrapper #third-row .col-title {
+        min-height: 0;
+        margin-bottom: 20px;
+    }
+
+    body.services #fourth-row-wrapper #fourth-row-title {
+        width: auto;
+    }
+
+
+    /* contact */
+
+    body.contact #second-row-wrapper {
+        padding: 20px 20px;
+    }
+
+
     
 }
 /*375-800*/

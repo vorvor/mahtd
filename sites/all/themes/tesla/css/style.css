@@ -222,6 +222,7 @@ h3.row-title {
     background: url(../images/S_interior.png) no-repeat #fff;
     background-position:550px 0;
     width: 100%;
+    box-sizing: border-box;
 }
 
 #second-row-wrapper ul li {
