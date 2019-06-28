@@ -33,6 +33,14 @@
     #top nav {
         display: none;
     }
+
+    h1#logo-wrapper {
+        margin-left: 14px;
+    }
+
+    #mobile-menu {
+        margin-right: 26px;
+    }
     
     /* */
     
@@ -93,7 +101,7 @@
     
     /* */
     
-    #second-row-right, #third-row-left {
+    #second-row-right, #third-row-left #config-calc {
         display: none;
     }
     
@@ -114,6 +122,11 @@
         margin: 12px 0;
         padding: 0;
     }
+
+    .config-block-top,
+    .config-sum-price {
+        font-size: 20px;
+    }
     
     .config-buttons {
         flex-wrap: wrap;
@@ -124,7 +137,7 @@
         margin-bottom: 20px;
     }
     
-    .config-button:nth-child(odd) {
+    .config-button {
         margin-right: 20px;
     }
     
@@ -137,7 +150,7 @@
     }
     
     .config-sum-price .config-price {
-        font-size: 34px;
+        font-size: 22px;
     }
     
     #footer-2 {
@@ -243,15 +256,15 @@
     }
     
     .config-buttons {
-        justify-content: space-between;
+        /*justify-content: space-between;*/
     }
     
     .config-button {
-        width: 173px;
+        width: 220px;
         font-size: 15px;
     }
     
-    .config-button:nth-child(odd) {
+    .config-button {
         margin-right: 8px;
     }
     

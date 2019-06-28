@@ -8,6 +8,14 @@
     	})
     	sumPrice();
 
+        //init configurator buttons
+        $('#facility-block .config-buttons .config-button:nth-child(1)').addClass('selected');
+        $('.config-block .config-options div').each(function() {
+            if ($(this).data('price') == 0) {
+                $(this).addClass('selected');
+            }
+        })
+
         // configurator buttons
     	$('body.inner #third-row-wrapper .config-options div').each(function() {
     		$(this).click(function() {

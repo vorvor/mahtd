@@ -149,29 +149,6 @@
             </div>
             <?php endif; ?>
 
-            <?php if (isset($winter_wheels)): ?>
-            <div class="config-block" id="winter-wheel-block">
-                <div class="config-block-top">
-                    <div class="config-title">Téli garnitúra Pirelli gumival</div>
-                    <div class="config-price"><span class="price">0</span> EUR</div>
-                </div>
-                <div class="config-block-desc">
-                    
-                </div>
-
-                <div class="config-options config-berries berries-5">
-                	<?php foreach ($winter_wheels as $item) { ?>
-                		<div class="config-berry" 
-                		data-title="<?php print $item['title']; ?>"
-                		data-price="<?php print $item['price']; ?>"
-                		data-wrapper="winter-wheel">
-                			<img src="<?php print file_create_url($item['image']) ?>">
-                		</div>
-                	<?php } ?>
-                </div>
-            </div>
-            <?php endif; ?>
-
             <?php if (isset($extras)): ?>
             <div class="config-block" id="extra-block">
                 <div class="config-block-top">
