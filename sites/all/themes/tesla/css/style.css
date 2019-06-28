@@ -14,6 +14,10 @@ body {
     font-family: Montserrat;
 }
 
+body::before {
+    display: none !important;
+}
+
 body.inner.model-3 {
     background-image: url(../images/tesla_model_s.jpg);
 }
@@ -409,7 +413,11 @@ h3.row-title {
 }
 
 .red-button-wide {
-    width: 350px;
+    width: 340px;
+}
+
+.red-button-wide a {
+    font-size: 17px;
 }
 
 footer {
