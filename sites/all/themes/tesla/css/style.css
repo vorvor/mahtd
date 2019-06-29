@@ -815,6 +815,14 @@ body.contact #contact-form .cp876453235 {
     float: left;
 }
 
+body.inner .send-order .form-actions {
+    height: 135px;
+}
+
+body.inner .config-block.block-send-order {
+    margin-bottom: 0;
+}
+
 body.contact #contact-form .webform-submit,
 body.inner .send-order .webform-submit {
     width: 23vw;

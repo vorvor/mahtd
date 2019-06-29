@@ -13,7 +13,7 @@
     	// init prices
     	$('.config-block').each(function() {
             // items with price 0 is default selected, so description is ought to be filled
-    		if ($('.config-option:nth-child(1)', this).data('price') == '0') {
+    		if ($('.config-option:nth-child(1)', this).data('price') == '0' && !$('.config-option:nth-child(1)', this).hasClass('config-button')) {
                 $('.config-block-desc', this).html($('.config-option:nth-child(1)', this).data('title'));
             }
     	})
@@ -53,7 +53,9 @@
                 if (!$(this).hasClass('one-item')) {
                     $(this).siblings().removeClass('selected');
                     $(this).addClass('selected');
-                    $('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
+                    if (!$(this).hasClass('config-button')) {
+                        $('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
+                    }
                     $('#' + wrapper + '-block .price').html($(this).data('price'));
                     // fil send order form fields
                     $('.send-order .order-' + wrapper).val($(this).data('title'));
@@ -88,11 +90,11 @@
 
         // send order form
         $('#send-order-button').click(function() {
-            if ($('.send-order').hasClass('invisible')) {
+            //if ($('.send-order').hasClass('invisible')) {
                 $('.send-order').removeClass('invisible');
-            } else {
-                $('.send-order').addClass('invisible');
-            }
+            //} else { 
+                //$('.send-order').addClass('invisible');
+            //}
         })
 
         // fill order form with config data

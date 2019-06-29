@@ -14,7 +14,7 @@
                     <div class="data">
                         <div class="data-text">
                             <div>hatótávolság</div>
-                            <div><span class="large-font">610 km</span>-ig</div>
+                            <div><span class="large-font">610 km/h</span>-ig</div>
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                 
                 <?php if ($preorder) { ?>
                 <div class="red-button preorder">
-                    <a id="send-order-button">Előrendelem</a>
+                    <a id="send-order-button"  href="#order-form">Előrendelem</a>
                 </div>
-                <div class="send-order invisible">
+                <div id="order-form" class="send-order invisible">
                     <?php
                         $nid = 9; //node id of the webform node
                         $node = node_load($nid);
@@ -280,11 +280,11 @@
             </div>
             <div class="config-block config-block-with-button">
                 <div class="red-button red-button-wide">
-                    <a id="send-order-button">Megrendelés véglegesítése</a>
+                    <a id="send-order-button" href="#send-order-button">Megrendelés véglegesítése</a>
                 </div>
             </div>
-            <div class="config-block">
-                <div class="send-order invisible">
+            <div class="config-block block-send-order">
+                <div id="order-form" class="send-order invisible">
                     <?php
                         $nid = 9; //node id of the webform node
                         $node = node_load($nid);
