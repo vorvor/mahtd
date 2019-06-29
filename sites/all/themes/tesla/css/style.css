@@ -37,7 +37,7 @@ body.roadster {
 }
 
 body::before {
-    display: none !important;
+    d isplay: none !important;
 }
 
 body.front {

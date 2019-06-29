@@ -328,6 +328,10 @@
 
     /* contact */
 
+     body.contact {
+        background-size: 180%;
+    }
+
     body.contact #second-row-wrapper {
         padding: 20px 20px;
     }
@@ -867,6 +871,13 @@
         font-size: 20px;
     }
 
+    body.contact #second-row-left {
+        width: 500px;
+    }
+
+    body.contact #second-row-right {
+        padding-left: 40px;
+    }
 
 }
 
