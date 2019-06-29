@@ -116,11 +116,26 @@
     #second-row-left h2 {
         margin: 0;
         padding: 0;
+        font-size: 22px;
     }
     
     #second-row-left h3 {
         margin: 12px 0;
         padding: 0;
+        font-size: 36px;
+    }
+
+    #third-row-left {
+        padding: 20px 12px;
+        background: #fff;
+    }
+
+    #third-row-left h2.row-title {
+        margin: 0;
+    }
+
+    #third-row-left h3.row-title {
+        margin: 10px 0;
     }
 
     .config-block-top,
@@ -152,7 +167,18 @@
     .config-sum-price .config-price {
         font-size: 22px;
     }
+
+    body.inner .config-block .send-order {
+        padding: 0;
+    }
     
+    body.inner .config-block .send-order input,
+    body.inner .config-block .send-order textarea {
+        width: 100%;
+    }
+
+    /* footer */
+
     #footer-2 {
         display: none;
     }
@@ -821,6 +847,25 @@
         margin-bottom: 30px;
     }
 
+    #third-row-left .config-calc-label {
+        width: 200px;
+    }
+
+    #third-row-left .config-calc-data {
+        width: 360px;
+    }
+
+    #third-row-left .config-calc-row {
+        font-size: 28px;
+    }
+
+    #third-row-left .config-calc-data {
+        font-size: 32px;
+    }
+
+    #third-row-left .config-calc-desc {
+        font-size: 20px;
+    }
 
 
 }
@@ -940,6 +985,27 @@
         text-transform: uppercase;
         font-weight: 800;
         margin-bottom: 30px;
+    }
+
+    /* config */
+    #third-row-left .config-calc-label {
+        width: 250px;
+    }
+
+    #third-row-left .config-calc-data {
+        width: 450px;
+    }
+
+    #third-row-left .config-calc-row {
+        font-size: 36px;
+    }
+
+    #third-row-left .config-calc-data {
+        font-size: 46px;
+    }
+
+    #third-row-left .config-calc-desc {
+        font-size: 25px;
     }
 
     

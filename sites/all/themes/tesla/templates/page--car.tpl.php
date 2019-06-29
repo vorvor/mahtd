@@ -20,7 +20,12 @@
                 </div>
                 <div id="data-3" class="first-row-data">
                     <div class="red-button">
-                        <a href="#third-row-wrapper" class="">Megrendelem</a>
+                        <?php if ($preorder) { ?>
+                                <a href="#second-row-wrapper"><?php print 'Előrendelem'; ?></a>
+                            <?php } else { ?>
+                                <a href="#third-row-wrapper"><?php print 'Megrendelem'; ?></a>
+                            <?php } ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -30,10 +35,28 @@
         <div id="second-row-left">
             <h2 class="row-title">Tesla <?php print $title; ?></h2>
             <h3 class="row-title">Technikai adatok</h3>
-            <?php print $technical_details; ?>
+            <div class="technical-details">
+                <?php print $technical_details; ?>
+                
+                <?php if ($preorder) { ?>
+                <div class="red-button preorder">
+                    <a id="send-order-button">Előrendelem</a>
+                </div>
+                <div class="send-order invisible">
+                    <?php
+                        $nid = 9; //node id of the webform node
+                        $node = node_load($nid);
+                        $form = drupal_get_form('webform_client_form_' . $nid, $node);
+                        print drupal_render($form);
+                    ?>
+                </div>
+                <?php } ?>
+            </div>
         </div>
         <div id="second-row-right"></div>
     </div>
+    
+    <?php if (!$preorder) { ?>
     <div id="third-row-wrapper">
         <div id="third-row-left">
             <div id="third-row-left-block">
@@ -70,7 +93,8 @@
 
                 <div class="config-options config-buttons">
                 	<?php foreach ($facilities as $item) { ?>
-                	  <div class="config-button config-option config-option-notnull" 
+                	  <div class="config-button config-option config-option-notnull"
+                      data-title="<?php print $item['title']; ?>"
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-range="<?php print $item['range']; ?>"
                 	  data-topspeed="<?php print $item['top_speed']; ?>"
@@ -206,6 +230,7 @@
                 <div class="config-options config-buttons">
                 	<?php foreach ($seats as $item) { ?>
                 	  <div class="config-button config-option" 
+                      data-title="<?php print $item['title']; ?>"
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-wrapper="seat">
                 	  <?php print $item['title']; ?></div>
@@ -226,6 +251,7 @@
                 <div class="config-options config-buttons">
                 	<?php foreach ($autopilots as $item) { ?>
                 	  <div class="config-button config-option" 
+                      data-title="<?php print $item['title']; ?>"
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-wrapper="autopilot">
                 	  <?php print $item['title']; ?></div>
@@ -273,8 +299,9 @@
         </div>
         </div>
     </div>
+    <?php } //preorder ?> 
     <?php if (isset($video)): ?>
         <div id="video-bg">
           <video id="mahtesla" muted="muted" autoplay="autoplay" loop="loop" preload="auto" title="MAH Tesla Modell 3"><source src="<?php print file_create_url($video); ?>" type="video/mp4"></source></video>
         </div>
-    <?php endif; ?>
+    <?php endif; //video background ?>

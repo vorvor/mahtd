@@ -95,6 +95,7 @@ function tesla_preprocess_page(&$variables, $hook) {
       $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
       $variables['video'] = $node->field_video['und'][0]['uri'];
       $variables['title'] = $node->title;
+      $variables['preorder'] = $node->field_preorder['und'][0]['value'];
 
       // facilities
       if (!empty($node->field_facilities)) {
@@ -164,7 +165,6 @@ function tesla_preprocess_page(&$variables, $hook) {
           $autopilots[] = array(
             'title' => $paragraph->field_title['und'][0]['value'],
             'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-            'image' => $paragraph->field_image['und'][0]['uri'],
           );
         }
 
@@ -209,7 +209,6 @@ function tesla_preprocess_page(&$variables, $hook) {
           $seats[] = array(
             'title' => $paragraph->field_title['und'][0]['value'],
             'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
-            'image' => $paragraph->field_image['und'][0]['uri'],
           );
         }
 

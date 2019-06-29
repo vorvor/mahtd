@@ -235,6 +235,30 @@ h3.row-title {
     font-size: 48px;
     font-family: Din;
 }
+
+.technical-details strong {
+    color: #000;
+    font-size: 20px;
+}
+
+.technical-details .red-button.preorder {
+    margin: 35px auto 40px;
+}
+
+.technical-details .send-order {
+    color: #000;
+}
+
+.technical-details .send-order .form-actions {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.technical-details .send-order .form-actions .form-submit {
+    float: none;
+}
+
+
 /* */
 #second-row-wrapper {
     background: url(../images/S_interior.png) no-repeat #fff;
@@ -289,7 +313,7 @@ h3.row-title {
 }
 
 #third-row-left .config-calc-label {
-    width: 270px;
+    width: 250px;
     float: left;
     padding-top: 8px;
 }
@@ -300,7 +324,7 @@ h3.row-title {
     font-weight: 800;
     text-transform: none;
     text-align: right;
-    width: 470px;
+    width: 450px;
 }
 
 #third-row-left .config-calc-desc {
@@ -370,6 +394,7 @@ h3.row-title {
     font-size: 15px;
     font-weight: bold;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .config-button.selected {
@@ -430,7 +455,7 @@ h3.row-title {
 }
 
 .red-button-wide {
-    width: 340px;
+    width: 320px;
 }
 
 .red-button-wide a {
@@ -767,6 +792,7 @@ body.inner .send-order textarea {
     box-sizing: border-box;
     margin-right: 20px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 body.contact #contact-form textarea,
@@ -807,6 +833,11 @@ body.inner .send-order .webform-submit {
     float: right;
     font-weight: bold;
     font-size: 18px;
+}
+
+body.inner .send-order .hidden,
+body.inner .send-order label.element-invisible {
+    display: none;
 }
 
 

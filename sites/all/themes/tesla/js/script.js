@@ -7,8 +7,7 @@
         $('.config-block .config-options div').each(function() {
             if ($(this).data('price') == 0) {
                 $(this).addClass('selected');
-                //$('.config-block-desc', this).html($('.config-berry:nth-child(1)', this).data('title'));
-            }
+                $('.send-order .order-' + $(this).data('wrapper')).val($(this).data('title'));            }
         })
 
     	// init prices
@@ -25,6 +24,7 @@
         $('#range').html(facilityFirst.data('range'));
         $('#topspeed').html(facilityFirst.data('topspeed'));
         $('#acceleration').html(facilityFirst.data('acceleration'));
+        $('.send-order .order-facility').val(facilityFirst.data('title'));
     	sumPrice();
 
         // configurator buttons
@@ -42,12 +42,12 @@
 					$('#acceleration').html($(this).data('acceleration'));
 				}
 
-				console.log($(this).siblings().first().data('price'));
                 if ($(this).hasClass('selected') && ($(this).siblings().first().data('price') != 0 && $(this).data('price') != 0 && !$(this).hasClass('config-option-notnull'))) {
                     $(this).removeClass('selected');
                     $(this).addClass('one-item');
                     $('#' + wrapper + '-block .config-block-desc').html('');
                     $('#' + wrapper + '-block .price').html(0);
+                    $('.send-order .order-' + wrapper).val('');
                 }
 
                 if (!$(this).hasClass('one-item')) {
@@ -55,9 +55,13 @@
                     $(this).addClass('selected');
                     $('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
                     $('#' + wrapper + '-block .price').html($(this).data('price'));
+                    // fil send order form fields
+                    $('.send-order .order-' + wrapper).val($(this).data('title'));
                 } else {
                     $(this).removeClass('one-item');
                 }
+
+                
  
     		})
     	})
@@ -90,6 +94,9 @@
                 $('.send-order').addClass('invisible');
             }
         })
+
+        // fill order form with config data
+        $('.send-order .order-model').val($('h2.row-title').html());
   
     }};
 }(jQuery));
