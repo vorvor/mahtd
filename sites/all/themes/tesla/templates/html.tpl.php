@@ -40,8 +40,8 @@
         <nav>
           <ol id="menu">
             <?php print $main_menu; ?>
-            <li><a href="/node/7">Szolgáltatásaink</a></li>
-            <li><a href="/node/6">Kapcsolat</a></li>
+            <li><a href="<?php print $services_page_path; ?>">Szolgáltatásaink</a></li>
+            <li><a href="<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>
         </nav>
     </div>
@@ -75,5 +75,6 @@
             <div id="footer-3" class="footer-block">© 2019 MAHZRT</div>
         </div>
     </footer>
+    <a id="scrolltop" href="#"></a>
 </body>
 </html>

@@ -329,7 +329,7 @@
     /* contact */
 
      body.contact {
-        background-size: 180%;
+        background-size: 200%;
     }
 
     body.contact #second-row-wrapper {
@@ -349,7 +349,7 @@
     }
 
     body.contact #contact-form .webform-submit {
-        width: 140px;
+        width: 100%;
         float: none;
         margin: 0 auto;
         display: block;

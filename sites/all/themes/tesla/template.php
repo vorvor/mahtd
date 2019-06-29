@@ -45,6 +45,9 @@ function tesla_preprocess_html(&$variables, $hook) {
   );*/
 
   $variables['body_class'] = 'front';
+  $variables['contact_page_path'] = drupal_get_path_alias('node/6');
+  $variables['services_page_path'] = drupal_get_path_alias('node/7');
+
   $node = menu_get_object();
   if ($node && $node->nid) {
     if ($node->type == 'car') {
