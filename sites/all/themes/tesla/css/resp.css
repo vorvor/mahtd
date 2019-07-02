@@ -236,6 +236,11 @@
 
     #index-sixth-row {
         height: auto;
+        padding: 0 40px;
+    }
+
+    #index-sixth-row .index-row .col-block .contact-title {
+        font-size: 40px;
     }
     
     #index-sixth-row .index-row {
