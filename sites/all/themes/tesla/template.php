@@ -250,6 +250,50 @@ function tesla_preprocess_page(&$variables, $hook) {
         $variables['seats'] = $seats;
       }
     }
+  } else {
+
+    $models = array(
+      2 => 'model_3',
+      1 => 'model_s',
+      3 => 'model_x',
+      5 => 'roadster',
+      4 => 'model_y',
+    );
+
+    foreach ($models as $key => $model) {
+      $node = node_load($key);
+
+      $ranges = [];
+      $top_speeds = [];
+      $accelerations = [];
+      foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
+        $paragraph = entity_load('paragraphs_item', array($facility['value']));
+        $paragraph = reset($paragraph);
+
+        $ranges[] = $paragraph->field_range['und'][0]['value'];
+        $top_speeds[] = $paragraph->field_top_speed['und'][0]['value'];
+        $accelerations[] = $paragraph->field_acceleration['und'][0]['value'];
+      }
+
+      if (isset($node->field_index_range['und'])) {
+        $variables[$model . '_range'] = $node->field_index_range['und'][0]['value'];
+      } else {
+        $variables[$model . '_range'] =  max($ranges);
+      }
+
+      if (isset($node->field_index_acceleration['und'])) {
+        $variables[$model . '_acceleration'] = $node->field_index_acceleration['und'][0]['value'];
+      } else {
+        $variables[$model . '_acceleration'] = max($accelerations);
+      }
+      if (isset($node->field_index_topspeed['und'])) {
+        $variables[$model . '_topspeed'] = $node->field_index_topspeed['und'][0]['value'];
+      } else {
+        $variables[$model . '_topspeed'] = max($top_speeds);
+      }
+
+    }
+
   }
 }
 // */
