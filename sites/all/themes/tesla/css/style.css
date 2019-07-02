@@ -289,14 +289,33 @@ h3.row-title {
 }
 
 #third-row-left {
-    background: url(../images/S.png) no-repeat #fff;
-    background-position:-1300px 100%;
+    background: url(../images/configurator-bg-model-s.png) no-repeat #fff;
+    background-position: -420px 60%;
+    background-size: 80%;
     width: 100%;
     float: left;
     position: relative;
     overflow: visible;
     height: auto;
     padding: 47px 0 0 39px;
+}
+
+body.model-3 #third-row-left {
+    background: url(../images/configurator-bg-model-3.jpg) no-repeat #fff;
+    background-size: 50%;
+    background-position: -70px 50%;
+}
+
+body.model-x #third-row-left {
+    background: url(../images/configurator-bg-model-x.jpg) no-repeat #fff;
+    background-size: 50%;
+    background-position: -70px 50%;
+}
+
+body.model-y #third-row-left {
+    background: url(../images/configurator-bg-model-y.png) no-repeat #fff;
+    background-size: 65%;
+    background-position: -240px 50%;
 }
 
 #third-row-left {

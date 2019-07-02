@@ -354,6 +354,10 @@
         margin: 0 auto;
         display: block;
     }
+
+    #scrolltop {
+        opacity: 0.6;
+    }
     
 }
 /*375-800*/
