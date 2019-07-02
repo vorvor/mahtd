@@ -3,20 +3,34 @@
             </div>
             <div id="first-row">
                 <div id="data-1" class="first-row-data">
-                    <div class="data">
+                    <div class="data data-acelleration">
                         <div class="data-text">
                             <div>gyorsulás 0 - 100 km/h</div>
-                            <div><span class="large-font">2,6 mp</span>-től</div>
+                            <div>
+                                <span class="large-font">
+                                <?php print $acceleration; ?> mp
+                                </span>-től
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="data-2" class="first-row-data">
-                    <div class="data">
+                    <?php if (isset($range)): ?>
+                    <div class="data data-range">
                         <div class="data-text">
                             <div>hatótávolság</div>
-                            <div><span class="large-font">610 km/h</span>-ig</div>
+                            <div><span class="large-font"><?php print $range; ?> km</span>-ig</div>
                         </div>
                     </div>
+                    <?php endif; ?>
+                    <?php if (isset($topspeed)): ?>
+                    <div class="data data-topspeed">
+                        <div class="data-text">
+                            <div>végsebesség</div>
+                            <div><span class="large-font"><?php print $topspeed; ?> km/h</span>-ig</div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                 </div>
                 <div id="data-3" class="first-row-data">
                     <div class="red-button">
