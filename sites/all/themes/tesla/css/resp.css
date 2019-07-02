@@ -772,7 +772,7 @@
     /* INDEX */
     
     #index-first-row {
-        background-position: center -75vw;
+        background-position: center -1070px;
     }
     
     #index-first-row #spacer {
@@ -780,7 +780,7 @@
     }
     
     #index-second-row {
-        background-position: center -75vw;
+        background-position: center -1070px;
     }
     
     #index-second-row #spacer {
@@ -788,7 +788,7 @@
     }
     
     #index-third-row {
-        background-position: center -75vw;
+        background-position: center -1070px;
     }
     
     #index-third-row #spacer {
@@ -797,6 +797,16 @@
     
     #index-fourth-row .index-row-data {
         width: 50%;
+    }
+
+    #index-fourth-row .index-row {
+        width: 100%;
+        display: flex;
+    }
+    
+    #index-fourth-row .index-row .index-col {
+        padding: 20% 40px 0;
+        background-position: center 3%;
     }
     
     /* contact */
