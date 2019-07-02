@@ -33,7 +33,11 @@ body.roadster {
     float: left;
     z-index: -1;
     position: absolute;
-    top: -300px;
+    top: 0px;
+}
+
+#video-bg video {
+    width: 100%;
 }
 
 body::before {
@@ -261,10 +265,26 @@ h3.row-title {
 
 /* */
 #second-row-wrapper {
-    background: url(../images/S_interior.png) no-repeat #fff;
+    background: url(../images/tech-bg-model-s.png) no-repeat #fff;
     background-position:550px 0;
     width: 100%;
     box-sizing: border-box;
+}
+
+body.model-3 #second-row-wrapper {
+    background-image: url(../images/tech-bg-model-3.jpg);
+}
+
+body.model-x #second-row-wrapper {
+    background-image: url(../images/tech-bg-model-x.png);
+}
+
+body.model-y #second-row-wrapper {
+    background-image: url(../images/tech-bg-model-y.jpg);
+}
+
+body.roadster #second-row-wrapper {
+    background-image: url(../images/tech-bg-roadster.jpg);
 }
 
 #second-row-wrapper ul li {
