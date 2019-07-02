@@ -9,6 +9,7 @@
 ?><!DOCTYPE html>
 <html>
 <head>
+    <?php print $head; ?>
     <?php print $styles; ?>
     <?php print $scripts; ?>
 

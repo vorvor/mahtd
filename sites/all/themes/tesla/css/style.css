@@ -37,7 +37,7 @@ body.roadster {
 }
 
 body::before {
-    d isplay: none !important;
+    display: none !important;
 }
 
 body.front {
@@ -1061,4 +1061,55 @@ body.services #fourth-row-wrapper #fourth-row-button {
 
 #scrolltop:hover {
     opacity: 1;
+}
+
+#user-login {
+    color: #000;
+}
+
+#user-login form {
+    margin: 50px auto;
+    width: 300px;
+}
+
+#user-login .form-item {
+    padding-left: 50px;
+    font-size:20px;
+    margin: 10px 0;
+}
+
+#user-login .form-item label {
+    display: block;
+}
+
+#user-login .form-item input {
+    font-size:20px;
+    width: 200px;
+}
+
+#user-login .form-item .description {
+    display: none;
+}
+
+#user-login .form-actions {
+    width: 23vw;
+    height: 56px;
+    box-shadow: 0 34px 30px 0px rgba(0,0,0,0.17);
+    background: var(--red-text);
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#user-login .form-actions input {
+    background: 0;
+    font-size: 20px;
+    line-height: 56px;
+    border: none;
+    color: #fff;
 }
