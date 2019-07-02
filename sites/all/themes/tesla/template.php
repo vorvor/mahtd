@@ -100,6 +100,28 @@ function tesla_preprocess_page(&$variables, $hook) {
       $variables['title'] = $node->title;
       $variables['preorder'] = $node->field_preorder['und'][0]['value'];
 
+      // if there is configurator, best values are the potential best choices, if not, it set manually
+      if (isset($node->field_index_range['und'])) {
+        $variables['range'] = $node->field_index_range['und'][0]['value'];
+      } else {
+        $variables['range'] = max($ranges);
+      }
+      
+      if (isset($node->field_index_acceleration['und'])) {
+        $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
+      } else {
+        $variables['acceleration'] = max($accelerations);
+      }
+      if (isset($node->field_index_topspeed['und'])) {
+        $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
+      } else {
+        $variables['topspeed'] = max($top_speeds);
+      }
+
+      if (in_array($node->title, array('Model 3', 'Model S', 'Model X', 'Model Y'))) {
+        unset($variables['topspeed']);
+      }
+
       // facilities
       if (!empty($node->field_facilities)) {
         foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
@@ -123,27 +145,6 @@ function tesla_preprocess_page(&$variables, $hook) {
           $accelerations[] = $paragraph->field_acceleration['und'][0]['value'];
         }
         $variables['facilities'] = $facilities;
-
-        // if there is configurator, best values are the potential best choices, if not, it set manually
-        if (isset($node->field_index_range['und'])) {
-          $variables['range'] = $node->field_index_range['und'][0]['value'];
-        } else {
-          $variables['range'] = max($ranges);
-        }
-        if (isset($node->field_index_acceleration['und'])) {
-          $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
-        } else {
-          $variables['acceleration'] = max($accelerations);
-        }
-        if (isset($node->field_index_topspeed['und'])) {
-          $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
-        } else {
-          $variables['topspeed'] = max($top_speeds);
-        }
-
-        if (in_array($node->title, array('Model 3', 'Model S', 'Model X', 'Model Y'))) {
-          unset($variables['topspeed']);
-        }
       }
 
       // exterior
