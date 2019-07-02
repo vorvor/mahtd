@@ -563,7 +563,7 @@ footer {
 
 #index-fourth-row .index-col-left,
 #index-fourth-row .index-col-right {
-    background-image: url(../images/modelY.png);
+    background-image: url(../images/roadster.png);
     background-repeat:  no-repeat;
     background-size: 100%;
     background-position: center 10%;
@@ -571,7 +571,7 @@ footer {
 }
 
 #index-fourth-row .index-col-right {
-    background-image: url(../images/roadster.png);
+    background-image: url(../images/modelY.png);
 }
 
 #index-fourth-row .col-extra {
