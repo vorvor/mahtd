@@ -1059,27 +1059,27 @@
     /* INDEX */
     
     #index-first-row {
-        background-position: center -1100px
+        background-position: center -1150px
     }
     
     #index-first-row #spacer {
-        height: 700px;
+        height: 500px;
     }
     
     #index-second-row {
-        background-position: center -1100px
+        background-position: center -1150px
     }
     
     #index-second-row #spacer {
-        height: 700px;
+        height: 500px;
     }
     
     #index-third-row {
-        background-position: center -1100px
+        background-position: center -1150px
     }
     
     #index-third-row #spacer {
-        height: 700px;
+        height: 500px;
     }
 
 }
