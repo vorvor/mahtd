@@ -390,7 +390,7 @@
     }
     
     .config-button {
-        width: 220px;
+        width: 290px;
         font-size: 15px;
     }
     
@@ -489,8 +489,12 @@
     
     /* */
     
+    body.inner #spacer {
+        height: 450px;
+    }
+
     #first-row-wrapper {
-        height: 830px;
+        height: 720px;
     }
     
     #first-row #data-1, #first-row #data-2 {
@@ -511,7 +515,7 @@
     /* */
     
     
-    #second-row-right, #third-row-left {
+    #second-row-right {
         display: none;
     }
     
