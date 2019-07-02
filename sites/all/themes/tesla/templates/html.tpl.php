@@ -41,8 +41,8 @@
         <nav>
           <ol id="menu">
             <?php print $main_menu; ?>
-            <li><a href="<?php print $services_page_path; ?>">Szolgáltatásaink</a></li>
-            <li><a href="<?php print $contact_page_path; ?>">Kapcsolat</a></li>
+            <li><a href="/<?php print $services_page_path; ?>">Szolgáltatásaink</a></li>
+            <li><a href="/<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>
         </nav>
     </div>

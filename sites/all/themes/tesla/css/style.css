@@ -850,6 +850,7 @@ body.inner .send-order .webform-submit {
     float: right;
     font-weight: bold;
     font-size: 18px;
+    cursor: pointer;
 }
 
 body.inner .send-order .hidden,

@@ -95,10 +95,12 @@ function tesla_preprocess_page(&$variables, $hook) {
       $variables['technical_details'] = $node->field_technical_details['und'][0]['value'];
       $variables['range'] = $node->field_index_range['und'][0]['value'];
       $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
-      if (isset($node->field_index_topspeed)) {
+      if (isset($node->field_index_topspeed['und'])) {
         $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
       }
-      $variables['video'] = $node->field_video['und'][0]['uri'];
+      if (isset($node->field_video['und'])) {
+        $variables['video'] = $node->field_video['und'][0]['uri'];
+      }
       $variables['title'] = $node->title;
       $variables['preorder'] = $node->field_preorder['und'][0]['value'];
 
