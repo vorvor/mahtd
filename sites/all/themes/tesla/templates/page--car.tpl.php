@@ -93,7 +93,7 @@
 
                 <div class="config-options config-buttons">
                 	<?php foreach ($facilities as $item) { ?>
-                	  <div class="config-button config-option config-option-notnull <?php print $item['optional-class']; ?>"
+                	  <div class="config-button config-option config-option-notnull <?php print $item['optional-class']; ?> <?php print $item['free-items-class']; ?>"
                       data-title="<?php print $item['title']; ?>"
                 	  data-price="<?php print $item['price']; ?>" 
                 	  data-range="<?php print $item['range']; ?>"
@@ -101,6 +101,7 @@
                 	  data-acceleration="<?php print $item['acceleration']; ?>"
                       data-optional="<?php print $item['optional']; ?>"
                       data-option-condition="<?php print $item['option-condition']; ?>"
+                      data-with-free-items="<?php print $item['free-items']; ?>"
                 	  data-wrapper="facility">
                 	  <?php print $item['title']; ?></div>
                 	<?php } ?>

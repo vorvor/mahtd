@@ -117,7 +117,10 @@ function tesla_preprocess_page(&$variables, $hook) {
             'acceleration' => $paragraph->field_acceleration['und'][0]['value'],
             'optional' => $paragraph->field_optional['und'][0]['value'],
             'option-condition' => $paragraph->field_option_condition['und'][0]['value'],
+            'free-items' => $paragraph->field_with_free_config_items['und'][0]['value'],
             'optional-class' => ($paragraph->field_optional['und'][0]['value'] == 1) ? 'optional' : '',
+            'free-items-class' => ($paragraph->field_with_free_config_items['und'][0]['value'] == 1) ? 'with-free-items' : '',
+
           );
         }
         $variables['facilities'] = $facilities;

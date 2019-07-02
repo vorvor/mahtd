@@ -61,7 +61,18 @@
                     } else {
                         $(this).siblings('.optional').hide();
                     }
+                    
                     $('#' + wrapper + '-block .price').html($(this).data('price'));
+                    // in some case interior is free
+                    if (wrapper == 'interior' || wrapper == 'facility') {
+                        if ($('#facility-block .config-option.selected').data('with-free-items') == 1) {
+                            $('#interior-block .price').html('0');
+                        } else {
+                            $('#interior-block .price').html($('#interior-block .config-option.selected').data('price'));
+                        }
+                    }
+
+
                     // fil send order form fields
                     $('.send-order .order-' + wrapper).val($(this).data('title'));
                 } else {
