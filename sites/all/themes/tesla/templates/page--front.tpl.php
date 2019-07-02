@@ -21,7 +21,7 @@
                 <div class="data">
                     <div class="data-text">
                         <div>hatótávolság</div>
-                        <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km/h</span>-ig</div>
+                        <div><span class="large-font"><?php print $node->field_index_range['und'][0]['value']; ?> km</span>-ig</div>
                     </div>
                 </div>
             </div>

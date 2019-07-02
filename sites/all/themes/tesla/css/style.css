@@ -401,6 +401,10 @@ h3.row-title {
     border-color: var(--red-text);
 }
 
+.config-button.optional {
+    display: none;
+}
+
 .config-block#seat-block .config-button {
     width: 56px;
 }

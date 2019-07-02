@@ -56,15 +56,17 @@
                     if (!$(this).hasClass('config-button')) {
                         $('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
                     }
+                    if ($(this).data('option-condition') == 1) {
+                        $(this).siblings('.optional').show();
+                    } else {
+                        $(this).siblings('.optional').hide();
+                    }
                     $('#' + wrapper + '-block .price').html($(this).data('price'));
                     // fil send order form fields
                     $('.send-order .order-' + wrapper).val($(this).data('title'));
                 } else {
                     $(this).removeClass('one-item');
                 }
-
-                
- 
     		})
     	})
 
@@ -76,7 +78,7 @@
 				}
 			})
 			
-			$('#sumprice').html(String(sum).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1 '));
+			$('#sumprice').html(String(sum).replace('/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g', '$1 '));
     	}
 
         // menu modal

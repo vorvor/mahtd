@@ -95,7 +95,9 @@ function tesla_preprocess_page(&$variables, $hook) {
       $variables['technical_details'] = $node->field_technical_details['und'][0]['value'];
       $variables['range'] = $node->field_index_range['und'][0]['value'];
       $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
-      $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
+      if (isset($node->field_index_topspeed)) {
+        $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
+      }
       $variables['video'] = $node->field_video['und'][0]['uri'];
       $variables['title'] = $node->title;
       $variables['preorder'] = $node->field_preorder['und'][0]['value'];
@@ -111,6 +113,9 @@ function tesla_preprocess_page(&$variables, $hook) {
             'range' => $paragraph->field_range['und'][0]['value'],
             'top_speed' => $paragraph->field_top_speed['und'][0]['value'],
             'acceleration' => $paragraph->field_acceleration['und'][0]['value'],
+            'optional' => $paragraph->field_optional['und'][0]['value'],
+            'option-condition' => $paragraph->field_option_condition['und'][0]['value'],
+            'optional-class' => ($paragraph->field_optional['und'][0]['value'] == 1) ? 'optional' : '',
           );
         }
         $variables['facilities'] = $facilities;

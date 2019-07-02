@@ -83,7 +83,7 @@
     }
     
     #first-row #data-2, #first-row #data-3 {
-        padding-top: 53px;
+        padding-top: 45px;
         width: 100%;
     }
     
@@ -92,7 +92,7 @@
     }
     
     #first-row #data-2 .data {
-        width: 220px;
+        width: 254px;
     }
     
     #first-row #data-3 .red-button {
@@ -752,7 +752,7 @@
     }
     
     .config-button {
-        width: 208px;
+        width: 270px;
         margin-bottom: 12px;
         
     }
@@ -894,12 +894,12 @@
     }
     
     .config-buttons {
-        flex-wrap:nowrap;
+        flex-wrap: wrap;
         justify-content: flex-start;
     }
     
     .config-button {
-        width: 202px;
+        width: 270px;
         margin-right: 20px;
     }
     
@@ -1115,10 +1115,3 @@
         height: 790px;
     }
 }
-
-
-
-
-
-
-
