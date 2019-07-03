@@ -431,6 +431,7 @@ body.model-y #third-row-left {
     justify-content: flex-start;
     margin-top: 10px;
     min-height: 68px;
+    align-items: center;
 }
 
 .config-button {
@@ -511,7 +512,7 @@ body.model-y #third-row-left {
 }
 
 .red-button-wide {
-    width: 320px;
+    width: 310px;
 }
 
 .red-button-wide a {

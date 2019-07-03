@@ -67,7 +67,7 @@
     }
     
     .index-row #data-2 .data {
-        width: 224px;
+        width: 240px;
     }
     
     .index-row #data-3 .red-button {
@@ -131,7 +131,8 @@
         font-size: 36px;
     }
 
-    #third-row-left {
+    #third-row-left,
+    body.inner #third-row-left {
         padding: 20px 12px;
         background: #fff;
     }
@@ -146,7 +147,15 @@
 
     .config-block-top,
     .config-sum-price {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .config-block-desc {
+        font-size: 14px;
+    }
+
+    .config-sum-price {
+        flex-wrap: wrap;
     }
     
     .config-buttons {
@@ -169,9 +178,14 @@
     .config-berries.berries-3 {
         width: 55%;
     }
+
+    #exterior-block .config-berry {
+        width: 48px;
+        height: 48px;
+    }
     
     .config-sum-price .config-price {
-        font-size: 22px;
+        font-size: 19px;
     }
 
     body.inner .config-block .send-order {

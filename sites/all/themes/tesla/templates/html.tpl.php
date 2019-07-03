@@ -9,6 +9,7 @@
 ?><!DOCTYPE html>
 <html>
 <head>
+    <title>Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu</title>
     <?php print $head; ?>
     <?php print $styles; ?>
     <?php print $scripts; ?>
@@ -25,7 +26,6 @@
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8"/>
 
     <link rel="alternate" type="application/rss+xml" title="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu RSS" href="https://www.tesla.hu/rss.xml" />
     <meta name="description" content="Tesla rendelés Magyarországon egyedülállóan rövid időn belül a Magyar Autókereskedőház Zrt.-től. Számolja ki elektromos Tesla autó konfigurátorunk segítségével a Tesla Model 3 árát, valamint a Tesla Model S, Tesla Model Y, Model X árát." />
@@ -73,7 +73,7 @@
         <header>
            <h1 id="logo-wrapper">
               <a id="logo" href="/" title="Mah Zrt. - tesla.hu">
-                  <img src="/<?php print $theme_path; ?>/images/logo.png">
+                  <img alt="logo" src="/<?php print $theme_path; ?>/images/logo.png">
               </a>
            </h1>  
         </header>
@@ -89,7 +89,7 @@
     <footer>
         <div id="footer-inner">
             <div id="footer-1" class="footer-block">
-                <img src="/<?php print $theme_path; ?>/images/logo-monochrome.jpg">
+                <img alt="logo mono" src="/<?php print $theme_path; ?>/images/logo-monochrome.jpg">
             </div>
             <div id="footer-2" class="footer-block">
               <ol id="menu">
