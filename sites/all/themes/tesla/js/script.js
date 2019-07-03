@@ -34,8 +34,6 @@
     			//$('#' + wrapper + '-block .price').html($(this).data('price'));
 				//$('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
 
-				sumPrice();
-
 				if ($(this).data('range') !== null) {
 					$('#range').html($(this).data('range'));
 					$('#topspeed').html($(this).data('topspeed'));
@@ -78,6 +76,8 @@
                 } else {
                     $(this).removeClass('one-item');
                 }
+
+                sumPrice();
     		})
     	})
 
