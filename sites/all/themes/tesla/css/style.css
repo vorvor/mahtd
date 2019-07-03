@@ -1062,8 +1062,8 @@ body.services #fourth-row-wrapper #fourth-row-button {
 #mobile-menu-block ol li {
     text-align: left;
     display: block;
-    height: 100px;
-    line-height: 100px;
+    height: 80px;
+    line-height: 80px;
     border-bottom: 1px solid #ccc;
 }
 

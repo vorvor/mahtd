@@ -102,7 +102,7 @@
                         <div class="data">
                             <div class="data-text">
                                 <div>gyorsulás 0 - 100 km/h</div>
-                                <div><span class="large-font"><?php print $roadster_acceleration; ?> mp</span>-től</div>
+                                <div><span class="large-font"><?php print $roadster_acceleration; ?> mp</span></div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                         <div class="data">
                             <div class="data-text">
                                 <div>végsebesség</div>
-                                <div><span class="large-font"><?php print $roadster_topspeed; ?>  km</span>-ig</div>
+                                <div><span class="large-font"><?php print $roadster_topspeed; ?>  km/h</span></div>
                             </div>
                         </div>
                     </div>

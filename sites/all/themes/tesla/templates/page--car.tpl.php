@@ -9,7 +9,10 @@
                             <div>
                                 <span class="large-font">
                                 <?php print $acceleration; ?> mp
-                                </span>-től
+                                </span>
+                                <?php if ($title !== 'Roadster'): ?>
+                                -től
+                            <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -19,7 +22,11 @@
                     <div class="data data-range">
                         <div class="data-text">
                             <div>hatótávolság</div>
-                            <div><span class="large-font"><?php print $range; ?> km</span>-ig</div>
+                            <div><span class="large-font"><?php print $range; ?> km</span>
+                            <?php if ($title !== 'Roadster'): ?>
+                            -ig
+                            <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -27,7 +34,11 @@
                     <div class="data data-topspeed">
                         <div class="data-text">
                             <div>végsebesség</div>
-                            <div><span class="large-font"><?php print $topspeed; ?> km/h</span>-ig</div>
+                            <div><span class="large-font"><?php print $topspeed; ?> km/h</span>
+                            <?php if ($title !== 'Roadster'): ?>
+                            -ig
+                        <?php endif; ?>
+                        </div>
                         </div>
                     </div>
                     <?php endif; ?>
