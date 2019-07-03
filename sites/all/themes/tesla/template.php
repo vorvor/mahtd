@@ -136,7 +136,7 @@ function tesla_preprocess_page(&$variables, $hook) {
       if (isset($node->field_index_acceleration['und'])) {
         $variables['acceleration'] = $node->field_index_acceleration['und'][0]['value'];
       } else {
-        $variables['acceleration'] = max($accelerations);
+        $variables['acceleration'] = min($accelerations);
       }
       if (isset($node->field_index_topspeed['und'])) {
         $variables['topspeed'] = $node->field_index_topspeed['und'][0]['value'];
@@ -284,7 +284,7 @@ function tesla_preprocess_page(&$variables, $hook) {
       if (isset($node->field_index_acceleration['und'])) {
         $variables[$model . '_acceleration'] = $node->field_index_acceleration['und'][0]['value'];
       } else {
-        $variables[$model . '_acceleration'] = max($accelerations);
+        $variables[$model . '_acceleration'] = min($accelerations);
       }
       if (isset($node->field_index_topspeed['und'])) {
         $variables[$model . '_topspeed'] = $node->field_index_topspeed['und'][0]['value'];
