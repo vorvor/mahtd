@@ -223,3 +223,7 @@
             </div>
         </div>
     </div>
+    <div id="video-bg">
+      <video id="mahtesla" muted="muted" autoplay="autoplay" loop="loop" preload="auto" title="MAH Tesla"><source src="/sites/all/themes/tesla/images/tesla-front.mp4" type="video/mp4"></source></video>
+    </div>
+    <div id="front-jump-down"><a href="#index-first-row"><img src="/<?php print $theme_path; ?>/images/jump-down.png"></a></div>

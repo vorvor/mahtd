@@ -29,6 +29,11 @@
     body.inner #first-row-wrapper #spacer {
         height: 400px;
     }
+
+    body.front #video-bg,
+    body.front #front-jump-down {
+        display: none;
+    }
     
     #top nav {
         display: none;
@@ -446,6 +451,11 @@
         color: #000;
         position: fixed;
         background: rgba(255, 255, 255, 0.5);
+    }
+
+    body.front #video-bg,
+    body.front #front-jump-down {
+        display: none;
     }
     
     #resp800plus {
@@ -949,6 +959,15 @@
         color: #000;
         position: fixed;
         background: rgba(255, 255, 255, 0.5);
+    }
+
+    body.front #video-bg,
+    body.front #front-jump-down {
+        display: block;
+    }
+
+    body.front #index-first-row {
+        margin-top: 100vh;
     }
 
     #top nav {

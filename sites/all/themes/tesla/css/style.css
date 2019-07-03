@@ -29,14 +29,16 @@ body.roadster {
     background-image: url(../images/tesla-model-roadster.jpg);
 }
 
-#video-bg {
+body.model-3 #video-bg,
+body.front #video-bg {
     float: left;
     z-index: -1;
     position: absolute;
     top: 0px;
 }
 
-#video-bg video {
+body.model-3 #video-bg video,
+body.front #video-bg video {
     width: 100%;
 }
 
@@ -46,6 +48,17 @@ body::before {
 
 body.front {
     background: #fff;
+}
+
+#front-jump-down a {
+    width: 24px;
+    height: 32px;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    top:85vh;
+    left: 50%;
 }
 
 h1 {
