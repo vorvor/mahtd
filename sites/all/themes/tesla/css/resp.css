@@ -95,7 +95,8 @@
         width: 254px;
     }
     
-    #first-row #data-3 .red-button {
+    #first-row #data-3 .red-button,
+    .technical-details .red-button.preorder {
         width: 300px;
     }
     
@@ -654,6 +655,10 @@
     body.services #second-row-wrapper {
         height: 650px;
     }
+
+    body.inner #third-row-left {
+        background: #fff;
+    }
 }
 
 /* 800-930 */
@@ -900,6 +905,36 @@
 
     body.contact #second-row-right {
         padding-left: 40px;
+    }
+
+    body.inner #third-row-left {
+        background: url(../images/configurator-bg-model-s.png) no-repeat #fff;
+        background-position: -420px 60%;
+        background-size: 1000px;
+        width: 100%;
+        float: left;
+        position: relative;
+        overflow: visible;
+        height: auto;
+        padding: 47px 0 0 39px;
+    }
+
+    body.model-3 #third-row-left {
+        background: url(../images/configurator-bg-model-3.jpg) no-repeat #fff;
+        background-size: 600px;
+        background-position: -70px 53%;
+    }
+
+    body.model-x #third-row-left {
+        background: url(../images/configurator-bg-model-x.jpg) no-repeat #fff;
+        background-size: 600px;
+        background-position: -70px 53%;
+    }
+
+    body.model-y #third-row-left {
+        background: url(../images/configurator-bg-model-y.png) no-repeat #fff;
+        background-size: 800px;
+        background-position: -240px 50%;
     }
 
 }
