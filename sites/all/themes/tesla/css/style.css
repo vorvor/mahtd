@@ -927,6 +927,13 @@ body.services .services-description {
     line-height: 30px;
 }
 
+body.services #first-row-wrapper,
+body.services #top,
+body.contact #first-row-wrapper,
+body.contact #top {
+    background: rgba(0,0,0,0.4);
+}
+
 body.services #second-row-wrapper {
     color: #000;
     clear: both;

@@ -1,3 +1,4 @@
+<?php $node = node_load(6); ?>
 <div id="first-row-wrapper">
         <div class="contact-title">Kapcsolat</div>
     </div>
@@ -11,18 +12,14 @@
                 <div class="contact-first-part contact-part">
                     <div class="open-hours-label">Nyitvatartás</div>
                     <div class="open-hours">
-                        H-P: 9.00 - 17.00<br />
-                        Sz-V: Zárva
+                        <?php print $node->field_text_3['und'][0]['value']; ?>
                     </div>
                 </div>
                 <div class="contact-second-part contact-part">
-                    <div class="address"><span class="address-label">Székhely:</span> 1112 Bp., Repülőtéri út 6. A épület</div>
-                    <div class="phone"><span class="phone-label">Telefonszám:</span> +36202578998 / +36203663447</div>
-                    <div class="email"><span class="email-label">Email:</span> info@mahzrt.hu</div>
+                    <?php print $node->field_text_4['und'][0]['value']; ?>
                 </div>
                 <div class="contact-third-part contact-part">
-                    <div class="tax-number"><span class="tax-number-label">Adószám:</span> 25196276-2-43</div>
-                    <div class="company-id"><span class="company-id-label">Cégjegyzékszám:</span> 01-10-048433</div>
+                    <?php print $node->field_text_5['und'][0]['value']; ?>
                 </div>
             </div>
         </div>
