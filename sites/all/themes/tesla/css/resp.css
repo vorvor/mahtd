@@ -915,6 +915,15 @@
         position: fixed;
         background: rgba(255, 255, 255, 0.5);
     }
+
+    #top nav {
+        width: 70%;
+    }
+
+    #top nav ol {
+        width: 540px;
+        margin: 0 auto;
+    }
     
     .config-buttons {
         flex-wrap: wrap;
