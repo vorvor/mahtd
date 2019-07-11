@@ -26,6 +26,10 @@
         $('#acceleration').html(facilityFirst.data('acceleration'));
         $('.send-order .order-facility').val(facilityFirst.data('title'));
     	sumPrice();
+        
+        // configurator init
+        $('body.model-3 #rim-block .config-option:nth-child(3)').hide();
+        $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').hide();
 
         // configurator buttons
     	$('body.inner #third-row-wrapper .config-option').each(function() {
@@ -39,7 +43,7 @@
 					$('#topspeed').html($(this).data('topspeed'));
 					$('#acceleration').html($(this).data('acceleration'));
 				}
-
+                
                 if ($(this).hasClass('selected') && ($(this).siblings().first().data('price') != 0 && $(this).data('price') != 0 && !$(this).hasClass('config-option-notnull'))) {
                     $(this).removeClass('selected');
                     $(this).addClass('one-item');
@@ -76,6 +80,40 @@
                 } else {
                     $(this).removeClass('one-item');
                 }
+                
+                if ($('#facility-block .config-option.selected').data('title').toLowerCase().includes('performance')) {
+                    // performance
+                    $('body.model-3 #rim-block .config-option').hide();
+                    $('body.model-3 #winter-wheel-block .config-option').hide();
+                    
+                    $('body.model-3 #rim-block .config-option:nth-child(3)').show().addClass('selected');
+                    $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(3)').data('title'));
+                    
+                    $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').show();
+                    $('body.model-3 #winter-wheel-block .config-block-desc').html('');
+                    if ($('body.model-3 #winter-wheel-block .config-option:nth-child(3)').hasClass('selected')) {
+                        $('body.model-3 #winter-wheel-block .config-block-desc').html($('body.model-3 #winter-wheel-block .config-option:nth-child(3)').data('title'));
+                    }
+                    
+                    
+                } else {
+                    $('body.model-3 #rim-block .config-option').show();
+                    $('body.model-3 #winter-wheel-block .config-option').show();
+                    $('body.model-3 #rim-block .config-option:nth-child(3)').hide();
+                    $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').hide();
+                    
+                    $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(1)').data('title'));
+                    
+                    $('body.model-3 #winter-wheel-block .config-option:nth-child(1)').show();
+                    $('body.model-3 #winter-wheel-block .config-block-desc').html('');
+                    if ($('body.model-3 #winter-wheel-block .config-option:nth-child(1)').hasClass('selected')) {
+                        $('body.model-3 #winter-wheel-block .config-block-desc').html($('body.model-3 #winter-wheel-block .config-option:nth-child(1)').data('title'));
+                    }
+                    if ($('body.model-3 #winter-wheel-block .config-option:nth-child(2)').hasClass('selected')) {
+                        $('body.model-3 #winter-wheel-block .config-block-desc').html($('body.model-3 #winter-wheel-block .config-option:nth-child(2)').data('title'));
+                    }
+                }
+
 
                 sumPrice();
     		})
