@@ -40,6 +40,8 @@ body.front #video-bg {
 body.model-3 #video-bg video,
 body.front #video-bg video {
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 body::before {

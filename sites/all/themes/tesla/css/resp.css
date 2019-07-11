@@ -979,9 +979,15 @@
     body.front #front-jump-down {
         display: block;
     }
+    
+    body.front #video-bg {
+        height: inherit;
+        max-height:894px;
+        overflow: hidden;
+    }
 
     body.front #index-first-row {
-        margin-top: 100vh;
+        margin-top: 87vh;
     }
 
     #top nav {
@@ -1011,7 +1017,7 @@
     /* INDEX */
     
     #index-first-row {
-        background-position: center -1100px
+        background-position: center -1100px;
     }
     
     #index-first-row #spacer {
@@ -1019,7 +1025,7 @@
     }
     
     #index-second-row {
-        background-position: center -1100px
+        background-position: center -1100px;
     }
     
     #index-second-row #spacer {
@@ -1192,7 +1198,7 @@
     /* INDEX */
     
     #index-first-row {
-        background-position: center -1650px;
+        background-position: center 50%;
     }
     
     #index-first-row #spacer {
@@ -1200,7 +1206,7 @@
     }
     
     #index-second-row {
-        background-position: center -1650px;
+        background-position: center 50%;
     }
     
     #index-second-row #spacer {
@@ -1208,10 +1214,43 @@
     }
     
     #index-third-row {
-        background-position: center -1650px;
+        background-position: center 50%;
     }
     
     #index-third-row #spacer {
         height: 790px;
     }
+    
+    body.inner {
+        background-position: 50% -75vw;
+    }
+    
+    .inner #first-row-wrapper {
+        height: 100vh;
+        position: relative;
+    }
+    
+    .inner #first-row-wrapper #first-row {
+        position: absolute;
+        width:100%;
+        bottom:20%;
+    }
+    
+    .inner #first-row-wrapper #first-row #data-1 {
+        position: absolute;
+        left:10%;
+    }
+    
+    .inner #first-row-wrapper #first-row #data-2 {
+        position: absolute;
+        left:35%;
+    }
+    
+    .inner #first-row-wrapper #first-row #data-3 {
+        position: absolute;
+        left:70%;
+        width:280px
+    }
+    
+    
 }

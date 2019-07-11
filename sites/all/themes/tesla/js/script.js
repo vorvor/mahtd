@@ -89,7 +89,17 @@
 				}
 			})
 			
-			$('#sumprice').html(String(sum).replace('/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g', '$1 '));
+            strPrice = String(sum);
+            var parts = []; // required array
+            var len = strPrice.length; //maintaining length
+            while (len > 0) {
+                len -= 3;
+                if (len < 0) { len = 0; }
+                parts.unshift(strPrice.slice(len)); //inserting value to required array
+                strPrice = strPrice.slice(0, len); //updating string
+            }
+            
+			$('#sumprice').html(parts.join(' '));
     	}
 
         // menu modal
@@ -112,6 +122,43 @@
 
         // fill order form with config data
         $('.send-order .order-model').val($('h2.row-title').html());
+        
+        // Frontpage video size correction
+        if ($('body').hasClass('front')) {
+            window.addEventListener('load', function() {
+                var video = document.querySelector('#mahtesla');
+
+                function checkVideoLoad() {
+                    if (video.readyState === 4) {
+                        frontVideoCorrection();
+                    } else {
+                        setTimeout(checkVideoLoad, 10);
+                    }
+                }
+                checkVideoLoad();
+            }, false);
+
+            $(window).resize(function() {
+                frontVideoCorrection();
+            })
+
+            function frontVideoCorrection() {
+                if ($('#video-bg').is(':visible')) {
+                    windowHeight = $(window).height();
+                    videoHeight = $('#video-bg video').height() - 50;
+                    console.log(windowHeight);
+
+                    //if (windowHeight > 894) {
+                        $('.front #index-first-row').css('margin-top', videoHeight + 'px');
+                        $('#front-jump-down a').css('top', (videoHeight - 20) + 'px');
+                    //}
+                } else {
+                    $('.front #index-first-row').css('margin-top', '-50px');
+                }
+            }
+        }
+            
+        
   
     }};
 }(jQuery));
