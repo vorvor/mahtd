@@ -112,6 +112,14 @@
                     if ($('body.model-3 #winter-wheel-block .config-option:nth-child(2)').hasClass('selected')) {
                         $('body.model-3 #winter-wheel-block .config-block-desc').html($('body.model-3 #winter-wheel-block .config-option:nth-child(2)').data('title'));
                     }
+                    
+                    $('body.model-3 #rim-block .config-block-desc').html('');
+                    if ($('body.model-3 #rim-block .config-option:nth-child(1)').hasClass('selected')) {
+                        $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(1)').data('title'));
+                    }
+                    if ($('body.model-3 #rim-block .config-option:nth-child(2)').hasClass('selected')) {
+                        $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(2)').data('title'));
+                    }
                 }
 
 
