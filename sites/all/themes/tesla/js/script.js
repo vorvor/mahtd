@@ -203,6 +203,15 @@
                 }
             }
         }
+        
+        // send order
+        $(".webform-component--funding input").change(function() {
+            if (this.checked) {
+                $('.send-order .funding-group').show();
+            } else {
+                $('.send-order .funding-group').hide();
+            }
+        });
             
         
   
