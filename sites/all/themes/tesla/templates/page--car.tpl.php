@@ -267,11 +267,11 @@
             </div>
         	<?php endif; ?>
 
-            <?php if (isset($autopilot)): ?>
+            <?php if (isset($autopilots)): ?>
             <div class="config-block" id="autopilot-block">
                 <div class="config-block-top">
                     <div class="config-title">Önvezetés</div>
-                    <div class="config-price"><span class="price">87 425</span> EUR</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">
                 </div>
