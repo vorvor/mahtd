@@ -53,7 +53,11 @@ function tesla_preprocess_html(&$variables, $hook) {
     if ($node->type == 'car') {
       $model_name = preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
       $variables['body_class'] = 'inner ' . $model_name;
-      drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/' . $model_name . '.js', 'file');
+
+      $model_js = drupal_get_path('theme', 'tesla') .'/js/' . $model_name . '.js';
+      if (file_exists($model_js)) {
+        drupal_add_js($model_js, 'file');
+      }
     }
     
     if ($node->type == 'page' && $node->nid == 6) {
@@ -95,6 +99,7 @@ function tesla_preprocess_page(&$variables, $hook) {
       $node = node_load($variables['node']->nid);
 
       $variables['technical_details'] = $node->field_technical_details['und'][0]['value'];
+      $variables['more_details'] = $node->field_more_details['und'][0]['value'];
       
       if (isset($node->field_video['und'])) {
         $variables['video'] = $node->field_video['und'][0]['uri'];

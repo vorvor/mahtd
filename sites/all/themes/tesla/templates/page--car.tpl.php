@@ -80,6 +80,20 @@
         </div>
         <div id="second-row-right"></div>
     </div>
+
+    <?php if (isset($more_details)) { ?>
+    <div id="second-half-row-wrapper">
+        <div id="second-half-row-left"></div>
+        <div id="second-half-row-right">
+            <h2 class="row-title">Tesla <?php print $title; ?></h2>
+            <h3 class="row-title">Felszereltség</h3>
+            <div class="more-details">
+                <?php print $more_details; ?>
+            </div>
+        </div>
+        
+    </div>
+    <?php } ?>
     
     <?php if (!$preorder) { ?>
     <div id="third-row-wrapper">
@@ -110,7 +124,7 @@
             <?php if (isset($facilities)): ?>
             <div class="config-block" id="facility-block">
                 <div class="config-block-top">
-                    <div class="config-title">Felszereltség</div>
+                    <div class="config-title">Kivitel</div>
                     <div class="config-price"><span class="price">0</span> EUR</div>
                 </div>
                 <div class="config-block-desc">

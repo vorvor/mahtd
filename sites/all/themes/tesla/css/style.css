@@ -316,9 +316,33 @@ body.roadster #second-row-wrapper {
 #second-row-left {
     width: 550px;
     padding: 47px 39px 10px;
-    float: lef†;
     box-sizing: border-box;
     background: #fff;
+}
+
+#second-half-row-wrapper {
+    background: url(../images/tech-bg-model-s.png) no-repeat #fff;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body.model-3 #second-half-row-wrapper {
+    background-image: url(../images/model3-more-details.jpg);
+    background-size: contain;
+}
+
+#second-half-row-wrapper ul li {
+    color: #000;
+    line-height: 32px;
+}
+
+#second-half-row-right {
+    width: 550px;
+    padding: 47px 39px 10px;
+    box-sizing: border-box;
+    background: #fff;
+    float: right;
 }
 
 #third-row-wrapper {
