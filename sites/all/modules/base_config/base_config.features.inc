@@ -18,6 +18,14 @@ function base_config_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'faq' => array(
+      'name' => t('Faq'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
@@ -52,6 +60,11 @@ function base_config_paragraphs_info() {
     'config_type_2' => array(
       'name' => 'config type 2',
       'bundle' => 'config_type_2',
+      'locked' => '1',
+    ),
+    'faq' => array(
+      'name' => 'faq',
+      'bundle' => 'faq',
       'locked' => '1',
     ),
     'index_extra' => array(

@@ -51,7 +51,9 @@ function tesla_preprocess_html(&$variables, $hook) {
   $node = menu_get_object();
   if ($node && $node->nid) {
     if ($node->type == 'car') {
-      $variables['body_class'] = 'inner ' . preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
+      $model_name = preg_replace('@[^a-z0-9-]+@','-', strtolower($node->title));
+      $variables['body_class'] = 'inner ' . $model_name;
+      drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/' . $model_name . '.js', 'file');
     }
     
     if ($node->type == 'page' && $node->nid == 6) {

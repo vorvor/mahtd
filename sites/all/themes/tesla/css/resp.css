@@ -1155,7 +1155,7 @@
     }
     
     #index-first-row #spacer {
-        height: 500px;
+        height: 80vh;
     }
     
     #index-second-row {
@@ -1163,7 +1163,7 @@
     }
     
     #index-second-row #spacer {
-        height: 500px;
+        height: 80vh;
     }
     
     #index-third-row {
@@ -1171,7 +1171,7 @@
     }
     
     #index-third-row #spacer {
-        height: 500px;
+        height: 80vh;
     }
 
 }
@@ -1188,6 +1188,12 @@
     
     body {
         background-position: 50% -86vw;
+    }
+
+    body.front #video-bg {
+        height: inherit;
+        max-height: 100vh;
+        overflow: hidden;
     }
     
     #second-row-wrapper {

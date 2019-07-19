@@ -143,6 +143,10 @@ ol#menu li a:visited {
     float: right;
 }
 
+#mobile-menu-block #submenu {
+    display: none;
+}
+
 
 
 #first-row-wrapper {

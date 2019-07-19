@@ -735,6 +735,61 @@ function base_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-faq-field_faq'.
+  $field_instances['node-faq-field_faq'] = array(
+    'bundle' => 'faq',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_faq',
+    'label' => 'Faq',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'config_type_1' => -1,
+        'config_type_2' => -1,
+        'faq' => 'faq',
+        'index_extra' => -1,
+      ),
+      'bundle_weights' => array(
+        'config_type_1' => 2,
+        'config_type_2' => 3,
+        'faq' => 4,
+        'index_extra' => 5,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => -4,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_text_1'.
   $field_instances['node-page-field_text_1'] = array(
     'bundle' => 'page',
@@ -1467,6 +1522,86 @@ function base_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-faq-field_answer'.
+  $field_instances['paragraphs_item-faq-field_answer'] = array(
+    'bundle' => 'faq',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_answer',
+    'label' => 'Answer',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-faq-field_question'.
+  $field_instances['paragraphs_item-faq-field_question'] = array(
+    'bundle' => 'faq',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_question',
+    'label' => 'Question',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-index_extra-field_image'.
   $field_instances['paragraphs_item-index_extra-field_image'] = array(
     'bundle' => 'index_extra',
@@ -1560,10 +1695,12 @@ function base_config_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Acceleration');
+  t('Answer');
   t('Autopilot');
   t('Exterior');
   t('Extras');
   t('Facilities');
+  t('Faq');
   t('Image');
   t('Index acceleration');
   t('Index extras');
@@ -1574,6 +1711,7 @@ function base_config_field_default_field_instances() {
   t('Optional');
   t('Preorder');
   t('Price');
+  t('Question');
   t('Range');
   t('Rim');
   t('Seats');

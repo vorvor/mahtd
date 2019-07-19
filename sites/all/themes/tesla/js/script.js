@@ -203,44 +203,10 @@
                 }
             }
         }
-        
-        
-        /*
-        // send order
-        $(".webform-component--funding input").change(function() {
-            if (this.checked) {
-                $('.send-order .funding-group').show();
-            } else {
-                $('.send-order .funding-group').hide();
-            }
+
+        $('#mobile-menu-block #submenu-parent').click(function() {
+            $('#submenu').slideToggle();
         })
-        
-        
-        $(".order-financial-construction input,.webform-component--duration select").change(function() {
-            construction = $(".order-financial-construction input:checked").val();
-            console.log(construction);
-            $(".order-remain").hide();
-            if (construction == "nyíltvégű pénzügyi lízing" || construction == "tartós bérlet") {
-                duration = parseInt($(".webform-component--duration select").val());
-                console.log(duration);
-                if (duration <= 24) {
-                    $('.webform-component--remain-24').show();
-                }
-                if (duration > 24 && duration <=36) {
-                    $('.webform-component--remain-24-36').show();
-                }
-                if (duration > 36 && duration <= 48) {
-                    $('.webform-component--remain-36-48').show();
-                }
-                if (duration > 48) {
-                    $('.webform-component--remain-48').show();
-                }
-            }
-        })
-        */
-        
-            
-        
   
     }};
 }(jQuery));
