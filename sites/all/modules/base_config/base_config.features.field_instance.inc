@@ -775,8 +775,8 @@ function base_config_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-faq-field_faq'.
-  $field_instances['node-faq-field_faq'] = array(
+  // Exported field_instance: 'node-faq-field_body'.
+  $field_instances['node-faq-field_body'] = array(
     'bundle' => 'faq',
     'default_value' => NULL,
     'deleted' => 0,
@@ -784,11 +784,49 @@ function base_config_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => -3,
+    ),
+  );
+
+  // Exported field_instance: 'node-faq-field_lead'.
+  $field_instances['node-faq-field_lead'] = array(
+    'bundle' => 'faq',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -799,33 +837,20 @@ function base_config_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_faq',
-    'label' => 'Faq',
+    'field_name' => 'field_lead',
+    'label' => 'Lead',
     'required' => 0,
     'settings' => array(
-      'add_mode' => 'select',
-      'allowed_bundles' => array(
-        'config_type_1' => -1,
-        'config_type_2' => -1,
-        'faq' => 'faq',
-        'index_extra' => -1,
-      ),
-      'bundle_weights' => array(
-        'config_type_1' => 2,
-        'config_type_2' => 3,
-        'faq' => 4,
-        'index_extra' => 5,
-      ),
-      'default_edit_mode' => 'open',
-      'title' => 'Paragraph',
-      'title_multiple' => 'Paragraphs',
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'paragraphs',
-      'settings' => array(),
-      'type' => 'paragraphs_embed',
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
       'weight' => -4,
     ),
   );
@@ -1737,16 +1762,17 @@ function base_config_field_default_field_instances() {
   t('Acceleration');
   t('Answer');
   t('Autopilot');
+  t('Body');
   t('Exterior');
   t('Extras');
   t('Facilities');
-  t('Faq');
   t('Image');
   t('Index acceleration');
   t('Index extras');
   t('Index range');
   t('Index topspeed');
   t('Interior');
+  t('Lead');
   t('More details');
   t('Option condition');
   t('Optional');
