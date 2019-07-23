@@ -68,6 +68,7 @@ features[field_instance][] = node-car-field_technical_details
 features[field_instance][] = node-car-field_video
 features[field_instance][] = node-car-field_winter_wheels
 features[field_instance][] = node-faq-field_body
+features[field_instance][] = node-faq-field_image
 features[field_instance][] = node-faq-field_lead
 features[field_instance][] = node-page-field_text_1
 features[field_instance][] = node-page-field_text_2
