@@ -342,7 +342,12 @@
         </div>
     </div>
     <?php } //preorder ?> 
-    <?php if (isset($video)): ?>
+    <?php 
+    function isMobileDevice() {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
+    if (isset($video) && !isMobileDevice()): ?>
         <div id="video-bg">
           <video id="mahtesla" muted="muted" autoplay="autoplay" loop="loop" preload="auto" title="MAH Tesla Modell 3"><source src="<?php print file_create_url($video); ?>" type="video/mp4"></source></video>
         </div>

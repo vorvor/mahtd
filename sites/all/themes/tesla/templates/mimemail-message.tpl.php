@@ -35,7 +35,10 @@
     <img src="../images/tech-bg-model-3.jpg">
     <div id="center">
       <div id="main">
-        <?php print $body ?>
+        <?php 
+          // TODO: parse color, rim and model from body, for choosing the right image 
+          print $body; 
+        ?>
       </div>
     </div>
   </body>

@@ -1,18 +1,11 @@
 .wrapper {
-	background: #f00;
-	padding: 10px;
+	
 }
 
 .model {
-	background: #0f0;
-	padding: 20px;
-	border-top: 4px solid #ccc;
-	float: left;
+	
 }
 
 .facility, #exterior {
-	background: blue;
-	margin-top: 40px;
-	padding-left: 20px;
-	float: left;
+	
 }

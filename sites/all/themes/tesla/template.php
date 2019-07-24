@@ -47,6 +47,7 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['body_class'] = 'front';
   $variables['contact_page_path'] = drupal_get_path_alias('node/6');
   $variables['services_page_path'] = drupal_get_path_alias('node/7');
+  $variables['faq_page_path'] = drupal_get_path_alias('node/11');
 
   $node = menu_get_object();
   if ($node && $node->nid) {
@@ -66,6 +67,10 @@ function tesla_preprocess_html(&$variables, $hook) {
 
     if ($node->type == 'page' && $node->nid == 7) {
       $variables['body_class'] = 'services';
+    }
+
+    if ($node->type == 'faq') {
+      $variables['body_class'] = 'faq';
     }
   }
 

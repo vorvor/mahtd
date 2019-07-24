@@ -110,6 +110,14 @@
     #second-row-right, #third-row-left #config-calc {
         display: none;
     }
+
+    body.inner #second-half-row-wrapper {
+        background: #fff;
+    }
+
+    body.inner #second-half-row-wrapper #second-half-row-right {
+        float: none;
+    }
     
     #second-row-left {
         padding: 20px 12px;
@@ -277,7 +285,7 @@
     }
 
     body.services {
-        background-size: 690px;
+        background-size: 142%;
     }
 
     body.services #first-row-wrapper {
@@ -378,6 +386,37 @@
         float: none;
         margin: 0 auto;
         display: block;
+    }
+
+    /* faq */
+    body.faq {
+        background-size: 520px;
+    }
+
+    body.faq #first-row-wrapper {
+        height: 345px;
+        padding-bottom: 20px;
+        min-height: 314px;
+    }
+
+    body.faq #first-row-wrapper .services-title {
+        font-size: 22px;
+        letter-spacing: 7px;
+        padding: 24px 0;
+    }
+
+    body.faq #first-row-wrapper .services-description {
+        font-size: 16px;
+        letter-spacing: 3px;
+        line-height: 20px;
+        padding: 0;
+    }
+
+    body.faq #second-row-wrapper {
+        background: none;
+        height: auto;
+        overflow: hidden;
+        padding: 20px;
     }
 
     #scrolltop {
@@ -552,6 +591,14 @@
     #second-row-right {
         display: none;
     }
+
+    body.inner #second-half-row-wrapper {
+        background: #fff;
+    }
+
+    body.inner #second-half-row-wrapper #second-half-row-right {
+        float: none;
+    }
     
     #second-row-left, #third-row-right {
         width: 100%;
@@ -683,6 +730,14 @@
     body.inner #third-row-left {
         background: #fff;
     }
+
+    body.faq {
+        background-size: 100%;
+    }
+
+    body.faq #first-row-wrapper {
+        height: 600px;
+    }
 }
 
 /* 800-930 */
@@ -778,6 +833,33 @@
     
     #second-row-right, #third-row-left {
         display: block;
+    }
+
+    #second-half-row-wrapper {
+        background: url(../images/tech-bg-model-s.png) no-repeat #fff;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    body.model-3 #second-half-row-wrapper {
+        background-image: url(../images/model3-more-details.jpg);
+        background-size: contain;
+    }
+
+    body.model-s #second-half-row-wrapper {
+        background-image: url(../images/models-more-details.jpg);
+        background-size: contain;
+    }
+
+    body.model-x #second-half-row-wrapper {
+        background-image: url(../images/modelx-more-details.jpg);
+        background-size: contain;
+        background-position-x: -250px;
+    }
+
+    body.inner #second-half-row-wrapper #second-half-row-right {
+        float: right;
     }
     
     #second-row-left{
@@ -984,6 +1066,7 @@
         height: inherit;
         max-height:894px;
         overflow: hidden;
+        width:100%;
     }
 
     body.front #index-first-row {
