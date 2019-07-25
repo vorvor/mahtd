@@ -90,11 +90,19 @@
         <div id="fifth-row-left">
             <h2 class="row-title">Magyar Autókereskedőház Zrt.</h2>
             <h3 class="row-title">Biztosítási lehetőségek</h3>
-            <div class="technical-details">
-                <?php print $technical_details; ?>
-            </div>
         </div>
         <div id="fifth-row-right">
             <?php print $node->field_text_7['und'][0]['value']; ?>
+        </div>
+        <div id="fifth-row-center">
+            <div id="fifth-row-center-col1" class="fifth-row-center-col">
+                <?php print $node->field_text_8['und'][0]['value']; ?>
+            </div>
+            <div id="fifth-row-center-col1" class="fifth-row-center-col">
+                <?php print $node->field_text_9['und'][0]['value']; ?>
+            </div>
+            <div id="fifth-row-center-col1" class="fifth-row-center-col">
+                <?php print $node->field_text_10['und'][0]['value']; ?>
+            </div>
         </div>
     </div>

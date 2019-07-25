@@ -365,6 +365,17 @@
         width: 100%;
     }
 
+    body.services #fifth-row-wrapper #fifth-row-center {
+        display: block;
+        clear: both;
+        border-top: 2px solid #ddd;
+    }
+
+    body.services #fifth-row-wrapper .fifth-row-center-col {
+        width: 100%;
+        float: none;
+    }
+
     /* contact */
 
      body.contact {
