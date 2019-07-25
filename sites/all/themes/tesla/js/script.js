@@ -207,6 +207,15 @@
         $('#mobile-menu-block #submenu-parent').click(function() {
             $('#submenu').slideToggle();
         })
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('#mahtesla').get(0).pause();
+            } else {
+                $('#mahtesla').get(0).play();
+            }
+        })
+        
   
     }};
 }(jQuery));

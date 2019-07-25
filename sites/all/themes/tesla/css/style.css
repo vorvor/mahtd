@@ -1172,8 +1172,36 @@ body.services #fourth-row-wrapper #fourth-row-title {
     padding: 200px 0 70px;
 }
 
-body.services #fourth-row-wrapper #fourth-row-button {
+body.services #fifth-row-wrapper {
+    padding: 50px 41px;
+}
 
+body.services #fifth-row-wrapper #fifth-row-left,
+body.services #fifth-row-wrapper #fifth-row-right {
+    float: left;
+}
+
+body.services #fifth-row-wrapper #fifth-row-left {
+    width:40%;
+}
+
+body.services #fifth-row-wrapper #fifth-row-right {
+    color: #000;
+    width: 58%;
+    font-size: 18px;
+    line-height: 2em;
+}
+
+
+body.services #fifth-row-wrapper h2.row-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+body.services #fifth-row-wrapper h3.row-title {
+    margin-top: 20px;
+    font-size: 42px;
 }
 
 /* faq page */

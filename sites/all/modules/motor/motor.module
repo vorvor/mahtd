@@ -1,0 +1,100 @@
+<?php
+
+function motor_get_config_photo($mail_body) {
+
+  preg_match('/Modell: (.*?)<br/ms', $mail_body, $model_match);
+  $model = trim($model_match[1]);
+
+  preg_match('/Külső szín: (.*?)<br/ms', $mail_body, $exterior_match);
+  $exterior = trim($exterior_match[1]);
+
+  preg_match('/Felni: (.*?)<br/ms', $mail_body, $rim_match);
+  $rim = trim($rim_match[1]);
+
+  switch ($model) {
+    case 'Tesla Model S':
+      $model = 'modelS';
+
+      if (strpos($rim, '19') !== FALSE) {
+        $rim = '19silver';
+      }
+      if (strpos($rim, '19') !== FALSE && strpos($rim, 'sonic') !== FALSE) {
+        $rim = '19sonic';
+      }
+      if (strpos($rim, '21') !== FALSE) {
+        $rim = '21sonic';
+      }
+      break;
+
+    case 'Tesla Model 3':
+      $model = 'model3';
+
+      if (strpos($rim, '18') !== FALSE) {
+        $rim = '18aero';
+      }
+      if (strpos($rim, '19') !== FALSE) {
+        $rim = '19sport';
+      }
+      if (strpos($rim, '20') !== FALSE) {
+        $rim = 'performance';
+      }
+
+      break;
+
+    case 'Tesla Model X':
+      $model = 'modelS';
+
+      if (strpos($rim, 'ezüst') !== FALSE) {
+        $rim = '20silver';
+      }
+      if (strpos($rim, 'ezüst-fekete') !== FALSE) {
+        $rim = '20slipstream';
+      }
+      if (strpos($rim, 'onyx') !== FALSE) {
+        $rim = '22onyx';
+      }
+      break;
+
+    case 'Tesla Model Y':
+      $model = 'modelS';
+      break;
+
+    case 'Tesla Roadster':
+      $model = 'roadster';
+      break;
+    
+    default:
+      $model = 'empty';
+      break;
+  }
+
+  switch ($exterior) {
+    case 'Gyémánt metál':
+      $exterior = 'white';
+      break;
+    case 'Fekete metál':
+      $exterior = 'black';
+      break;
+    case 'Sötétszürke metál':
+      $exterior = 'silver';
+      break;
+    case 'Mélykék metál':
+      $exterior = 'blue';
+      break;
+    case 'Vörös metál':
+      $exterior = 'red';
+      break;
+    
+    default:
+      $model = 'empty';
+      break;
+  }
+
+  $path = drupal_get_path('theme', 'tesla') . '/images/config-images/';
+  $photo_name = $path . $model . '_' . $exterior . '_' . $rim . '.png';
+
+  watchdog('config image', $photo_name);
+
+  return $photo_name;
+
+}

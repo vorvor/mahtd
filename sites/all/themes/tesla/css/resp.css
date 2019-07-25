@@ -119,11 +119,11 @@
         float: none;
     }
     
-    #second-row-left {
+    #second-row-left, #second-half-row-right {
         padding: 20px 12px;
     }
     
-    #second-row-left, #third-row-right {
+    #second-row-left, #third-row-right, #second-half-row-right {
         width: 100%;
     }
     
@@ -357,6 +357,12 @@
 
     body.services #fourth-row-wrapper .red-button {
         width: 170px;
+    }
+
+    body.services #fifth-row-wrapper #fifth-row-left,
+    body.services #fifth-row-wrapper #fifth-row-right {
+        float: none;
+        width: 100%;
     }
 
     /* contact */

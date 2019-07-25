@@ -1,0 +1,4 @@
+name = Motor - additional functions
+description = Additional functions to teslahu.
+core = 7.x
+version = 7.x-1.x

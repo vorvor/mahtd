@@ -31,8 +31,12 @@
     <?php endif; ?>
   </head>
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
-    <img src="/sites/all/themes/tesla/images/tech-bg-model-3.jpg">
-    <img src="../images/tech-bg-model-3.jpg">
+    
+    <?php if (module_exists('motor')) {
+      $config_photo = motor_get_config_photo($body); ?>
+      <div id="config-photo"><img src="<?php print $config_photo; ?>" style="width:100%;max-width:100%;"></div>
+    <?php } ?>
+
     <div id="center">
       <div id="main">
         <?php 
