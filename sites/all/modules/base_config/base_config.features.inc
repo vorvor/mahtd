@@ -10,6 +10,14 @@
  */
 function base_config_node_info() {
   $items = array(
+    'accessories' => array(
+      'name' => t('Accessories'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'car' => array(
       'name' => t('Car'),
       'base' => 'node_content',
