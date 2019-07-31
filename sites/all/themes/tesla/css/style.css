@@ -520,6 +520,7 @@ body.model-y #third-row-left {
     height: 56px;
     background-size: contain;
     margin-right: 3vw;
+    cursor: pointer;
 }
 
 .config-berry img {
@@ -1242,9 +1243,12 @@ body.faq {
 }
 
 body.faq #first-row-wrapper {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url(../images/model3-more-details.jpg);
     background-position: center 0;
     background-size: cover;
-    background-image: url(../images/model3-more-details.jpg);
     background-position: center 0;
     background-color: rgba(0,0,0,0.4);
     margin-top: -50px;

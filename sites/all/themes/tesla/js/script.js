@@ -5,9 +5,10 @@
         //init configurator buttons
         $('#facility-block .config-buttons .config-button:nth-child(1)').addClass('selected');
         $('.config-block .config-options div').each(function() {
-            if ($(this).data('price') == 0) {
+            if ($(this).data('price') == 0 && $(this).index() == 0) {
                 $(this).addClass('selected');
-                $('.send-order .order-' + $(this).data('wrapper')).val($(this).data('title'));            }
+                $('.send-order .order-' + $(this).data('wrapper')).val($(this).data('title'));
+             }
         })
 
     	// init prices
@@ -30,6 +31,8 @@
         // configurator init
         $('body.model-3 #rim-block .config-option:nth-child(3)').hide();
         $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').hide();
+
+        $('body.model-y #rim-block .config-option:nth-child(3)').hide();
 
         // configurator buttons
     	$('body.inner #third-row-wrapper .config-option').each(function() {
@@ -76,7 +79,7 @@
 
 
                     // fil send order form fields
-                    $('.send-order .order-' + wrapper).val($(this).data('title'));
+                    $('.send-order .order-' + wrapper).val($(this).data('title') + '|' + $(this).data('price'));
                 } else {
                     $(this).removeClass('one-item');
                 }
@@ -84,10 +87,14 @@
                 if ($('#facility-block .config-option.selected').data('title').toLowerCase().includes('performance')) {
                     // performance
                     $('body.model-3 #rim-block .config-option').hide();
+                    $('body.model-y #rim-block .config-option').hide();
                     $('body.model-3 #winter-wheel-block .config-option').hide();
                     
                     $('body.model-3 #rim-block .config-option:nth-child(3)').show().addClass('selected');
                     $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(3)').data('title'));
+
+                    $('body.model-y #rim-block .config-option:nth-child(3)').show().addClass('selected');
+                    $('body.model-y #rim-block .config-block-desc').html($('body.model-y #rim-block .config-option:nth-child(3)').data('title'));
                     
                     $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').show();
                     $('body.model-3 #winter-wheel-block .config-block-desc').html('');
@@ -98,11 +105,16 @@
                     
                 } else {
                     $('body.model-3 #rim-block .config-option').show();
+                    $('body.model-y #rim-block .config-option').show();
+
                     $('body.model-3 #winter-wheel-block .config-option').show();
                     $('body.model-3 #rim-block .config-option:nth-child(3)').hide();
+                    $('body.model-y #rim-block .config-option:nth-child(3)').hide();
+
                     $('body.model-3 #winter-wheel-block .config-option:nth-child(3)').hide();
                     
                     $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(1)').data('title'));
+                    $('body.model-y #rim-block .config-block-desc').html($('body.model-y #rim-block .config-option:nth-child(1)').data('title'));
                     
                     $('body.model-3 #winter-wheel-block .config-option:nth-child(1)').show();
                     $('body.model-3 #winter-wheel-block .config-block-desc').html('');
@@ -119,6 +131,14 @@
                     }
                     if ($('body.model-3 #rim-block .config-option:nth-child(2)').hasClass('selected')) {
                         $('body.model-3 #rim-block .config-block-desc').html($('body.model-3 #rim-block .config-option:nth-child(2)').data('title'));
+                    }
+
+                    $('body.model-y #rim-block .config-block-desc').html('');
+                    if ($('body.model-y #rim-block .config-option:nth-child(1)').hasClass('selected')) {
+                        $('body.model-y #rim-block .config-block-desc').html($('body.model-y #rim-block .config-option:nth-child(1)').data('title'));
+                    }
+                    if ($('body.model-y #rim-block .config-option:nth-child(2)').hasClass('selected')) {
+                        $('body.model-y #rim-block .config-block-desc').html($('body.model-y #rim-block .config-option:nth-child(2)').data('title'));
                     }
                 }
 
@@ -209,10 +229,12 @@
         })
 
         $(window).scroll(function() {
-            if ($(this).scrollTop() > 500) {
-                $('#mahtesla').get(0).pause();
-            } else {
-                $('#mahtesla').get(0).play();
+            if ($('body').hasClass('front')) {
+                if ($(this).scrollTop() > 500) {
+                    $('#mahtesla').get(0).pause();
+                } else {
+                    $('#mahtesla').get(0).play();
+                }
             }
         })
         

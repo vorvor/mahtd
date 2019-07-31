@@ -90,8 +90,8 @@ function motor_get_config_photo($mail_body) {
       break;
   }
 
-  $path = drupal_get_path('theme', 'tesla') . '/images/config-images/';
-  $photo_name = $path . $model . '_' . $exterior . '_' . $rim . '.png';
+  $path = drupal_get_path('theme', 'tesla') . '/images/config-images/jpg/';
+  $photo_name = 'https://tesla.hu/' . $path . $model . '_' . $exterior . '_' . $rim . '.jpg';
 
   watchdog('config image', $photo_name);
 

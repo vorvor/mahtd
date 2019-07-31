@@ -9,7 +9,7 @@
 ?><!DOCTYPE html>
 <html>
 <head>
-    <title>Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu</title>
+    <title><?php print $meta_title; ?></title>
     <?php print $head; ?>
     <?php print $styles; ?>
     <?php print $scripts; ?>
@@ -27,25 +27,24 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="alternate" type="application/rss+xml" title="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu RSS" href="https://www.tesla.hu/rss.xml" />
-    <meta name="description" content="Tesla rendelés Magyarországon egyedülállóan rövid időn belül a Magyar Autókereskedőház Zrt.-től. Számolja ki elektromos Tesla autó konfigurátorunk segítségével a Tesla Model 3 árát, valamint a Tesla Model S, Tesla Model Y, Model X árát." />
+    <meta name="description" content="<?php print $meta_description; ?>" />
     <meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
     <link rel="canonical" href="https://www.tesla.hu/" />
     <link rel="shortlink" href="https://www.tesla.hu/" />
     <meta property="fb:app_id" content="1192951680871368" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu" />
+    <meta property="og:site_name" content="<?php print $meta_title; ?>" />
     <meta property="og:url" content="https://www.tesla.hu/" />
-    <meta property="og:title" content="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu" />
+    <meta property="og:title" content="<?php print $meta_title; ?>" />
     <meta property="og:determiner" content="auto" />
-    <meta property="og:description" content="Tesla rendelés Magyarországon egyedülállóan rövid időn belül a Magyar Autókereskedőház Zrt.-től. Számolja ki elektromos Tesla autó konfigurátorunk segítségével a Tesla Model 3 árát, valamint a Tesla Model S, Tesla Model Y, Model X árát." />
+    <meta property="og:description" content="<?php print $meta_description; ?>" />
     <meta property="og:image" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
     <meta property="og:image:url" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
     <meta property="og:image:secure_url" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://www.tesla.hu/" />
-    <meta name="twitter:title" content="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és" />
-    <meta name="dcterms.title" content="Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu" />
+    <meta name="twitter:title" content="<?php print $meta_title; ?>" />
+    <meta name="dcterms.title" content="<?php print $meta_title; ?>" />
     <meta name="dcterms.type" content="Text" />
     <meta name="dcterms.identifier" content="https://www.tesla.hu/" />
     <meta name="dcterms.format" content="text/html" />

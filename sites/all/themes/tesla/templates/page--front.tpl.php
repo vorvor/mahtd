@@ -142,7 +142,7 @@
 
             <div class="index-col index-col-right">
                 <div class="col-block year-model">
-                    <div class="year"><img src="/<?php print $theme_path; ?>/images/2019.png"></div>
+                    <div class="year"><img src="/<?php print $theme_path; ?>/images/2021.png"></div>
                     <div class="name-model">
                         <div class="name">Tesla</div>
                         <div class="model">model Y</div>

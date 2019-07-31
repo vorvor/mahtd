@@ -72,6 +72,17 @@ function tesla_preprocess_html(&$variables, $hook) {
     if ($node->type == 'faq') {
       $variables['body_class'] = 'faq';
     }
+
+    $variables['meta_title'] = $node->field_meta_title[LANGUAGE_NONE][0]['value'];
+    $variables['meta_description'] = $node->field_meta_description[LANGUAGE_NONE][0]['value'];
+  } 
+
+  if (empty($variables['meta_title'])) {
+    $variables['meta_title'] = 'Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu';
+  }
+
+  if (empty($variables['meta_description'])) {
+    $variables['meta_description'] = 'Tesla rendelés Magyarországon egyedülállóan rövid időn belül a Magyar Autókereskedőház Zrt.-től. Számolja ki elektromos Tesla autó konfigurátorunk segítségével a Tesla Model 3 árát, valamint a Tesla Model S, Tesla Model Y, Model X árát.';
   }
 
   $main_menu_items = menu_tree('main-menu');

@@ -871,8 +871,8 @@
 
     body.model-x #second-half-row-wrapper {
         background-image: url(../images/modelx-more-details.jpg);
-        background-size: contain;
-        background-position-x: -250px;
+        background-position-x: 1207px;
+        background-repeat: no-repeat;
     }
 
     body.inner #second-half-row-wrapper #second-half-row-right {
