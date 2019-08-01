@@ -1,3 +1,119 @@
+body {
+	background: #ccc;
+	font-family: Din;
+}
+
+#logo {
+	width: 182px;
+	margin: 37px auto;
+}
+
+#mail-inside-wrapper {
+	background: #fff;
+	width: 560px;
+	margin: 0 auto;
+	border-top: 4px solid #cd0033;
+	padding: 37px 58px;
+}
+
+#config-photo {
+	margin: 0 auto;
+}
+
+#title {
+	font-size: 24px;
+	text-align: center;
+	font-weight: 900;
+	margin: 0px auto 40px;
+	text-transform: uppercase;
+}
+
 #config-photo img {
 	width: 100%;
 }
+
+#data-personal,
+#data-funding {
+
+	margin: 0 auto;
+}
+
+#data-personal .data-row,
+#data-funding .data-row {
+	margin: 10px 0;
+	overflow: hidden;
+}
+
+.data-row-left, .data-row-right {
+	float: left;
+}
+
+#data-personal .data-row-left {
+	width: 40%;
+}
+
+#data-personal .data-row-right {
+	width: 60%;
+	font-weight: bold;
+}
+
+#data-funding .data-row-left {
+	width: 60%;
+}
+
+#data-funding .data-row-right {
+	width: 40%;
+	font-weight: bold;
+	text-align: right;
+}
+
+#data-personal .data-row-right.note,
+#data-funding .data-row-right.note {
+	font-weight: normal;
+}
+
+#model-name {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#cd0033;
+	margin: 28px 0;
+}
+
+#data-vehicle .data-row {
+	border-bottom: 2px solid red;
+	overflow: hidden;
+	font-weight: bold;
+}
+
+#data-vehicle .data-row.sum {
+	border: none;
+	text-transform: uppercase;
+	background: #cd0033;
+	color: #fff;
+}
+
+#data-vehicle .data-row-left {
+	width: 50%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#data-vehicle .data-row-right {
+	width: 50%;
+	text-align: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#funding-title {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 40px 0 25px;
+}
+
+
+
+
+

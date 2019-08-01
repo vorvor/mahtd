@@ -8,6 +8,7 @@
             if ($(this).data('price') == 0 && $(this).index() == 0) {
                 $(this).addClass('selected');
                 $('.send-order .order-' + $(this).data('wrapper')).val($(this).data('title'));
+                $('.send-order .order-' + $(this).data('wrapper') + '-price').val($(this).data('price'));
              }
         })
 
@@ -26,6 +27,7 @@
         $('#topspeed').html(facilityFirst.data('topspeed'));
         $('#acceleration').html(facilityFirst.data('acceleration'));
         $('.send-order .order-facility').val(facilityFirst.data('title'));
+        $('.send-order .order-facility-price').val(facilityFirst.data('price'));
     	sumPrice();
         
         // configurator init
@@ -53,6 +55,7 @@
                     $('#' + wrapper + '-block .config-block-desc').html('');
                     $('#' + wrapper + '-block .price').html(0);
                     $('.send-order .order-' + wrapper).val('');
+                    $('.send-order .order-' + wrapper + '-price').val('');
                 }
 
                 if (!$(this).hasClass('one-item')) {
@@ -79,7 +82,8 @@
 
 
                     // fil send order form fields
-                    $('.send-order .order-' + wrapper).val($(this).data('title') + '|' + $(this).data('price'));
+                    $('.send-order .order-' + wrapper).val($(this).data('title'));
+                    $('.send-order .order-' + wrapper + '-price').val($(this).data('price'));
                 } else {
                     $(this).removeClass('one-item');
                 }
@@ -166,6 +170,7 @@
             }
             
 			$('#sumprice').html(parts.join(' '));
+            $('.send-order .order-sum-price').val(parts.join(' '));
     	}
 
         // menu modal

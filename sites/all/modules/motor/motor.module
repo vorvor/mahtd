@@ -18,11 +18,14 @@ function motor_get_config_photo($mail_body) {
       if (strpos($rim, '19') !== FALSE) {
         $rim = '19silver';
       }
-      if (strpos($rim, '19') !== FALSE && strpos($rim, 'sonic') !== FALSE) {
+      elseif (strpos($rim, '19') !== FALSE && strpos($rim, 'sonic') !== FALSE) {
         $rim = '19sonic';
       }
-      if (strpos($rim, '21') !== FALSE) {
+      elseif (strpos($rim, '21') !== FALSE) {
         $rim = '21sonic';
+      }
+      else {
+        $rim = 'empty';
       }
       break;
 
@@ -32,11 +35,14 @@ function motor_get_config_photo($mail_body) {
       if (strpos($rim, '18') !== FALSE) {
         $rim = '18aero';
       }
-      if (strpos($rim, '19') !== FALSE) {
+      elseif (strpos($rim, '19') !== FALSE) {
         $rim = '19sport';
       }
-      if (strpos($rim, '20') !== FALSE) {
+      elseif (strpos($rim, '20') !== FALSE) {
         $rim = 'performance';
+      }
+      else {
+        $rim = 'empty';
       }
 
       break;
@@ -47,11 +53,14 @@ function motor_get_config_photo($mail_body) {
       if (strpos($rim, 'ezüst') !== FALSE) {
         $rim = '20silver';
       }
-      if (strpos($rim, 'ezüst-fekete') !== FALSE) {
+      elseif (strpos($rim, 'ezüst-fekete') !== FALSE) {
         $rim = '20slipstream';
       }
-      if (strpos($rim, 'onyx') !== FALSE) {
+      elseif (strpos($rim, 'onyx') !== FALSE) {
         $rim = '22onyx';
+      }
+      else {
+        $rim = 'empty';
       }
       break;
 
@@ -86,7 +95,7 @@ function motor_get_config_photo($mail_body) {
       break;
     
     default:
-      $model = 'empty';
+      $exterior = 'empty';
       break;
   }
 

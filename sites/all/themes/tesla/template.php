@@ -301,7 +301,9 @@ function tesla_preprocess_page(&$variables, $hook) {
       if (isset($node->field_index_range['und'])) {
         $variables[$model . '_range'] = $node->field_index_range['und'][0]['value'];
       } else {
-        $variables[$model . '_range'] =  max($ranges);
+        if (!empty($ranges)) {
+          $variables[$model . '_range'] =  max($ranges);
+        }
       }
 
       if (isset($node->field_index_acceleration['und'])) {

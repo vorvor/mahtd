@@ -961,7 +961,7 @@ body.inner .send-order .webform-submit {
 body.inner .send-order .hidden,
 body.inner .send-order label.element-invisible,
 body.inner .order-remain {
-    display: none;
+    d isplay: none;
 }
 
 .send-order .form-item input[type="checkbox"],

@@ -39,8 +39,7 @@
 
     <div id="center">
       <div id="main">
-        <?php 
-          // TODO: parse color, rim and model from body, for choosing the right image 
+        <?php
           print $body; 
         ?>
       </div>
