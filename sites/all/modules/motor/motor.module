@@ -2,13 +2,13 @@
 
 function motor_get_config_photo($mail_body) {
 
-  preg_match('/Modell: (.*?)<br/ms', $mail_body, $model_match);
+  preg_match('/<div id="model-name">(.*?)<\/div>/ms', $mail_body, $model_match);
   $model = trim($model_match[1]);
 
-  preg_match('/Külső szín: (.*?)<br/ms', $mail_body, $exterior_match);
+  preg_match('/<div class="data-row-left exterior">(.*?)<\/div>/ms', $mail_body, $exterior_match);
   $exterior = trim($exterior_match[1]);
 
-  preg_match('/Felni: (.*?)<br/ms', $mail_body, $rim_match);
+  preg_match('/<div class="data-row-left rim">(.*?)<\/div>/ms', $mail_body, $rim_match);
   $rim = trim($rim_match[1]);
 
   switch ($model) {

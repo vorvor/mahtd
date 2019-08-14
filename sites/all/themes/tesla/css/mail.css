@@ -1,19 +1,21 @@
-body {
+#mail-wrapper {
 	background: #ccc;
-	font-family: Din;
+	font-family: 'Barlow', sans-serif;
+	overflow: hidden;
 }
 
 #logo {
 	width: 182px;
-	margin: 37px auto;
+	margin: 37px auto 60px;
 }
 
 #mail-inside-wrapper {
 	background: #fff;
-	width: 560px;
-	margin: 0 auto;
+	width: 80%;
+	margin: 0 auto 50px;
 	border-top: 4px solid #cd0033;
 	padding: 37px 58px;
+	box-sizing: border-box;
 }
 
 #config-photo {
@@ -81,7 +83,7 @@ body {
 }
 
 #data-vehicle .data-row {
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid #cd0033;
 	overflow: hidden;
 	font-weight: bold;
 }
@@ -114,6 +116,18 @@ body {
 }
 
 
+@media screen and (max-width: 800px) {
+    /*375-800*/
 
+	#logo {
+		margin: 30px auto;
+	}
+
+    #mail-inside-wrapper {
+    	width: 100%;
+    	padding: 0;
+    	margin: 0;
+    }
+}
 
 

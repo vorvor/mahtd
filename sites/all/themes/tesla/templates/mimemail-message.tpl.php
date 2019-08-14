@@ -22,8 +22,13 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow:500,700,800&display=swap" rel="stylesheet">
     <?php if ($css): ?>
     <style type="text/css">
+
+    @import url("https://use.typekit.net/xxa7rwd.css");
+
+
       <!--
       <?php print $css ?>
       -->
@@ -33,13 +38,32 @@
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
     
     <?php if (module_exists('motor')) {
-      $config_photo = motor_get_config_photo($body); ?>
-      <div id="config-photo"><img src="<?php print $config_photo; ?>" style="width:100%;max-width:100%;"></div>
+      $config_photo = motor_get_config_photo($body); 
+      $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body); ?>
     <?php } ?>
 
     <div id="center">
       <div id="main">
         <?php
+          preg_match_all('/data-keys="(.*?)"/ms', $body, $keys);
+          preg_match_all('/data-values="(.*?)"/ms', $body, $values);
+
+          $keys_e = explode(',', $keys[1][0]);
+          $values_e = explode(',', $values[1][0]);
+          $c = 0;
+          foreach ($values_e as $value) {
+            if (empty(trim($value))) {
+              $pattern = '/<span id="' . trim($keys_e[$c]) . '">.*?<\/span>/ms';
+              $body = preg_replace($pattern, '', $body);
+            }
+            $c++;
+          }
+
+          preg_match('/data-funding.*?right">(.*?)<\/div>/ms', $body, $match);
+
+          if (empty(trim($match[1]))) {
+            $body = preg_replace('/<div id="funding-title">.*?<div id="funding-end"><\/div>/ms', '', $body);
+          }
           print $body; 
         ?>
       </div>

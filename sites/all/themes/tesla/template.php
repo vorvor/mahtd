@@ -45,9 +45,10 @@ function tesla_preprocess_html(&$variables, $hook) {
   );*/
 
   $variables['body_class'] = 'front';
-  $variables['contact_page_path'] = drupal_get_path_alias('node/6');
-  $variables['services_page_path'] = drupal_get_path_alias('node/7');
-  $variables['faq_page_path'] = drupal_get_path_alias('node/11');
+  $variables['contact_page_path'] = drupal_get_path_alias('tesla/kapcsolat');
+  $variables['services_page_path'] = drupal_get_path_alias('tesla/szolgaltatasaink');
+  $variables['faq_page_path'] = drupal_get_path_alias('tesla-gyik');
+  $variables['brand_story_path'] = drupal_get_path_alias('tesla/markatortenet');
 
   $node = menu_get_object();
   if ($node && $node->nid) {
@@ -289,13 +290,15 @@ function tesla_preprocess_page(&$variables, $hook) {
       $ranges = [];
       $top_speeds = [];
       $accelerations = [];
-      foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
-        $paragraph = entity_load('paragraphs_item', array($facility['value']));
-        $paragraph = reset($paragraph);
+      if (isset($node->field_facilities[LANGUAGE_NONE])) {
+        foreach ($node->field_facilities[LANGUAGE_NONE] as $facility) {
+          $paragraph = entity_load('paragraphs_item', array($facility['value']));
+          $paragraph = reset($paragraph);
 
-        $ranges[] = $paragraph->field_range['und'][0]['value'];
-        $top_speeds[] = $paragraph->field_top_speed['und'][0]['value'];
-        $accelerations[] = $paragraph->field_acceleration['und'][0]['value'];
+          $ranges[] = $paragraph->field_range['und'][0]['value'];
+          $top_speeds[] = $paragraph->field_top_speed['und'][0]['value'];
+          $accelerations[] = $paragraph->field_acceleration['und'][0]['value'];
+        }
       }
 
       if (isset($node->field_index_range['und'])) {
