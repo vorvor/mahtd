@@ -1,4 +1,4 @@
-<?php $node = node_load(arg(1)); ?>
+<?php $node = node_load(10); ?>
 <div id="first-row-wrapper">
     <div class="services-title"><?php print $node->title; ?></div>
     <div class="services-description">

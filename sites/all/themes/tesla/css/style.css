@@ -1242,11 +1242,25 @@ body.faq {
     background-color: #fff;
 }
 
-body.faq #first-row-wrapper {
+body.faq #first-row-wrapper,
+body.brand-story #first-row-wrapper {
     background: linear-gradient(
       rgba(0, 0, 0, 0.45), 
       rgba(0, 0, 0, 0.45)
     ),url(../images/model3-more-details.jpg);
+    background-position: center 0;
+    background-size: cover;
+    background-position: center 0;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+body.brand-story #first-row-wrapper {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url(../images/brand-story-bg.jpg);
     background-position: center 0;
     background-size: cover;
     background-position: center 0;

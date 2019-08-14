@@ -70,8 +70,12 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['body_class'] = 'services';
     }
 
-    if ($node->type == 'faq') {
+    if ($node->type == 'faq' && $node->nid == 10) {
       $variables['body_class'] = 'faq';
+    }
+
+    if ($node->type == 'faq' && $node->nid == 11) {
+      $variables['body_class'] = 'faq brand-story';
     }
 
     $variables['meta_title'] = $node->field_meta_title[LANGUAGE_NONE][0]['value'];
