@@ -191,6 +191,29 @@
             //}
         })
 
+        // funding webform condition couldn't be set on webform conditionals form
+        $('#webform-client-form-9 input[name="submitted[financial_construction]"]').click(function() {
+            $('select.order-duration option').each(function() {
+                $(this).show();
+            });
+
+            if ($(this).val() == 'tartós bérlet') {
+                $('select.order-duration option').each(function() {
+                    if ( parseInt($(this).val()) > 60 ) {
+                        $(this).hide();
+                    }
+                });
+            }
+
+            if ($(this).val() == 'nyíltvégű pénzügyi lízing') {
+                $('select.order-duration option').each(function() {
+                    if ( parseInt($(this).val()) > 72 ) {
+                        $(this).hide();
+                    }
+                });
+            }
+        })
+
         // fill order form with config data
         $('.send-order .order-model').val($('h2.row-title').html());
         

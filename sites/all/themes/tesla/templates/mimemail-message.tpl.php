@@ -39,7 +39,9 @@
     
     <?php if (module_exists('motor')) {
       $config_photo = motor_get_config_photo($body); 
-      $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body); ?>
+      $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body); 
+      watchdog('order mail body', $body);
+      ?>
     <?php } ?>
 
     <div id="center">

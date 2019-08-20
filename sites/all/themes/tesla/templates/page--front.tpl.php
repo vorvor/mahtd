@@ -192,6 +192,11 @@
             </div>
         </div>
     </div>
+    <div id="articles">
+        <?php
+        print views_embed_view('articles', 'block_1');
+        ?>
+    </div>
     <div class="index-row-wrapper" id="index-fifth-row">
         <div class="index-row">
             <iframe allow="fullscreen" defer="defer" height="100vh" src="//www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.300798865563!2d18.98028671562492!3d47.44507567917426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741e0aad6a5d437%3A0x593a19e9c78f1d1b!2zTWFneWFyIEF1dMOza2VyZXNrZWTFkWjDoXogWnJ0Lg!5e0!3m2!1shu!2shu!4v1557134518362!5m2!1shu!2shu" style="border:0;width:99vw;height:100vh;" width="98vw"></iframe>
