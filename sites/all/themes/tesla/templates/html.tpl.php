@@ -78,7 +78,7 @@
         <header>
            <h1 id="logo-wrapper">
               <a id="logo" href="/" title="Mah Zrt. - tesla.hu">
-                  <img alt="logo" src="/<?php print $theme_path; ?>/images/logo.png">
+                  <img alt="logo" src="<?php print $logo; ?>">
               </a>
            </h1>  
         </header>

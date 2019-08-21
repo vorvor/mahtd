@@ -44,11 +44,16 @@ function tesla_preprocess_html(&$variables, $hook) {
     array('class-to-remove')
   );*/
 
+  $theme_path = drupal_get_path('theme', 'tesla');
+
+  $variables['logo'] = '/' . $theme_path . '/images/logo.png';
+
   $variables['body_class'] = 'front';
   $variables['contact_page_path'] = drupal_get_path_alias('tesla/kapcsolat');
   $variables['services_page_path'] = drupal_get_path_alias('tesla/szolgaltatasaink');
   $variables['faq_page_path'] = drupal_get_path_alias('tesla-gyik');
   $variables['brand_story_path'] = drupal_get_path_alias('tesla/markatortenet');
+  $variables['articles_path'] = drupal_get_path_alias('tesla/hirek');
 
   $node = menu_get_object();
   if ($node && $node->nid) {
@@ -81,6 +86,11 @@ function tesla_preprocess_html(&$variables, $hook) {
     $variables['meta_title'] = $node->field_meta_title[LANGUAGE_NONE][0]['value'];
     $variables['meta_description'] = $node->field_meta_description[LANGUAGE_NONE][0]['value'];
   } 
+
+  if (current_path() == 'tesla/hirek') {
+    $variables['body_class'] = 'articles';
+    $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+  }
 
   if (empty($variables['meta_title'])) {
     $variables['meta_title'] = 'Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu';
