@@ -66,6 +66,11 @@ function tesla_preprocess_html(&$variables, $hook) {
         drupal_add_js($model_js, 'file');
       }
     }
+
+    if (isset($node->field_meta_title)) {
+      $variables['meta_title'] = $node->field_meta_title[LANGUAGE_NONE][0]['value'];
+      $variables['meta_description'] = $node->field_meta_description[LANGUAGE_NONE][0]['value'];
+    }
     
     if ($node->type == 'page' && $node->nid == 6) {
       $variables['body_class'] = 'contact';
@@ -83,8 +88,13 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['body_class'] = 'faq brand-story';
     }
 
-    $variables['meta_title'] = $node->field_meta_title[LANGUAGE_NONE][0]['value'];
-    $variables['meta_description'] = $node->field_meta_description[LANGUAGE_NONE][0]['value'];
+    if ($node->type == 'article') {
+      $variables['body_class'] = 'articles tesla-article';
+      $variables['meta_title'] = $node->title;
+      $variables['meta_description'] = $node->field_lead[LANGUAGE_NONE][0]['value'];
+      $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+    }
+
   } 
 
   if (current_path() == 'tesla/hirek') {
@@ -125,6 +135,11 @@ function tesla_preprocess_page(&$variables, $hook) {
   //$variables['sample_variable'] = t('Lorem ipsum.');
   if (isset($variables['node'])) {
     $variables['theme_hook_suggestion'] = 'page__' . $variables['node']->type;
+
+    if ($variables['node']->type == 'article') {
+      $difference = time() - $node->created;
+      $variables['date'] = format_interval($difference, 1) . ' ago';
+    }
 
     if ($variables['node']->type == 'car') {
       $node = node_load($variables['node']->nid);
