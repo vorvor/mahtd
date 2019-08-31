@@ -148,6 +148,11 @@ body.tesla-article .article-body {
 	line-height: 30px;
 }
 
+body.tesla-article .article-main-image {
+	max-width: 100%;
+	height: auto;
+}
+
 body.tesla-article .view-articles .views-row {
 	
 }
