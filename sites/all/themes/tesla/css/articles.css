@@ -148,7 +148,7 @@ body.tesla-article .article-body {
 	line-height: 30px;
 }
 
-body.tesla-article .article-main-image {
+body.tesla-article .article-main-image img {
 	max-width: 100%;
 	height: auto;
 }
