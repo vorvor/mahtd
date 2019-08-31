@@ -48,7 +48,7 @@ function motor_get_config_photo($mail_body) {
       break;
 
     case 'Tesla Model X':
-      $model = 'modelS';
+      $model = 'modelX';
 
       if (strpos($rim, 'ezüst') !== FALSE) {
         $rim = '20silver';
@@ -65,7 +65,7 @@ function motor_get_config_photo($mail_body) {
       break;
 
     case 'Tesla Model Y':
-      $model = 'modelS';
+      $model = 'modelY';
       break;
 
     case 'Tesla Roadster':

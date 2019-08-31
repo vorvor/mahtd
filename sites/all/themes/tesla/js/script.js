@@ -106,7 +106,6 @@
                         $('body.model-3 #winter-wheel-block .config-block-desc').html($('body.model-3 #winter-wheel-block .config-option:nth-child(3)').data('title'));
                     }
                     
-                    
                 } else {
                     $('body.model-3 #rim-block .config-option').show();
                     $('body.model-y #rim-block .config-option').show();
@@ -146,6 +145,7 @@
                     }
                 }
 
+                $('#order-form .order-rim').val($('#rim-block .config-option.selected:visible').data('title'));
 
                 sumPrice();
     		})

@@ -133,10 +133,12 @@ function tesla_preprocess_html(&$variables, $hook) {
 
 function tesla_preprocess_page(&$variables, $hook) {
   //$variables['sample_variable'] = t('Lorem ipsum.');
+
   if (isset($variables['node'])) {
     $variables['theme_hook_suggestion'] = 'page__' . $variables['node']->type;
 
     if ($variables['node']->type == 'article') {
+      $node = $variables['node'];
       $difference = time() - $node->created;
       $variables['date'] = format_interval($difference, 1) . ' ago';
     }
