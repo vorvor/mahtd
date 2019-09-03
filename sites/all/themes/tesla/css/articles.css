@@ -58,6 +58,7 @@ body.articles #top ol li a:visited {
 body.tesla-article .article-date  {
 	font-size: 16px;
 	color: #808080;
+	line-height: 2em;
 }
 
 body.tesla-article .article-title h1,
@@ -65,13 +66,15 @@ body.tesla-article .article-title h1,
 	font-size: 30px;
 	font-weight: 900;
 	color: #cd0033;
+	text-transform: uppercase;
 }
 
-.view-articles .views-row .views-field-field-lead {
+.view-articles .views-row .views-field-field-lead h2 {
 	font-size: 20px;
 	color: #000;
 	height: 90px;
 	overflow: hidden;
+	font-weight: normal;
 }
 
 .view-articles .views-row .views-field-field-main-image img {
@@ -133,7 +136,7 @@ body.tesla-article .article-title h1 {
 	margin: 0;
 }
 
-body.tesla-article .article-lead {
+body.tesla-article .article-lead h2 {
 	color: #000;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -148,13 +151,22 @@ body.tesla-article .article-body {
 	line-height: 30px;
 }
 
+body.tesla-article .article-body a {
+	color: #cd0033;
+}
+
+body.tesla-article .article-body a:hover {
+	color: #cd0033;
+	text-decoration: underline;	
+}
+
 body.tesla-article .article-main-image img {
 	max-width: 100%;
 	height: auto;
 }
 
-body.tesla-article .view-articles .views-row {
-	
+body.tesla-article .view-articles {
+	padding: 0 0 0 40px;
 }
 
 body.tesla-article .view-articles .views-row {
