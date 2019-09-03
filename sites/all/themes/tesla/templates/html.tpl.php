@@ -68,10 +68,8 @@
                 <?php print $main_menu; ?>
             </ol>
             <li><a href="/<?php print $services_page_path; ?>">Szolgáltatásaink</a></li>
-            <!--
             <li><a href="/<?php print $articles_path; ?>">Tesla hírek</a></li>
             <li><a href="/<?php print $brand_story_path; ?>">Tesla márkatörténet</a></li>
-        -->
             <li><a href="/<?php print $faq_page_path; ?>">Gy.i.k.</a></li>
             <li><a href="/<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>
