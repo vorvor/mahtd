@@ -36,36 +36,48 @@
             <div class="data-row-left">[data:facility-value]</div>
             <div class="data-row-right">[data:facility_price-value] EUR</div>
           </div>
+          <span id="exterior">
           <div class="data-row exterior">
             <div class="data-row-left exterior">[data:exterior-value]</div>
             <div class="data-row-right">[data:exterior_price-value] EUR</div>
           </div>
+          </span>
+          <span id="rim">
           <div class="data-row rim">
             <div class="data-row-left rim">[data:rim-value]</div>
             <div class="data-row-right">[data:rim_price-value] EUR</div>
           </div>
+          </span>
+          <span id="interior">
           <div class="data-row interior">
             <div class="data-row-left">[data:interior-value]</div>
             <div class="data-row-right">[data:interior_price-value] EUR</div>
           </div>
+          </span>
+          <span id="autopilot">
           <div class="data-row autopilot">
             <div class="data-row-left">[data:autopilot-value]</div>
             <div class="data-row-right">[data:autopilot_price-value] EUR</div>
           </div>
+          </span>
+          <span id="tire">
           <div class="data-row winter-wheel">
-            <div class="data-row-left">[data:winter-wheel-value]</div>
-            <div class="data-row-right">[data:winter_wheel_price-value] EUR</div>
+            <div class="data-row-left">[data:tire-value]</div>
+            <div class="data-row-right">[data:tire_price-value] EUR</div>
           </div>
+          </span>
           <span id="extra">
           <div class="data-row extra">
             <div class="data-row-left">[data:extra-value]</div>
             <div class="data-row-right">[data:extra_price-value] EUR</div>
           </div>
           </span>
+          <span id="seats">
           <div class="data-row seats">
             <div class="data-row-left">[data:seats-value]</div>
             <div class="data-row-right">[data:seats_price-value] EUR</div>
           </div>
+          </span>
           <div class="data-row">
             <div class="data-row-left">Szállítás</div>
             <div class="data-row-right">990 EUR</div>
@@ -79,8 +91,8 @@
             <div class="data-row-right">[data:sum_price-value] EUR</div>
           </div>
         </div>
-        <div data-keys="facility,exterior,rim,interior,autopilot,winter-wheel,extra,seats"></div>
-        <div data-values="[data:facility-value],[data:exterior-value],[data:rim-value],[data:interior-value],[data:autopilot-value],[data:winter-wheel-value],[data:extra-value],[data:seats-value]"></div>
+        <div data-keys="facility,exterior,rim,interior,autopilot,tire,extra,seats"></div>
+        <div data-values="[data:facility-value],[data:exterior-value],[data:rim-value],[data:interior-value],[data:autopilot-value],[data:tire-value],[data:extra-value],[data:seats-value]"></div>
 
         <div id="funding-title">Finanszírozás</div>
         <div id="data-funding">

@@ -54,8 +54,9 @@
           $values_e = explode(',', $values[1][0]);
           $c = 0;
           foreach ($values_e as $value) {
+            $key = trim($keys_e[$c]);
             if (empty(trim($value))) {
-              $pattern = '/<span id="' . trim($keys_e[$c]) . '">.*?<\/span>/ms';
+              $pattern = '/<span id="' . $key . '">.*?<\/span>/ms';
               $body = preg_replace($pattern, '', $body);
             }
             $c++;
