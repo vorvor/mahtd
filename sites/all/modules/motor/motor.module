@@ -107,3 +107,12 @@ function motor_get_config_photo($mail_body) {
   return $photo_name;
 
 }
+
+function motor_get_model($mail_body) {
+
+  preg_match('/<div id="model-name">(.*?)<\/div>/ms', $mail_body, $model_match);
+  $model = trim($model_match[1]);
+
+  return $model;
+
+}

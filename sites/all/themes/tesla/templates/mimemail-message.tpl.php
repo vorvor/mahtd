@@ -38,6 +38,16 @@
   <body id="mimemail-body" <?php if ($module && $key): print 'class="'. $module .'-'. $key .'"'; endif; ?>>
     
     <?php if (module_exists('motor')) {
+      $model = motor_get_model($body);
+
+      if ($model == 'Tesla Roadster') {
+        $pattern = '/<div id="data-vehicle">.*?<div data-keys/ms';
+        $body = preg_replace($pattern, '<div data-keys', $body);
+
+        $pattern = '/<span id="mail-spec-text">.*?<\/span>/';
+        $body = preg_replace($pattern, 'A jármű jelenleg előrendelhető, a tovább részletekről kollégáink hamarosan felveszik Önnel a kapcsolatot.', $body);        
+      }
+
       $config_photo = motor_get_config_photo($body); 
       $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body); 
       watchdog('order mail body', $body);

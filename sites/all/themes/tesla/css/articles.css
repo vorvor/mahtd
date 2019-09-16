@@ -1,4 +1,3 @@
-
 body.articles,
 body.tesla-article {
 	background: #fff;
@@ -177,3 +176,11 @@ body.tesla-article .view-articles .views-row {
 }
 
 
+@media screen and (max-width: 800px) {
+	.view-articles .views-row {
+        margin-right: 0;
+    }
+    .view-articles .views-row {
+        width: 100%;
+    }
+}

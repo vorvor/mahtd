@@ -240,7 +240,6 @@
                 if ($('#video-bg').is(':visible')) {
                     windowHeight = $(window).height();
                     videoHeight = $('#video-bg video').height() - 50;
-                    console.log(windowHeight);
 
                     //if (windowHeight > 894) {
                         $('.front #index-first-row').css('margin-top', videoHeight + 'px');

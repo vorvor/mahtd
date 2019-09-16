@@ -318,7 +318,7 @@ body.roadster #second-row-wrapper {
 
 #second-row-wrapper ul li {
     color: #000;
-    line-height: 10px;
+    line-height: 32px;
 }
 
 #second-row-left {
@@ -343,6 +343,7 @@ body.model-3 #second-half-row-wrapper {
 body.model-s #second-half-row-wrapper {
     background-image: url(../images/models-more-details.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 body.model-x #second-half-row-wrapper {

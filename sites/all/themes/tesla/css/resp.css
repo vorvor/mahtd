@@ -611,6 +611,7 @@
 
     body.inner #second-half-row-wrapper {
         background: #fff;
+        background-repeat: no-repeat;
     }
 
     body.inner #second-half-row-wrapper #second-half-row-right {
