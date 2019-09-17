@@ -42,9 +42,9 @@
 		})
 
 		// data element effect
-		function dataEffect(element) {
+		function dataEffect(element, innerElement) {
 			element.each(function() {
-				$('.index-row-data', this).each(function() {
+				$(innerElement, this).each(function() {
 					$(this).animate({
 						opacity: 1,
 					}, 1000, function() {
@@ -64,7 +64,7 @@
 		 		diffEnd = endPos + $(this).height() - scrollPos;
 
 		 		if (diff < $(window).height() * -1.1 && $(this).attr('effect') == undefined) {
-					dataEffect($(this));
+					dataEffect($(this), '.index-row-data');
 					$(this).attr('effect', 1);
 				} 
 		 	})
@@ -88,6 +88,65 @@
 			 	$('#mobile-menu-block').offset({ top: -700});
 			 });
 		})
+
+		// inner-effects
+
+		function dataInnerEffect(element) {
+			
+		}
+
+		$('.first-row-data').css('opacity', 0);
+		dataEffect($('#first-row-wrapper'), '.first-row-data');
+		$('#first-row-wrapper').attr('effect', 1);
+
+
+		$('.inner #second-row-left h2').offset({ left: -700}).css('opacity', 0);
+		$('.inner #second-row-left h3').offset({ left: -2000}).css('opacity', 0);
+		$('.inner #second-row-left div').offset({ left: -5000}).css('opacity', 0);
+
+
+		$('.inner #second-row-wrapper')
+		.offset({ left: 3000})
+		.animate({
+				left: 0
+			}, 1000, function() {
+				$('.inner #second-row-left h2')
+				.css('opacity', 1)
+				.animate({
+						left: 0
+					}, 500);
+
+				$('.inner #second-row-left h3')
+				.css('opacity', 1)
+				.animate({
+						left: 0
+					}, 500);
+
+				$('.inner #second-row-left div')
+				.css('opacity', 1)
+				.animate({
+						left: 0
+					}, 500);
+			});
+
+		
+
+		$(window).scroll(function() {
+
+		 	$('#second-row-left').each(function(index) {
+		 		scrollPos = $(window).scrollTop() + $(window).height();
+		 		endOffset = $(this).offset();
+		 		endPos = endOffset.top;
+		 		diff = endPos - scrollPos;
+		 		diffEnd = endPos + $(this).height() - scrollPos;
+
+		 		if (diff < $(window).height() * -0.3 && $(this).attr('effect') == undefined) {
+					dataInnerEffect($(this));
+					$(this).attr('effect', 1);
+				} 
+		 	})
+		})
+
 
 	}}
 
