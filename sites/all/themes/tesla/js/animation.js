@@ -41,7 +41,7 @@
 			$(this).css('opacity', 0);
 		})
 
-		$('.index-row-wrapper').offset({left: -3000}).css({opacity: 0});
+		$('.index-row-wrapper').offset({left: 3000}).css({opacity: 0});
 
 		// data element effect
 		function dataEffect(element, innerElement) {
@@ -49,7 +49,7 @@
 				$(innerElement, this).each(function() {
 					$(this).animate({
 						opacity: 1,
-					}, 1000, function() {
+					}, 4000, function() {
 						$(this).fadeOut(5).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10);
 					});
 				});

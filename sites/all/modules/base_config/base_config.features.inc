@@ -6,12 +6,61 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function base_config_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function base_config_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: article_main_image.
+  $styles['article_main_image'] = array(
+    'label' => 'Article main image',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 350,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      2 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 500,
+          'height' => 350,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function base_config_node_info() {
   $items = array(
     'accessories' => array(
       'name' => t('Accessories'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'article' => array(
+      'name' => t('Article'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -27,7 +76,7 @@ function base_config_node_info() {
       'help' => '',
     ),
     'faq' => array(
-      'name' => t('Faq'),
+      'name' => t('Unique page'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

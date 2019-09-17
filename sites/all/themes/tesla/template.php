@@ -52,7 +52,7 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['contact_page_path'] = drupal_get_path_alias('tesla/kapcsolat');
   $variables['services_page_path'] = drupal_get_path_alias('tesla/szolgaltatasaink');
   $variables['faq_page_path'] = drupal_get_path_alias('tesla-gyik');
-  $variables['brand_story_path'] = drupal_get_path_alias('tesla/markatortenet');
+  $variables['brand_story_path'] = drupal_get_path_alias('tesla/tesla-márkatörténete-az-elektromos-forradalom-története');
   $variables['articles_path'] = drupal_get_path_alias('tesla/hirek');
 
   $node = menu_get_object();
