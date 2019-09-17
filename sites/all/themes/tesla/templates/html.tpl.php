@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/animation.css">
+
     
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
