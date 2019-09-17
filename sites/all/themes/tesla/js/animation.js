@@ -41,6 +41,8 @@
 			$(this).css('opacity', 0);
 		})
 
+		$('.index-row-wrapper').offset({left: -3000}).css({opacity: 0});
+
 		// data element effect
 		function dataEffect(element, innerElement) {
 			element.each(function() {
@@ -63,9 +65,14 @@
 		 		diff = endPos - scrollPos;
 		 		diffEnd = endPos + $(this).height() - scrollPos;
 
-		 		if (diff < $(window).height() * -1.1 && $(this).attr('effect') == undefined) {
+		 		if (diff < $(window).height() * -0.2 && $(this).attr('effect') == undefined) {
+		 			$(this).animate({left: 0, opacity: 1}, 2000);
+		 		}
+
+		 		if (diff < $(window).height() * -1 && $(this).attr('effect') == undefined) {
 					dataEffect($(this), '.index-row-data');
 					$(this).attr('effect', 1);
+					
 				} 
 		 	})
 		})
