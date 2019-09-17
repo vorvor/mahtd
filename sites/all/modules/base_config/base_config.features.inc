@@ -26,7 +26,7 @@ function base_config_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => '',
-          'height' => 350,
+          'height' => 320,
           'upscale' => 0,
         ),
         'weight' => 1,
@@ -35,7 +35,7 @@ function base_config_image_default_styles() {
         'name' => 'image_crop',
         'data' => array(
           'width' => 500,
-          'height' => 350,
+          'height' => 320,
           'anchor' => 'center-center',
         ),
         'weight' => 2,

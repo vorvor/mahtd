@@ -1,6 +1,7 @@
 name = base_config
 core = 7.x
 package = Features
+dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = file
@@ -131,4 +132,3 @@ features[rules_config][] = rules_send_contact_form_in_email
 features[rules_config][] = rules_send_order_in_email
 features[taxonomy][] = model
 features[views_view][] = articles
-features_exclude[dependencies][ctools] = ctools
