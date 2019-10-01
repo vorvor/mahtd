@@ -807,8 +807,8 @@ footer {
 
 body.contact {
     background-image: url(../images/contact.jpg);
-    background-position: center 0;
-    background-size: 130%;
+    background-position: 100% 0;
+    background-size: 140%;
 }
 
 body.contact .contact-title {
@@ -822,7 +822,7 @@ body.contact .contact-title {
 }
 
 body.contact #first-row-wrapper {
-    height:500px;
+    height:50vw;
 }
 
 body.contact #second-row-wrapper {
@@ -1159,8 +1159,9 @@ body.services #third-row-wrapper .col-row-content {
 }
 
 body.services #fourth-row-wrapper {
-    background-image: url(../images/services-contact-block.png);
+    background-image: url(../images/services-contact-block.jpg);
     height: 670px;
+    background-position: center 70%;
 }
 
 body.services #fourth-row-wrapper #fourth-row-title {
@@ -1243,7 +1244,7 @@ body.faq {
     background-color: #fff;
 }
 
-body.brand-story #first-row-wrapper {
+body.faq.brand-story #first-row-wrapper {
     background: linear-gradient(
       rgba(0, 0, 0, 0.45), 
       rgba(0, 0, 0, 0.45)
@@ -1268,6 +1269,18 @@ body.brand-story #first-row-wrapper {
     background-color: rgba(0,0,0,0.4);
     margin-top: -50px;
     padding-top: 50px;
+}
+
+body.brand-story #first-row-wrapper {
+     background: linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),url(../images/brand-story-bg.jpg);
+
+    background-position: center 0;
+    background-size: cover;
+    background-position: center 0;
+    background-color: rgba(0,0,0,0.4);
 }
 
 
@@ -1300,7 +1313,7 @@ body.faq #second-row-wrapper {
 
 body.faq #second-row-wrapper img {
     max-width: 100%;
-    height: auto;
+    height: auto !important;
 }
 
 body.faq blockquote {

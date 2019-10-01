@@ -18,6 +18,31 @@ function base_config_views_api($module = NULL, $api = NULL) {
 function base_config_image_default_styles() {
   $styles = array();
 
+  // Exported image style: accessories.
+  $styles['accessories'] = array(
+    'label' => 'accessories',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 400,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+      4 => array(
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 400,
+          'height' => 400,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: article_main_image.
   $styles['article_main_image'] = array(
     'label' => 'Article main image',

@@ -80,11 +80,11 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['body_class'] = 'services';
     }
 
-    if ($node->type == 'faq' && $node->nid == 10) {
+    if ($node->type == 'faq' && $node->nid == 11) {
       $variables['body_class'] = 'faq';
     }
 
-    if ($node->type == 'faq' && $node->nid == 11) {
+    if ($node->type == 'faq' && $node->nid == 18) {
       $variables['body_class'] = 'faq brand-story';
     }
 
@@ -95,11 +95,23 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
     }
 
+    if ($node->type == 'accessories') {
+      $variables['body_class'] = 'accessories';
+      drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/accessories.css', 'file');
+      drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/accessories.js', 'file');
+    }
+
   } 
 
   if (current_path() == 'tesla/hirek') {
     $variables['body_class'] = 'articles';
     $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+  }
+
+  if (current_path() == 'tesla/kiegeszitok-listaja') {
+    $variables['body_class'] = 'accessories-list';
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/accessories-list.js', 'file');
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/accessories-list.css', 'file');
   }
 
   if (empty($variables['meta_title'])) {

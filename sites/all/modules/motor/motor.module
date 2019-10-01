@@ -66,6 +66,18 @@ function motor_get_config_photo($mail_body) {
 
     case 'Tesla Model Y':
       $model = 'modelY';
+      if (strpos($rim, '18') !== FALSE) {
+        $rim = '18aero';
+      }
+      elseif (strpos($rim, '19') !== FALSE) {
+        $rim = '19sport';
+      }
+      elseif (strpos($rim, '20') !== FALSE) {
+        $rim = '20performance';
+      }
+      else {
+        $rim = 'empty';
+      }
       break;
 
     case 'Tesla Roadster':

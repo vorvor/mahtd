@@ -186,7 +186,7 @@ function base_config_field_default_field_instances() {
       'max' => '',
       'min' => '',
       'prefix' => '',
-      'suffix' => '',
+      'suffix' => 'EUR',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
