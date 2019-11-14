@@ -1,8 +1,7 @@
 (function ($) {
-  Drupal.behaviors.anim = {
+  Drupal.behaviors.accessories = {
     attach: function (context, settings) {
     
-
     	// topmenu effect
 		$('a.counter-minus').click(function(e) {
 			e.preventDefault();
@@ -37,7 +36,10 @@
 		})
 
 		function refreshItems() {
-			$('.webform-component--accessories input').val($('.accessories-title h1').html() + '#' + $('.accessories-counter-count').html());
+			$('.webform-component--accessories-name input').val($('.accessories-title h1').html());
+			$('.webform-component--accessories-quantity input').val($('.accessories-counter-count').html());
+			$('.webform-component--accessories-model input').val($('.accessories-model').html().trim());
+			$('.webform-component--accessories-image input').val($('.accessories-main-image img').attr('src'));
 		}
 
 		hoverEffectPostition();
@@ -47,7 +49,6 @@
 
 		function hoverEffectPostition() {
 			$('.view-accessories .views-row').each(function() {
-				console.log('A');
 				height = $('.views-field-field-image img', this).height();
 				$('.views-field-nothing .accessories-details').height(height);
 			})

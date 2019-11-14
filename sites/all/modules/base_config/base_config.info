@@ -129,6 +129,7 @@ features[paragraphs][] = config_type_1
 features[paragraphs][] = config_type_2
 features[paragraphs][] = faq
 features[paragraphs][] = index_extra
+features[rules_config][] = rules_send_accessories_order
 features[rules_config][] = rules_send_contact_form_in_email
 features[rules_config][] = rules_send_order_in_email
 features[taxonomy][] = model

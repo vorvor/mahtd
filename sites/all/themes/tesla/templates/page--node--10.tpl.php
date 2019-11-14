@@ -1,4 +1,7 @@
-<?php $node = node_load(10); ?>
+<?php 
+	$path = explode('/', current_path());
+	$node = node_load($path[1]); 
+?>
 <div id="first-row-wrapper">
     <div class="services-title"><?php print $node->title; ?></div>
     <div class="services-description">

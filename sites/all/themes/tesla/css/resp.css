@@ -73,6 +73,11 @@
     .index-row #data-3 .red-button {
         width: 300px;
     }
+
+    #index-third-half-row .index-row #data-3 {
+        width: 100%;
+        padding-top: 0;
+    }
     
     /* */
     
@@ -464,6 +469,11 @@
     body.brand-story #second-row-wrapper ul li p {
         margin: 0;
     }
+
+    #index-third-half-row #spacer {
+        font-size: 45px;
+        padding-top: 50px;
+    }
 }
 /*375-800*/
 
@@ -604,6 +614,11 @@
     .index-row #data-3 {
         width: 100%;
         padding-top: 113px;
+    }
+
+    #index-third-half-row .index-row #data-3 {
+        width: 100%;
+        padding-top: 0;
     }
     
     /* */
@@ -853,6 +868,16 @@
         width: 28%;
         padding-top: 0;
     }
+
+    #index-third-half-row #spacer {
+        padding: 6vw 5vw;
+        height: 310px;
+    }
+
+    #index-third-half-row.index-row #data-1,
+    #index-third-half-row.index-row #data-2 {
+        height: 0;
+    }
     
     /* */
     
@@ -1058,12 +1083,14 @@
         font-size: 20px;
     }
 
-    body.contact #second-row-left {
+   body.contact #second-row-left {
         width: 500px;
+        width: 43%;
     }
 
     body.contact #second-row-right {
         padding-left: 40px;
+        width: 52%;
     }
 
     body.inner #third-row-left {
@@ -1261,6 +1288,10 @@
         font-size: 25px;
     }
 
+    #index-third-half-row #spacer {
+        padding: 6vw 5vw;
+        height: 310px;
+    }
     
 }
 
@@ -1308,6 +1339,11 @@
     
     #index-third-row #spacer {
         height: 80vh;
+    }
+
+    #index-third-half-row #spacer {
+        padding: 6vw 5vw;
+        height: 510px;
     }
 
 }
@@ -1392,6 +1428,11 @@
         position: absolute;
         left:70%;
         width:280px
+    }
+
+    #index-third-half-row #spacer {
+        padding: 6vw 5vw;
+        height: 510px;
     }
     
     

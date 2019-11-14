@@ -86,6 +86,34 @@
             </div>
 
     </div>
+    <div class="index-row-wrapper" id="index-third-half-row">
+            <div id="spacer">
+                Elektromos autó állami támogatás helyett, társasági adó jóváírás lehetősége
+                magyarországi vállalkozások részére.
+            </div>
+            <div class="index-row">
+                <div id="data-1" class="index-row-data">
+                    <div class="data">
+                        <div class="data-text">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="data-2" class="index-row-data">
+                    <div class="data">
+                        <div class="data-text">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="data-3" class="index-row-data">
+                    <div class="red-button">
+                        <a href="/tesla/energetikai-tanusitvany" class="">Részletek</a>
+                    </div>
+                </div>
+            </div>
+
+    </div>
     <div class="index-row-wrapper" id="index-fourth-row">
         <div class="index-row">
 
@@ -211,12 +239,14 @@
             <div class="col-block col-2">
                 <div class="contact-first-part">
                     <div class="address"><span class="address-label">Székhely:</span> 1112 Bp., Repülőtéri út 6. A épület</div>
+                    <div><br />Személyes találkozó esetén időpont egyeztetés szükséges.<br /><br /></div>
                     <div class="phone"><span class="phone-label">Telefonszám:</span> +36202578998 / +36203663447</div>
                     <div class="email"><span class="email-label">Email:</span> info@mahzrt.hu</div>
                 </div>
                 <div class="contact-second-part">
                     <div class="tax-number"><span class="tax-number-label">Adószám:</span> 25196276-2-43</div>
                     <div class="company-id"><span class="company-id-label">Cégjegyzékszám:</span> 01-10-048433</div>
+                    <div class="gdpr"><a href="/tesla/adatkezelesi-tajekoztato"><br />Adatkezelési tájékoztató</a></div>
                 </div>
             </div>
             <div class="col-block col-3">
@@ -233,11 +263,13 @@
         return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
     }
 
-    if (!isMobileDevice()): ?>
+    if (!isMobileDevice()) { ?>
 
     <div id="video-bg">
       <video id="mahtesla" muted="muted" autoplay="autoplay" loop="loop" preload="auto" title="MAH Tesla"><source src="/sites/all/themes/tesla/images/tesla-front.mp4" type="video/mp4"></source></video>
     </div>
     <div id="front-jump-down"><a href="#index-first-row"><img src="/<?php print $theme_path; ?>/images/jump-down.png"></a></div>
     
-    <?php endif; //video background ?>
+    <?php } else { ?>
+        <div id="log"> <?php print $_SERVER["HTTP_USER_AGENT"]; ?></div>
+    <?php } //video background ?>

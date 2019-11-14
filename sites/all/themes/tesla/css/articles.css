@@ -43,13 +43,14 @@ body.articles #top ol li a:visited {
 	overflow: hidden;
 }
 
-.view-articles .views-row:nth-child(odd) {
-	margin-right: 5%;
+.view-articles .view-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .view-articles .views-row {
-	float: left;
-	width: 45%;
+	width: 48%;
 	margin-bottom: 40px;
 }
 
@@ -77,8 +78,8 @@ body.tesla-article .article-title h1,
 }
 
 .view-articles .views-row .views-field-field-main-image img {
-	width: 90%;
-	max-width: 90%;
+	width: 100%;
+	max-width: 100%;
 	height: auto;
 }
 
@@ -175,6 +176,21 @@ body.tesla-article .view-articles .views-row {
 	margin-bottom: 40px;
 }
 
+body.tesla-article blockquote::before,
+body.tesla-article blockquote::after {
+	content: "";
+	width: 100%;
+	height: 54px;
+	display: block;
+	margin-left: -20px;
+	background-image: url(../images/quotemark.png);
+	margin-bottom: 4px;
+	background-repeat: no-repeat;
+}
+
+body.tesla-article blockquote::after {
+	background-position: right bottom;
+}
 
 @media screen and (max-width: 800px) {
 	.view-articles .views-row {
@@ -183,4 +199,22 @@ body.tesla-article .view-articles .views-row {
     .view-articles .views-row {
         width: 100%;
     }
+
+    body.tesla-article #article-column-left,
+    body.tesla-article #article-column-right {
+    	width: 100%;
+    	float: none;
+    }
+
+    body.tesla-article .view-articles {
+    	padding: 0;
+    }
+
+    body.tesla-article .view-articles .views-row .views-field-field-main-image img {
+    	width: 100%;
+    	max-width: 100%;
+
+    }
+
 }
+

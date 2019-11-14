@@ -10,6 +10,13 @@ body.accessories-list #page-title {
 	text-align: center;
 }
 
+body.accessories-list #page-lead {
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+}
+
 body.accessories-list #page-title h1 {
 	width: 100%;
 	color: #fff;
@@ -32,6 +39,7 @@ body.accessories-list #page-title h1 {
 .view-accessories .views-row {
 	width: 30%;
 	font-family: Din;
+	margin-bottom: 40px;
 }
 
 .view-accessories .views-row .views-field-field-model {
@@ -95,6 +103,14 @@ body.accessories-list #page-title h1 {
 	display: block;
 }
 
+.view-accessories .views-row .accessories-details:hover .accessories-details-button:hover {
+	background-color: #cd0033;
+}
+
+.view-accessories .views-row .accessories-details:hover .accessories-details-button:hover a {
+	color: #fff;
+}
+
 @media screen and (max-width: 800px) {
 
 	.view-accessories .views-row .views-field-field-image img {
@@ -109,12 +125,20 @@ body.accessories-list #page-title h1 {
 	.view-accessories .views-row .views-field-title a, .view-accessories .views-row .views-field-field-price {
     	font-size: 18px;
 	}
+
+	body.accessories-list #page-lead {
+		width: 100%;
+		color: #000;
+	}
+
+	.view-accessories .views-row .accessories-details:hover .accessories-details-button {
+		width: 100%;
+		font-size: 15px;
+	}
 	
 }
 
-@media screen and (max-width: 500px) {
 
-}
 
 @media screen and (max-width: 800px) and (orientation: landscape) {
 
@@ -124,56 +148,123 @@ body.accessories-list #page-title h1 {
 	body.accessories-list #page-title {
     	padding: 17vw 0 0 0;
     }
+
+    body.accessories-list #page-lead {
+		width: 100%;
+		color: #000;
+	}
 	
 }
 
 @media screen and (min-width: 800px) {
 	
 	body.accessories-list #page-title {
-		padding: 19vh 0 0 0;
+		padding: 3vw 0 0 0;
+		height: 3vw;
+	}
+
+	body.accessories-list #page-lead {
+		display: block;
+		font-family: Din;
+		margin-bottom: 18vw;
+		color: #fff !important;
+	}
+
+	body.accessories-list #page-lead h2 {
+		font-weight: normal;
+		font-size: 16px;
+
 	}
 
 }
 
+@media screen and (min-width: 500px) {
+	body.accessories-list #page-lead {
+		width: 100%;
+		color: #000;
+	}
+}
+
 @media screen and (min-width: 930px) {
 	body.accessories-list #page-title {
-		padding: 24vh 0 0 0;
+		padding: 5vw 0 0 0;
+		height: 3vw;
+	}
+
+	body.accessories-list #page-lead {
+		display: block;
+		font-family: Din;
+		margin-bottom: 18vw;
+		color: #fff;
+	}
+
+	body.accessories-list #page-lead h2 {
+		font-weight: normal;
+		font-size: 20px;
+
 	}
 }
 
 @media screen and (min-width: 1100px) {
 	body.accessories-list #page-title {
-		padding: 26vh 0 0 0;
+		padding: 7vw 0 0 0;
+		height: 5vw;
+	}
+
+	body.accessories-list #page-lead {
+		display: block;
+		font-family: Din;
+		margin-bottom: 16vw;
+		color: #fff;
 	}
 }
 
 @media screen and (min-width: 1280px) {
 	body.accessories-list #page-title {
-		padding: 30vh 0 0 0;
+		padding: 8vw 0 0 0;
+		height: 8vw;
 	}
 }
 
 @media screen and (min-width: 1366px) {
 	body.accessories-list #page-title {
-		padding: 32vh 0 0 0;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	body.accessories-list #page-title {
-		padding: 35vh 0 0 0;
+		padding: 11vw 0 0 0;
 	}
 }
 
 
-
-
-
-
 @media screen and (min-width: 1440px) {
 	body.accessories-list #page-title {
-	    height: 30vh;
-	    padding: 44vh 0 0 0;
+	    height: 6vw;
+	    padding: 12vw 0 0 0;
 	    text-align: center;
+	}
+
+	body.accessories-list #page-lead {
+		margin-bottom: 16vw;
+	}
+
+	body.accessories-list #page-lead h2 {
+		font-weight: normal;
+		font-size: 25px;
+
+	}
+}
+
+@media screen and (min-width: 1850px) {
+	body.accessories-list #page-title {
+	    height: 8vw;
+	    padding: 9vw 0 0 0;
+	    text-align: center;
+	}
+
+	body.accessories-list #page-lead {
+		margin-bottom: 16vw;
+	}
+
+	body.accessories-list #page-lead h2 {
+		font-weight: normal;
+		font-size: 25px;
+
 	}
 }

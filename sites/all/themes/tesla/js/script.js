@@ -76,7 +76,12 @@
                         if ($('#facility-block .config-option.selected').data('with-free-items') == 1) {
                             $('#interior-block .price').html('0');
                         } else {
-                            $('#interior-block .price').html($('#interior-block .config-option.selected').data('price'));
+                            if ($('#facility-block .config-option.selected').data('title').toLowerCase().includes('performance')) {
+                                price = $('#interior-block .config-option.selected').data('performance-price');
+                            } else {
+                                price = $('#interior-block .config-option.selected').data('price');
+                            }
+                            $('#interior-block .price').html(price);
                         }
                     }
 

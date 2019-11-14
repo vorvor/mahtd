@@ -36,6 +36,8 @@ function tesla_preprocess_maintenance_page(&$variables, $hook) {
  */
 
 function tesla_preprocess_html(&$variables, $hook) {
+
+  global $base_url;
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
   // The body tag's classes are controlled by the $classes_array variable. To
@@ -54,6 +56,12 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['faq_page_path'] = drupal_get_path_alias('tesla-gyik');
   $variables['brand_story_path'] = drupal_get_path_alias('tesla/markatortenet');
   $variables['articles_path'] = drupal_get_path_alias('tesla/hirek');
+  $variables['accessories_path'] = drupal_get_path_alias('tesla/kiegeszitok-listaja');
+  $variables['energy_certificate'] = drupal_get_path_alias('tesla/energetikai-tanusitvany');
+  $variables['current_url'] = url(current_path(), array('absolute' => TRUE));
+  if (drupal_is_front_page()) {
+    $variables['current_url'] = $base_url;
+  }
 
   $node = menu_get_object();
   if ($node && $node->nid) {
@@ -90,15 +98,18 @@ function tesla_preprocess_html(&$variables, $hook) {
 
     if ($node->type == 'article') {
       $variables['body_class'] = 'articles tesla-article';
-      $variables['meta_title'] = $node->title;
-      $variables['meta_description'] = $node->field_lead[LANGUAGE_NONE][0]['value'];
+      $variables['meta_title'] = check_plain(strip_tags($node->title));
+      $variables['meta_description'] = check_plain(strip_tags($node->field_lead[LANGUAGE_NONE][0]['value']));
+      $variables['meta_img'] = file_create_url($node->field_main_image[LANGUAGE_NONE][0]['uri']);
       $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+
     }
 
     if ($node->type == 'accessories') {
       $variables['body_class'] = 'accessories';
       drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/accessories.css', 'file');
       drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/accessories.js', 'file');
+      $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
     }
 
   } 
@@ -114,12 +125,28 @@ function tesla_preprocess_html(&$variables, $hook) {
     drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/accessories-list.css', 'file');
   }
 
+  if (drupal_get_path_alias(current_path()) == 'tesla/energetikai-tanusitvany') {
+    $variables['body_class'] = 'energetikai-tanusitvany';
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/energetikai-tanusitvany.js', 'file');
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/energetikai-tanusitvany.css', 'file');
+  }
+
+  if (drupal_get_path_alias(current_path()) == 'tesla/adatkezelesi-tajekoztato') {
+    $variables['body_class'] = 'gdpr';
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/gdpr.css', 'file');
+    $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+  }
+
   if (empty($variables['meta_title'])) {
     $variables['meta_title'] = 'Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu';
   }
 
   if (empty($variables['meta_description'])) {
     $variables['meta_description'] = 'Tesla rendelés Magyarországon egyedülállóan rövid időn belül a Magyar Autókereskedőház Zrt.-től. Számolja ki elektromos Tesla autó konfigurátorunk segítségével a Tesla Model 3 árát, valamint a Tesla Model S, Tesla Model Y, Model X árát.';
+  }
+
+  if (empty($variables['meta_img'])) {
+    $variables['meta_img'] = 'https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg';
   }
 
   $main_menu_items = menu_tree('main-menu');
@@ -147,7 +174,10 @@ function tesla_preprocess_page(&$variables, $hook) {
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
   if (isset($variables['node'])) {
-    $variables['theme_hook_suggestion'] = 'page__' . $variables['node']->type;
+    $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
+
+    $alias = str_replace('-', '_', drupal_get_path_alias('node/' . $variables['node']->nid));
+    $variables['theme_hook_suggestions'][] = 'page__' . str_replace('/', '__', $alias);
 
     if ($variables['node']->type == 'article') {
       $node = $variables['node'];
@@ -252,6 +282,7 @@ function tesla_preprocess_page(&$variables, $hook) {
           $interiors[] = array(
             'title' => $paragraph->field_title['und'][0]['value'],
             'price' => number_format($paragraph->field_price['und'][0]['value'], 0, ',', ' '),
+            'performance-price' => number_format($paragraph->field_performance_price['und'][0]['value'], 0, ',', ' '),
             'image' => $paragraph->field_image['und'][0]['uri'],
           );
         }

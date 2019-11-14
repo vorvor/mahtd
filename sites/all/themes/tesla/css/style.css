@@ -248,6 +248,7 @@ ol#menu li a:visited {
     font-weight: 600;
     height: 56px;
     display: block;
+    letter-spacing: 0;
 }
 
 .config-block .config-note {
@@ -447,6 +448,18 @@ body.model-y #third-row-left {
     padding: 0px 45px 45px 0;
 }
 
+#index-third-half-row #spacer {
+    padding: 8vw 5vw;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: Din;
+    letter-spacing: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    height: 510px;
+}
+
 .config-block {
     color: #000;
     margin-bottom: 40px;
@@ -611,7 +624,14 @@ footer {
 #index-third-row {
     background: url(../images/model-x.jpg);
     background-size: cover;
-} 
+}
+
+#index-third-half-row {
+    background: url(../images/index-energy.jpg);
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+}
 
 /* */
 .index-row {
@@ -646,6 +666,11 @@ footer {
     width: 57px;
     height: 58px;
     float: left;
+}
+
+#index-third-half-row .index-row #data-1 .data::before,
+#index-third-half-row .index-row #data-2 .data::before {
+    background: none;
 }
 
 .index-row #data-2 .data::before {
@@ -822,7 +847,7 @@ body.contact .contact-title {
 }
 
 body.contact #first-row-wrapper {
-    height:50vw;
+    height:100vh;
 }
 
 body.contact #second-row-wrapper {
@@ -926,7 +951,7 @@ body.inner .send-order .p93854759563 {
 body.contact #contact-form .contact-name,
 body.contact #contact-form .ce87325643,
 body.contact #contact-form .cp876453235 {
-    width: 30%;
+    width: 100%;
     float: left;
 }
 
@@ -1363,8 +1388,8 @@ body.faq a {
 #mobile-menu-block ol li {
     text-align: left;
     display: block;
-    height: 80px;
-    line-height: 80px;
+    height: 70px;
+    line-height: 70px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -1454,4 +1479,15 @@ body.faq a {
     line-height: 56px;
     border: none;
     color: #fff;
+}
+
+.webform-component--gdpr > label {
+    display: none;
+}
+
+.webform-component--gdpr a {
+    text-decoration: none;
+    text-transform: none;
+    color: var(--red-text);
+    padding-left: 65px;
 }

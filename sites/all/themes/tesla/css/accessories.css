@@ -138,7 +138,7 @@ body.accessories .red-button {
 	display: none;
 }
 
-#accessories-order-form input,
+#accessories-order-form input[type=text],
 #accessories-order-form textarea {
     background-color: #fff;
     border-color: #bbb;
@@ -218,10 +218,11 @@ body.accessories .red-button {
 	}
 
 	.accessories-title h1 {
-
+		font-size: 36px;
 	}
 
 	.accessories-price {
+		font-size: 30px;
 		margin: 0;
 	}
 
@@ -253,12 +254,25 @@ body.accessories .red-button {
 		margin-top: 10px;
 	}
 
+	.accessories-counter a {
+    	width: 15px;
+    }
+
 	body.accessories .red-button-wide {
 		margin-top: -10px;
-	}	
+	}
+
+	body.accessories .red-button-wide a {
+    	font-size: 13px;
+    }
 
 	.accessories-body {
 		margin: 30px 0 0 0;
+	}
+
+	#accessories-order-form .webform-submit {
+		font-size: 16px;
+		width: 100%;
 	}
 }
 

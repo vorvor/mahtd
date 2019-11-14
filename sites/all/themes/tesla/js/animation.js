@@ -36,47 +36,6 @@
 			}
 		);	
 
-		// hide all data elemenet
-		$('.index-row-data').each(function() {
-			$(this).css('opacity', 0);
-		})
-
-		$('.index-row-wrapper').offset({left: 3000}).css({opacity: 0});
-
-		// data element effect
-		function dataEffect(element, innerElement) {
-			element.each(function() {
-				$(innerElement, this).each(function() {
-					$(this).animate({
-						opacity: 1,
-					}, 4000, function() {
-						$(this).fadeOut(5).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10).fadeOut(10).fadeIn(10);
-					});
-				});
-			})
-		}
-
-		$(window).scroll(function() {
-
-		 	$('.index-row-wrapper').each(function(index) {
-		 		scrollPos = $(window).scrollTop() + $(window).height();
-		 		endOffset = $(this).offset();
-		 		endPos = endOffset.top;
-		 		diff = endPos - scrollPos;
-		 		diffEnd = endPos + $(this).height() - scrollPos;
-
-		 		if (diff < $(window).height() * -0.2 && $(this).attr('effect') == undefined) {
-		 			$(this).animate({left: 0, opacity: 1}, 2000);
-		 		}
-
-		 		if (diff < $(window).height() * -1 && $(this).attr('effect') == undefined) {
-					dataEffect($(this), '.index-row-data');
-					$(this).attr('effect', 1);
-					
-				} 
-		 	})
-		})
-
 		// mobile menu effect
 		$('#mobile-menu').unbind('click');
 		$('#mobile-menu-close').unbind('click');
@@ -97,46 +56,17 @@
 		})
 
 		// inner-effects
+		$('.inner #second-row-left').css({
+			'margin-left' : '-1000px',
+		});
+
+		$('.inner #second-half-row-right').css({
+			'margin-right' : '-1000px',
+		});
 
 		function dataInnerEffect(element) {
 			
 		}
-
-		$('.first-row-data').css('opacity', 0);
-		dataEffect($('#first-row-wrapper'), '.first-row-data');
-		$('#first-row-wrapper').attr('effect', 1);
-
-
-		$('.inner #second-row-left h2').offset({ left: -700}).css('opacity', 0);
-		$('.inner #second-row-left h3').offset({ left: -2000}).css('opacity', 0);
-		$('.inner #second-row-left div').offset({ left: -5000}).css('opacity', 0);
-
-
-		$('.inner #second-row-wrapper')
-		.offset({ left: 3000})
-		.animate({
-				left: 0
-			}, 1000, function() {
-				$('.inner #second-row-left h2')
-				.css('opacity', 1)
-				.animate({
-						left: 0
-					}, 500);
-
-				$('.inner #second-row-left h3')
-				.css('opacity', 1)
-				.animate({
-						left: 0
-					}, 500);
-
-				$('.inner #second-row-left div')
-				.css('opacity', 1)
-				.animate({
-						left: 0
-					}, 500);
-			});
-
-		
 
 		$(window).scroll(function() {
 
@@ -148,11 +78,67 @@
 		 		diffEnd = endPos + $(this).height() - scrollPos;
 
 		 		if (diff < $(window).height() * -0.3 && $(this).attr('effect') == undefined) {
-					dataInnerEffect($(this));
+					$('.inner #second-row-left').animate({
+						'marginLeft': 0,
+					}, 1000);
+					$(this).attr('effect', 1);
+				} 
+		 	})
+
+		 	$('#second-half-row-right').each(function(index) {
+		 		scrollPos = $(window).scrollTop() + $(window).height();
+		 		endOffset = $(this).offset();
+		 		endPos = endOffset.top;
+		 		diff = endPos - scrollPos;
+		 		diffEnd = endPos + $(this).height() - scrollPos;
+
+		 		if (diff < $(window).height() * -0.3 && $(this).attr('effect') == undefined) {
+					$('.inner #second-half-row-right').animate({
+						'marginRight': 0,
+					}, 1000);
 					$(this).attr('effect', 1);
 				} 
 		 	})
 		})
+
+		$('.config-block').each(function() {
+			$('.config-option', this).hover(
+				function() {
+					$('.config-option').addClass('opacityOn').removeClass('opacityOff');
+					$('.config-title').addClass('opacityOn').removeClass('opacityOff');
+					$('.config-block-desc').addClass('opacityOn').removeClass('opacityOff');
+					$(this).removeClass('opacityOn').removeClass('opacityOff');
+					wrapper = $(this).data('wrapper');
+					$('#' + wrapper + '-block .config-title').removeClass('opacityOn').removeClass('opacityOff');
+					origDesc = $('#' + wrapper + '-block .config-block-desc').html();
+					$('#' + wrapper + '-block .config-block-desc')
+					.removeClass('opacityOn')
+					.removeClass('opacityOff');
+					if (!$(this).hasClass('config-button')) {
+						$('#' + wrapper + '-block .config-block-desc')
+						.html($(this).data('title'));
+					}
+				},
+				function() {
+					$('.config-option').addClass('opacityOff').removeClass('opacityOn');
+					$('.config-title').addClass('opacityOff').removeClass('opacityOn');
+					$('.config-block-desc').addClass('opacityOff').removeClass('opacityOn');
+					$('#' + wrapper + '-block .config-block-desc')
+					.html(origDesc);
+				}
+			)
+		})
+
+		$('.first-row-data').hover(
+			function() {
+				$('.first-row-data').addClass('downScaleS').removeClass('resetScaleS');
+				$(this).removeClass('downScaleS').addClass('upScaleS');
+			},
+			function() {
+				$('.first-row-data').removeClass('downScaleS').removeClass('upScaleS').addClass('resetScaleS');
+			}
+		);	
+		
 
 
 	}}

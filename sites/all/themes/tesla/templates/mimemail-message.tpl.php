@@ -77,6 +77,9 @@
           if (empty(trim($match[1]))) {
             $body = preg_replace('/<div id="funding-title">.*?<div id="funding-end"><\/div>/ms', '', $body);
           }
+
+          $body = str_replace(' !', '!', $body);
+
           print $body; 
         ?>
       </div>

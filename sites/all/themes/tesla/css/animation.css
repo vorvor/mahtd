@@ -12,3 +12,28 @@
 	transform: scale(1);
 	transition: all 1s;	
 }
+
+.upScaleS {
+	transform: scale(1.1);
+	transition: all 1s;
+}
+
+.downScaleS {
+	transform: scale(0.8);
+	transition: all 1s;	
+}
+
+.resetScaleS {
+	transform: scale(1);
+	transition: all 1s;	
+}
+
+.opacityOn {
+	opacity: 0.2;
+	transition: all 1s;
+}
+
+.opacityOff {
+	opacity: 1;
+	transition: all 1s;
+}

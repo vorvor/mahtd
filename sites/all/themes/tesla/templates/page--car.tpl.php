@@ -46,9 +46,9 @@
                 <div id="data-3" class="first-row-data">
                     <div class="red-button">
                         <?php if ($preorder) { ?>
-                                <a href="#second-row-wrapper"><?php print 'Előrendelem'; ?></a>
+                                <a href="#second-row-wrapper"><?php print 'Ajánlat kérése'; ?></a>
                             <?php } else { ?>
-                                <a href="#third-row-wrapper"><?php print 'Megrendelem'; ?></a>
+                                <a href="#third-row-wrapper"><?php print 'Konfigurátor'; ?></a>
                             <?php } ?>
                         </a>
                     </div>
@@ -65,7 +65,7 @@
                 
                 <?php if ($preorder) { ?>
                 <div class="red-button preorder">
-                    <a id="send-order-button"  href="#order-form">Előrendelem</a>
+                    <a id="send-order-button"  href="#order-form">Ajánlat kérése</a>
                 </div>
                 <div id="order-form" class="send-order invisible">
                     <?php
@@ -170,7 +170,7 @@
             </div>
             <?php endif; ?>
 
-            <?php if (isset($exteriors)): ?>
+            <?php if (isset($rims)): ?>
             <div class="config-block" id="rim-block">
                 <div class="config-block-top">
                     <div class="config-title">Felni</div>
@@ -252,6 +252,7 @@
                 		<div class="config-berry config-option" 
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
+                        data-performance-price="<?php print $item['performance-price']; ?>"
                 		data-wrapper="interior">
                 			<img src="<?php print file_create_url($item['image']) ?>">
                 		</div>
@@ -322,7 +323,7 @@
             </div>
             <div class="config-block config-block-with-button">
                 <div class="red-button red-button-wide">
-                    <a id="send-order-button" href="#send-order-button">Megrendelés véglegesítése</a>
+                    <a id="send-order-button" href="#send-order-button">Ajánlat kérése</a>
                 </div>
             </div>
             <div class="config-block block-send-order">

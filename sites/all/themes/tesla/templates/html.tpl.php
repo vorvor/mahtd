@@ -11,8 +11,6 @@
 <head>
     <title><?php print $meta_title; ?></title>
     <?php print $head; ?>
-    <?php print $styles; ?>
-    <?php print $scripts; ?>
 
     <?php
       $theme_path = drupal_get_path('theme', 'tesla');
@@ -37,13 +35,13 @@
     <meta property="fb:app_id" content="1192951680871368" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?php print $meta_title; ?>" />
-    <meta property="og:url" content="https://www.tesla.hu/" />
+    <meta property="og:url" content="<?php print $current_url; ?>" />
     <meta property="og:title" content="<?php print $meta_title; ?>" />
     <meta property="og:determiner" content="auto" />
     <meta property="og:description" content="<?php print $meta_description; ?>" />
-    <meta property="og:image" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
-    <meta property="og:image:url" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
-    <meta property="og:image:secure_url" content="https://www.tesla.hu/sites/default/files/tesla-model-x-index.jpg" />
+    <meta property="og:image" content="<?php print $meta_img; ?>" />
+    <meta property="og:image:url" content="<?php print $meta_img; ?>" />
+    <meta property="og:image:secure_url" content="<?php print $meta_img; ?>" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://www.tesla.hu/" />
     <meta name="twitter:title" content="<?php print $meta_title; ?>" />
@@ -51,6 +49,9 @@
     <meta name="dcterms.type" content="Text" />
     <meta name="dcterms.identifier" content="https://www.tesla.hu/" />
     <meta name="dcterms.format" content="text/html" />
+
+    <?php print $styles; ?>
+    <?php print $scripts; ?>
     
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!--  <script src="./js/script.js"></script>  -->
@@ -73,6 +74,8 @@
             <li><a href="/<?php print $articles_path; ?>">Tesla hírek</a></li>
             <li><a href="/<?php print $brand_story_path; ?>">Tesla márkatörténet</a></li>
             <li><a href="/<?php print $faq_page_path; ?>">Gy.i.k.</a></li>
+            <li><a href="/<?php print $energy_certificate; ?>">Energetikai tanusítvány</a></li>
+            <li><a href="/<?php print $accessories_path; ?>">Kiegészítők</a></li>
             <li><a href="/<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>
         </nav>

@@ -1,5 +1,5 @@
 (function ($) {
-  Drupal.behaviors.anim = {
+  Drupal.behaviors.accessorieslist = {
     attach: function (context, settings) {
     
 		function refreshItems() {
@@ -16,9 +16,9 @@
 
 				height = $('.views-field-field-image', this).height();
 				padding = height * 0.35;
-				$('.views-field-nothing .accessories-details').height(height);
-				$('.views-field-nothing .accessories-details').css('padding-top', padding + 'px');
-				$('.views-field-nothing .accessories-details').css({
+				$('.views-field-nothing .accessories-details', this).height(height);
+				$('.views-field-nothing .accessories-details', this).css('padding-top', padding + 'px');
+				$('.views-field-nothing .accessories-details', this).css({
 					'marginTop': height * -1 + 'px',
 				});
 			})

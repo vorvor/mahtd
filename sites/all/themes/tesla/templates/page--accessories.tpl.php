@@ -76,7 +76,7 @@
 			<div class="accessories-counter-title">Mennyiség</div>
 			<div class="accessories-counter">
 				<a href="#" class="counter-minus">-</a>
-				<span class="accessories-counter-count">2</span>
+				<span class="accessories-counter-count">1</span>
 				<a href="#" class="counter-plus">+</a>
 			</div>
 			<div class="red-button red-button-wide">

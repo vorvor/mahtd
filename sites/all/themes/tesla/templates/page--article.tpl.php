@@ -8,7 +8,6 @@
  */
 ?>
 
-
 <div id="content-wrapper">
 	<div id="line"></div>
 

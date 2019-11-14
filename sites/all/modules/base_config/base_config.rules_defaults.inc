@@ -10,6 +10,36 @@
  */
 function base_config_default_rules_configuration() {
   $items = array();
+  $items['rules_send_accessories_order'] = entity_import('rules_config', '{ "rules_send_accessories_order" : {
+      "LABEL" : "Send accessories order",
+      "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
+      "REQUIRES" : [ "webform_rules", "rules", "mimemail" ],
+      "ON" : { "webform_rules_submit" : [] },
+      "IF" : [
+        { "webform_has_id" : {
+            "form_id" : "webform-client-form-19",
+            "selected_webform" : { "value" : { "webform-client-form-34" : "webform-client-form-34" } }
+          }
+        }
+      ],
+      "DO" : [
+        { "mimemail" : {
+            "USING" : {
+              "key" : "accessories-order",
+              "to" : "vorosborisz@gmail.com",
+              "cc" : "vorosborisz@gmail.com",
+              "bcc" : "vorosborisz@gmail.com",
+              "subject" : "Kieg\\u00e9szt\\u0151 rendel\\u00e9s \\u00e9rkezett a tesla.hu oldalr\\u00f3l",
+              "body" : "\\u003Cdiv id=\\u0022order-wrapper\\u0022 class=\\u0022wrapper\\u0022\\u003E\\r\\n\\u003Cstrong\\u003EMegrendel\\u0151 adatai:\\u003C\\/strong\\u003E\\u003Cbr \\/\\u003E\\r\\nN\\u00e9v: [data:name-value]\\u003Cbr \\/\\u003E\\r\\nC\\u00edm: [data:add7892349-value]\\u003Cbr \\/\\u003E\\r\\nTelefonsz\\u00e1m: [data:rd456378456-value]\\u003Cbr \\/\\u003E\\r\\nE-mail: [data:qr187453674854-value]\\u003Cbr \\/\\u003E\\r\\nEgy\\u00e9b inform\\u00e1ci\\u00f3, megjegyz\\u00e9s: [data:note-value]\\u003Cbr \\/\\u003E\\r\\n\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\r\\n\\u003Cstrong\\u003EA rendel\\u00e9s adatai:\\u003C\\/strong\\u003E\\u003Cbr \\/\\u003E\\r\\nKieg\\u00e9sz\\u00edt\\u0151: [data:accessories-value]\\u003Cbr \\/\\u003E\\r\\n\\u003C\\/div\\u003E",
+              "language" : [ "" ]
+            },
+            "PROVIDE" : { "send_status" : { "send_status" : "Send status" } }
+          }
+        }
+      ]
+    }
+  }');
   $items['rules_send_contact_form_in_email'] = entity_import('rules_config', '{ "rules_send_contact_form_in_email" : {
       "LABEL" : "Send contact form in email",
       "PLUGIN" : "reaction rule",
