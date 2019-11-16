@@ -84,7 +84,7 @@ function base_config_field_default_field_bases() {
   // Exported field_base: 'field_exta'.
   $field_bases['field_exta'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_exta',
@@ -100,7 +100,6 @@ function base_config_field_default_field_bases() {
         1 => 'Autopilot',
         2 => 'FSD',
         3 => 'vonóhorog',
-        4 => 'ülések száma (5-6-7 csak az X-nél)',
         5 => 'prémium hifi',
         6 => 'nyitható tetőablak (csak az S-nél)',
         7 => 'légrugós futómű (csak az S és X nél)',
@@ -147,8 +146,11 @@ function base_config_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'black' => 'fekete',
-        'white' => 'fehér',
+        'gyémánt metál' => 'gyémánt metál',
+        'fekete metál' => 'fekete metál',
+        'sötétszürke metál' => 'sötétszürke metál',
+        'mélykék metál' => 'mélykék metál',
+        'vörös metál' => 'vörös metál',
       ),
       'allowed_values_function' => '',
     ),
@@ -326,8 +328,13 @@ function base_config_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'white' => 'fehér',
-        'black' => 'fekete',
+        'fekete' => 'fekete',
+        'fehér' => 'fehér',
+        'fekete kőrisfa betétekkel' => 'fekete kőrisfa betétekkel',
+        'fekete-fehér kőrisfa betétekkel' => 'fekete-fehér kőrisfa betétekkel',
+        'bézs tölgyfa betétekkel' => 'bézs tölgyfa betétekkel',
+        'fekete karbon betétekkel' => 'fekete karbon betétekkel',
+        'fekete-fehér karbon betétekkel' => 'fekete-fehér karbon betétekkel',
       ),
       'allowed_values_function' => '',
     ),
@@ -508,6 +515,32 @@ function base_config_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_num_of_seats'.
+  $field_bases['field_num_of_seats'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_num_of_seats',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        5 => 5,
+        6 => 6,
+        7 => 7,
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_option_condition'.

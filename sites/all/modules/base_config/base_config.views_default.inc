@@ -321,7 +321,7 @@ function base_config_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'tesla/po-tesla';
+  $handler->display->display_options['path'] = 'tesla/hasznalt-tesla';
   $export['po_tesla'] = $view;
 
   return $export;

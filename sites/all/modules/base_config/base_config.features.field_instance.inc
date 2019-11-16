@@ -1956,8 +1956,8 @@ function base_config_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 10,
+      'type' => 'options_buttons',
+      'weight' => 11,
     ),
   );
 
@@ -2031,7 +2031,7 @@ function base_config_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -2221,6 +2221,43 @@ function base_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-po_tesla-field_num_of_seats'.
+  $field_instances['node-po_tesla-field_num_of_seats'] = array(
+    'bundle' => 'po_tesla',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_num_of_seats',
+    'label' => 'Ülések',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-po_tesla-field_price'.
   $field_instances['node-po_tesla-field_price'] = array(
     'bundle' => 'po_tesla',
@@ -2310,14 +2347,14 @@ function base_config_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
+        'input_format' => 'custom',
+        'input_format_custom' => 'Y-m',
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-7:+0',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_select',
       'weight' => 3,
     ),
   );
@@ -3103,6 +3140,7 @@ function base_config_field_default_field_instances() {
   t('Winter wheels');
   t('With free config items');
   t('Year');
+  t('Ülések');
 
   return $field_instances;
 }

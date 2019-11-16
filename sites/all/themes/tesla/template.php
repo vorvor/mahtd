@@ -137,6 +137,12 @@ function tesla_preprocess_html(&$variables, $hook) {
     $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
   }
 
+  if (drupal_get_path_alias(current_path()) == 'tesla/hasznalt-tesla') {
+    $variables['body_class'] = 'po-tesla-list';
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/po-tesla-list.css', 'file');
+    $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+  }
+
   if (empty($variables['meta_title'])) {
     $variables['meta_title'] = 'Tesla ár és vásárlás Magyarországon - Tesla Model 3 ár kalkuláció és rendelés 2 hónapon belül | Tesla.hu';
   }
