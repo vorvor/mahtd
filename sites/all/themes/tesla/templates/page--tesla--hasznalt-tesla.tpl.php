@@ -4,16 +4,14 @@
 	<div id="page-title">
 	<h1><?php print drupal_get_title(); ?></h1>
 	</div>
-	<div id="page-lead">
-		<h2>
-			<?php
-				$node = node_load(35);
-				print $node->field_lead[LANGUAGE_NONE][0]['value'];
-			?>
-		</h2>
-	</div>
+	<div id="po-tesla">
+	<?php 
+		// print views_embed_view('po_tesla', 'page'); 
 
-	<div id="accessories">
-	<?php print views_embed_view('po_tesla', 'page'); ?>
+		$view = views_get_view('po_tesla','page');
+		$view->override_path = $_GET['q'];
+		$viewsoutput = $view->preview();
+		print $viewsoutput;
+	?>
 	</div>
 </div>

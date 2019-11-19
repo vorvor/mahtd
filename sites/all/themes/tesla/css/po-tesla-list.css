@@ -1,65 +1,103 @@
-body.accessories-list {
-	background: url(../images/accessories.jpg) #fff no-repeat;
+body.po-tesla-list {
+	background-color: #fff;
 	color: #000;
 	background-size: contain;
 }
 
-body.accessories-list #page-title {
-	height: 15vw;
-	padding: 15vw 0 0 0;
+body.po-tesla-list #page-title {
+	height: 5vw;
+	padding: 5vw 0 0 0;
 	text-align: center;
 }
 
-body.accessories-list #page-lead {
+body.po-tesla-list #page-lead {
 	width: 40%;
 	margin: 0 auto;
 	text-align: center;
 	color: #fff;
 }
 
-body.accessories-list #page-title h1 {
+body.po-tesla-list #page-title h1 {
 	width: 100%;
-	color: #fff;
+	color: #000;
 	text-transform: uppercase;
 	font-size: 4vw;
 	font-family: Din;
 	margin: 0;
 }
 
-#accessories {
+#po-tesla {
 	padding: 21px;
 }
 
-.view-accessories .view-content {
+.view-po-tesla .view-header {
+	font-size: 24px;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.view-po-tesla .form-item-field-model-one-tid {
+	border-radius:36px;
+	display:inline-block;
+	overflow:hidden;
+	background:#fff;
+	border:4px solid var(--red-text);
+	padding-left:20px;
+	width: 100%;
+	text-align: center;
+}
+
+.view-po-tesla select#edit-field-model-one-tid {
+	width: 340px;
+	height: 40px;
+	border: 0px;
+	outline: none;
+	text-transform: uppercase;
+	padding: 20px;
+	background: #fff;
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.view-po-tesla .view-filters {
+	display: flex;
+	justify-content: center;
+}
+
+.view-po-tesla .view-content {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.view-accessories .views-row {
+.view-po-tesla .views-row {
 	width: 30%;
 	font-family: Din;
 	margin-bottom: 40px;
 }
 
-.view-accessories .views-row .views-field-field-model {
+.view-po-tesla .views-row .views-field-field-model-one {
 	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: #000;
 }
 
-.view-accessories .views-row .views-field-title a,
-.view-accessories .views-row .views-field-field-price {
+.view-po-tesla .views-row .views-field-title a,
+.view-po-tesla .views-row .views-field-field-price {
 	font-size: 24px;
 	color: #000;
 }
 
 
-.view-accessories .views-row .views-field-field-image img {
+.view-po-tesla .views-row .views-field-field-image img {
 	max-width: 100%;
+	height: auto;
 }
 
-.view-accessories .views-row .accessories-details {
+.view-po-tesla .views-row .po-tesla-details {
 	width: 100%;
 	padding-top:200px;
 	margin-top: -405px;
@@ -69,15 +107,15 @@ body.accessories-list #page-title h1 {
 	
 }
 
-.view-accessories .views-row .accessories-details:hover {
+.view-po-tesla .views-row .po-tesla-details:hover {
 	background: rgba(255, 255, 255, 0.8);
 }
 
-.view-accessories .views-row .accessories-details .accessories-details-button {
+.view-po-tesla .views-row .po-tesla-details .po-tesla-details-button {
 	display: none;
 }
 
-.view-accessories .views-row .accessories-details:hover .accessories-details-button {
+.view-po-tesla .views-row .po-tesla-details:hover .po-tesla-details-button {
 	display: block;
 	border: 3px solid #cd0033;
 	-webkit-border-radius: 50px;
@@ -96,42 +134,46 @@ body.accessories-list #page-title h1 {
 	margin: 0 auto;
 }
 
-.view-accessories .views-row .accessories-details:hover .accessories-details-button a {
+.view-po-tesla .views-row .po-tesla-details:hover .po-tesla-details-button a {
 	color: #cd0033;
 	line-height: 60px;
 	width: 100%;
 	display: block;
 }
 
-.view-accessories .views-row .accessories-details:hover .accessories-details-button:hover {
+.view-po-tesla .views-row .po-tesla-details:hover .po-tesla-details-button:hover {
 	background-color: #cd0033;
 }
 
-.view-accessories .views-row .accessories-details:hover .accessories-details-button:hover a {
+.view-po-tesla .views-row .po-tesla-details:hover .po-tesla-details-button:hover a {
 	color: #fff;
+}
+
+.view-po-tesla .views-submit-button input {
+	display: none;
 }
 
 @media screen and (max-width: 800px) {
 
-	.view-accessories .views-row .views-field-field-image img {
+	.view-po-tesla .views-row .views-field-field-image img {
 	    max-width: 100%;
 	    height: auto;
 	}
 
-	.view-accessories .views-row .views-field-field-model {
+	.view-po-tesla .views-row .views-field-field-model-one {
     	font-size: 18px;
 	}
 
-	.view-accessories .views-row .views-field-title a, .view-accessories .views-row .views-field-field-price {
+	.view-po-tesla .views-row .views-field-title a, .view-po-tesla .views-row .views-field-field-price {
     	font-size: 18px;
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		width: 100%;
 		color: #000;
 	}
 
-	.view-accessories .views-row .accessories-details:hover .accessories-details-button {
+	.view-po-tesla .views-row .po-tesla-details:hover .po-tesla-details-button {
 		width: 100%;
 		font-size: 15px;
 	}
@@ -145,11 +187,11 @@ body.accessories-list #page-title h1 {
 }
 
 @media screen and (min-width: 650px) {
-	body.accessories-list #page-title {
-    	padding: 17vw 0 0 0;
+	body.po-tesla-list #page-title {
+
     }
 
-    body.accessories-list #page-lead {
+    body.po-tesla-list #page-lead {
 		width: 100%;
 		color: #000;
 	}
@@ -158,19 +200,18 @@ body.accessories-list #page-title h1 {
 
 @media screen and (min-width: 800px) {
 	
-	body.accessories-list #page-title {
-		padding: 3vw 0 0 0;
-		height: 3vw;
+	body.po-tesla-list #page-title {
+
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		display: block;
 		font-family: Din;
 		margin-bottom: 18vw;
 		color: #fff !important;
 	}
 
-	body.accessories-list #page-lead h2 {
+	body.po-tesla-list #page-lead h2 {
 		font-weight: normal;
 		font-size: 16px;
 
@@ -179,26 +220,25 @@ body.accessories-list #page-title h1 {
 }
 
 @media screen and (min-width: 500px) {
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		width: 100%;
 		color: #000;
 	}
 }
 
 @media screen and (min-width: 930px) {
-	body.accessories-list #page-title {
-		padding: 5vw 0 0 0;
-		height: 3vw;
+	body.po-tesla-list #page-title {
+
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		display: block;
 		font-family: Din;
 		margin-bottom: 18vw;
 		color: #fff;
 	}
 
-	body.accessories-list #page-lead h2 {
+	body.po-tesla-list #page-lead h2 {
 		font-weight: normal;
 		font-size: 20px;
 
@@ -206,12 +246,11 @@ body.accessories-list #page-title h1 {
 }
 
 @media screen and (min-width: 1100px) {
-	body.accessories-list #page-title {
-		padding: 7vw 0 0 0;
-		height: 5vw;
+	body.po-tesla-list #page-title {
+
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		display: block;
 		font-family: Din;
 		margin-bottom: 16vw;
@@ -220,31 +259,29 @@ body.accessories-list #page-title h1 {
 }
 
 @media screen and (min-width: 1280px) {
-	body.accessories-list #page-title {
-		padding: 8vw 0 0 0;
-		height: 8vw;
+	body.po-tesla-list #page-title {
+
 	}
 }
 
 @media screen and (min-width: 1366px) {
-	body.accessories-list #page-title {
-		padding: 11vw 0 0 0;
+	body.po-tesla-list #page-title {
+
 	}
 }
 
 
 @media screen and (min-width: 1440px) {
-	body.accessories-list #page-title {
-	    height: 6vw;
-	    padding: 12vw 0 0 0;
+	body.po-tesla-list #page-title {
+
 	    text-align: center;
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		margin-bottom: 16vw;
 	}
 
-	body.accessories-list #page-lead h2 {
+	body.po-tesla-list #page-lead h2 {
 		font-weight: normal;
 		font-size: 25px;
 
@@ -252,17 +289,15 @@ body.accessories-list #page-title h1 {
 }
 
 @media screen and (min-width: 1850px) {
-	body.accessories-list #page-title {
-	    height: 8vw;
-	    padding: 9vw 0 0 0;
+	body.po-tesla-list #page-title {
 	    text-align: center;
 	}
 
-	body.accessories-list #page-lead {
+	body.po-tesla-list #page-lead {
 		margin-bottom: 16vw;
 	}
 
-	body.accessories-list #page-lead h2 {
+	body.po-tesla-list #page-lead h2 {
 		font-weight: normal;
 		font-size: 25px;
 

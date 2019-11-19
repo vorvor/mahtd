@@ -112,6 +112,13 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
     }
 
+    if ($node->type == 'po_tesla') {
+      $variables['body_class'] = 'po-tesla';
+      drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/po-tesla.css', 'file');
+      drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/po-tesla.js', 'file');
+      $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+    }
+
   } 
 
   if (current_path() == 'tesla/hirek') {
@@ -139,6 +146,7 @@ function tesla_preprocess_html(&$variables, $hook) {
 
   if (drupal_get_path_alias(current_path()) == 'tesla/hasznalt-tesla') {
     $variables['body_class'] = 'po-tesla-list';
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/po-tesla-list.js', 'file');
     drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/po-tesla-list.css', 'file');
     $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
   }

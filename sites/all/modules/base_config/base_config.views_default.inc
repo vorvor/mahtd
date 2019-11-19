@@ -233,16 +233,32 @@ function base_config_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Kiegészítők listája';
+  $handler->display->display_options['title'] = 'Használt Teslák';
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = 'Válogasson Ön is igénye szerint a Tesla német tartós bérletből visszaszármaztatott, ellenőrzött forrásból származó gépjárművei közül!';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Nyema';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -268,19 +284,20 @@ function base_config_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="accessories-details">
-<div class="accessories-details-button"><a href="/node/[nid]">Részletek</a></div>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="po-tesla-details">
+<div class="po-tesla-details-button"><a href="/node/[nid]">Részletek</a></div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Model */
-  $handler->display->display_options['fields']['field_model']['id'] = 'field_model';
-  $handler->display->display_options['fields']['field_model']['table'] = 'field_data_field_model';
-  $handler->display->display_options['fields']['field_model']['field'] = 'field_model';
-  $handler->display->display_options['fields']['field_model']['label'] = '';
-  $handler->display->display_options['fields']['field_model']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_model']['empty'] = 'Összes modell';
-  $handler->display->display_options['fields']['field_model']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_model']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_model_one']['id'] = 'field_model_one';
+  $handler->display->display_options['fields']['field_model_one']['table'] = 'field_data_field_model_one';
+  $handler->display->display_options['fields']['field_model_one']['field'] = 'field_model_one';
+  $handler->display->display_options['fields']['field_model_one']['label'] = '';
+  $handler->display->display_options['fields']['field_model_one']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_model_one']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_model_one']['settings'] = array(
+    'linked' => 0,
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -318,6 +335,19 @@ function base_config_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'po_tesla' => 'po_tesla',
   );
+  /* Filter criterion: Content: Model (field_model_one) */
+  $handler->display->display_options['filters']['field_model_one_tid']['id'] = 'field_model_one_tid';
+  $handler->display->display_options['filters']['field_model_one_tid']['table'] = 'field_data_field_model_one';
+  $handler->display->display_options['filters']['field_model_one_tid']['field'] = 'field_model_one_tid';
+  $handler->display->display_options['filters']['field_model_one_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_model_one_tid']['expose']['operator_id'] = 'field_model_one_tid_op';
+  $handler->display->display_options['filters']['field_model_one_tid']['expose']['operator'] = 'field_model_one_tid_op';
+  $handler->display->display_options['filters']['field_model_one_tid']['expose']['identifier'] = 'field_model_one_tid';
+  $handler->display->display_options['filters']['field_model_one_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_model_one_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_model_one_tid']['vocabulary'] = 'model';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
