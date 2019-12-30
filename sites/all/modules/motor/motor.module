@@ -1,5 +1,18 @@
 <?php
 
+function motor_menu() {
+
+  $items['ajax/get-model-description'] = array(
+    'title' => 'motor_get_model_description',
+    'page callback' => 'motor_get_model_description',
+    'page argument' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
 function motor_get_config_photo($mail_body) {
 
   preg_match('/<div id="model-name">(.*?)<\/div>/ms', $mail_body, $model_match);
@@ -114,8 +127,6 @@ function motor_get_config_photo($mail_body) {
   $path = drupal_get_path('theme', 'tesla') . '/images/config-images/jpg/';
   $photo_name = 'https://tesla.hu/' . $path . $model . '_' . $exterior . '_' . $rim . '.jpg';
 
-  watchdog('config image', $photo_name);
-
   return $photo_name;
 
 }
@@ -126,5 +137,24 @@ function motor_get_model($mail_body) {
   $model = trim($model_match[1]);
 
   return $model;
+
+}
+
+function motor_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'po_tesla_node_form') {
+    $form['#attached']['js'][] = array(
+      'data' => drupal_get_path('module', 'motor') . '/motor.js',
+      'type' => 'file',
+    );
+  }
+}
+
+function motor_get_model_description($tid) {
+
+  $model = taxonomy_term_load($tid);
+  if (empty($model->description)) {
+    $model = reset(taxonomy_get_parents($tid));
+  } 
+  drupal_json_output($model->description);
 
 }

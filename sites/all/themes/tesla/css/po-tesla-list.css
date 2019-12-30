@@ -37,7 +37,7 @@ body.po-tesla-list #page-title h1 {
 	margin: 0 auto;
 }
 
-.view-po-tesla .form-item-field-model-one-tid {
+.view-po-tesla .form-item-term-node-tid-depth {
 	border-radius:36px;
 	display:inline-block;
 	overflow:hidden;
@@ -48,13 +48,12 @@ body.po-tesla-list #page-title h1 {
 	text-align: center;
 }
 
-.view-po-tesla select#edit-field-model-one-tid {
+.view-po-tesla select#edit-term-node-tid-depth {
 	width: 340px;
 	height: 40px;
 	border: 0px;
 	outline: none;
 	text-transform: uppercase;
-	padding: 20px;
 	background: #fff;
 	font-family: Montserrat;
 	font-weight: bold;
@@ -68,17 +67,25 @@ body.po-tesla-list #page-title h1 {
 
 .view-po-tesla .view-content {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
 .view-po-tesla .views-row {
-	width: 30%;
+	width: 33%;
 	font-family: Din;
 	margin-bottom: 40px;
 }
 
-.view-po-tesla .views-row .views-field-field-model-one {
+.view-po-tesla .views-row .views-field {
+	text-align: center;
+}
+
+.view-po-tesla .views-row .views-field-field-image {
+	min-height: 254px;
+}
+
+.view-po-tesla .views-row .views-field-field-model-one,
+.view-po-tesla .views-row .views-field-name {
 	font-size: 24px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -89,6 +96,11 @@ body.po-tesla-list #page-title h1 {
 .view-po-tesla .views-row .views-field-field-price {
 	font-size: 24px;
 	color: #000;
+}
+
+.view-po-tesla .views-row .views-field-field-price {
+	font-weight: bold;
+	color: #cd0033;
 }
 
 

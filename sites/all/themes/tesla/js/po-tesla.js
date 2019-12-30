@@ -1,23 +1,6 @@
 (function ($) {
   Drupal.behaviors.accessories = {
     attach: function (context, settings) {
-    
-    	// topmenu effect
-		$('a.counter-minus').click(function(e) {
-			e.preventDefault();
-			c = parseInt($('.po-tesla-counter-count').html());
-			if (c > 1) {
-				$('.po-tesla-counter-count').html(c - 1);
-				refreshItems();
-			}
-		})
-
-		$('a.counter-plus').click(function(e) {
-			e.preventDefault();
-			c = parseInt($('.po-tesla-counter-count').html());
-			$('.po-tesla-counter-count').html(c + 1);
-			refreshItems();
-		})
 
 		origSrc = $('.po-tesla-main-image img').attr('src');
 		$('.po-tesla-image').hover(
@@ -54,6 +37,12 @@
 			})
 		}
 
+		// Populate order fields.
+		$('.order-model').val($('#po-tesla-details #model').val());
+		$('.order-model-price').val($('#po-tesla-details #price').val());
+		$('.order-exterior').val($('#po-tesla-details #exterior').val());
+		$('.order-interior').val($('#po-tesla-details #interior').val());
+		$('.order-sum-price').val($('.po-tesla-main-image img').attr('src'));
 
 	}}
 

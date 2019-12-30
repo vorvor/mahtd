@@ -6,6 +6,7 @@
  * Complete documentation for this file is available online.
  * @see https://drupal.org/node/1728148
  */
+
 ?>
 
 
@@ -47,17 +48,14 @@
 	<div id="po-tesla-column-right">
 		<div class="po-tesla-model">
 			<?php
-				$model_term = taxonomy_term_load($node->field_model_one[LANGUAGE_NONE][0]['tid']);
-				$year = date('Y', strtotime($node->field_year[LANGUAGE_NONE][0]['value']));
-				$km = number_format($node->field_km[LANGUAGE_NONE][0]['value'], 0, ',', ' ');
-				print $year . ' ' . $model_term->name . ' - ' . $km . ' km';
+				print $year . ' ' . $model_parent . ' ' . $model . ' - ' . $km . ' km';
 			?>
 		</div>
 		<div class="po-tesla-title">
 			<h1><?php print $title; ?></h1>
 		</div>
 		<div class="po-tesla-price">
-			<?php print number_format($node->field_price[LANGUAGE_NONE][0]['value'], 0, ',', ' '); ?> EUR
+			<?php print $price ?>
 		</div>
 		<div class="po-tesla-main-image bottom">
 				<img 
@@ -69,29 +67,44 @@
 			
 			<div class="po-tesla-field-title">Külső</div>
 			<div class="po-tesla-field-data">
-				<?php print $node->field_exterior_color[LANGUAGE_NONE][0]['value']; ?>
+				<div class="color-pic"><img src="<?php print $exterior_color_pic; ?>"></div>
+				<div class="color-name"><?php print $exterior_color_name; ?></div>
+				<div style="clear: both;"></div>
 			</div>
+
 			<div class="po-tesla-field-title">Belső</div>
 			<div class="po-tesla-field-data">
-				<?php print $node->field_interior_color[LANGUAGE_NONE][0]['value']; ?>
+				<div class="color-pic"><img src="<?php print $interior_color_pic; ?>"></div>
+				<div class="color-name"><?php print $interior_color_name; ?></div>
+				<div style="clear: both;"></div>
 			</div>
+
 			
 			<?php if (!empty($node->field_num_of_seats)) { ?>
 			<div class="po-tesla-field-title">Ülések száma</div>
 			<div class="po-tesla-field-data">
-				<?php print $node->field_num_of_seats[LANGUAGE_NONE][0]['value']; ?>
+				<?php print $seats; ?>
 			</div>
+			<div style="clear: both;" />
+			<?php } ?>
+
+			<?php if (!empty($node->field_guarantee)) { ?>
+			<div class="po-tesla-field-title">Garancia</div>
+			<div class="po-tesla-field-data">
+				<?php print $guarantee; ?>
+			</div>
+			<div style="clear: both;" />
 			<?php } ?>
 
 			<div class="red-button red-button-wide">
-				<a id="po-tesla-send-order-button" href="#send-order-button">Megrendelem</a>
+				<a id="po-tesla-send-order-button" href="#send-order-button">Ajánlat kérése</a>
 			
         	</div>
 		</div>
 		<div class="block-po-tesla-send-order">
             <div id="po-tesla-order-form" class="po-tesla-send-order invisible">
                 <?php
-                    $nid = 19; //node id of the webform node
+                    $nid = 67; //node id of the webform node
                     $node_webform = node_load($nid);
                     $form = drupal_get_form('webform_client_form_' . $nid, $node_webform);
                     print drupal_render($form);
@@ -114,6 +127,13 @@
 				}
 				?>
 			</ul>
+		</div>
+		<div id="po-tesla-details" style="display:none;">
+			<input type="hidden" id="model" value="<?php print $model_parent . ' ' . $model; ?>">
+			<input type="hidden" id="price" value="<?php print $price; ?>">
+			<input type="hidden" id="exterior" value="<?php print $exterior_color_name; ?>">
+			<input type="hidden" id="interior" value="<?php print $interior_color_name; ?>">
+			<input type="hidden" id="seats" value="<?php print $seats; ?>">
 		</div>
 	</div>
 </div>

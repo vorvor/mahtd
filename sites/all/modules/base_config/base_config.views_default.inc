@@ -294,7 +294,7 @@ function base_config_views_default_views() {
   $handler->display->display_options['fields']['field_model_one']['field'] = 'field_model_one';
   $handler->display->display_options['fields']['field_model_one']['label'] = '';
   $handler->display->display_options['fields']['field_model_one']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_model_one']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_model_one']['type'] = 'shs_default';
   $handler->display->display_options['fields']['field_model_one']['settings'] = array(
     'linked' => 0,
   );
@@ -335,19 +335,27 @@ function base_config_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'po_tesla' => 'po_tesla',
   );
-  /* Filter criterion: Content: Model (field_model_one) */
-  $handler->display->display_options['filters']['field_model_one_tid']['id'] = 'field_model_one_tid';
-  $handler->display->display_options['filters']['field_model_one_tid']['table'] = 'field_data_field_model_one';
-  $handler->display->display_options['filters']['field_model_one_tid']['field'] = 'field_model_one_tid';
-  $handler->display->display_options['filters']['field_model_one_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_model_one_tid']['expose']['operator_id'] = 'field_model_one_tid_op';
-  $handler->display->display_options['filters']['field_model_one_tid']['expose']['operator'] = 'field_model_one_tid_op';
-  $handler->display->display_options['filters']['field_model_one_tid']['expose']['identifier'] = 'field_model_one_tid';
-  $handler->display->display_options['filters']['field_model_one_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Has taxonomy terms (with depth) */
+  $handler->display->display_options['filters']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['filters']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['value'] = array(
+    1 => '1',
+    2 => '2',
+    3 => '3',
+    4 => '4',
+  );
+  $handler->display->display_options['filters']['term_node_tid_depth']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator_id'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['operator'] = 'term_node_tid_depth_op';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['identifier'] = 'term_node_tid_depth';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['remember_roles'] = array(
     2 => '2',
   );
-  $handler->display->display_options['filters']['field_model_one_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_model_one_tid']['vocabulary'] = 'model';
+  $handler->display->display_options['filters']['term_node_tid_depth']['expose']['reduce'] = TRUE;
+  $handler->display->display_options['filters']['term_node_tid_depth']['type'] = 'select';
+  $handler->display->display_options['filters']['term_node_tid_depth']['vocabulary'] = 'model';
+  $handler->display->display_options['filters']['term_node_tid_depth']['depth'] = '3';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

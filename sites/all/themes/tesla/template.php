@@ -58,6 +58,8 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['articles_path'] = drupal_get_path_alias('tesla/hirek');
   $variables['accessories_path'] = drupal_get_path_alias('tesla/kiegeszitok-listaja');
   $variables['energy_certificate'] = drupal_get_path_alias('tesla/energetikai-tanusitvany');
+  $variables['po_tesla_path'] = drupal_get_path_alias('tesla/hasznalt-tesla');
+
   $variables['current_url'] = url(current_path(), array('absolute' => TRUE));
   if (drupal_is_front_page()) {
     $variables['current_url'] = $base_url;
@@ -361,6 +363,82 @@ function tesla_preprocess_page(&$variables, $hook) {
 
         $variables['seats'] = $seats;
       }
+    }
+
+    if ($variables['node']->type == 'po_tesla') {
+
+      $node = $variables['node'];
+      $interior = $node->field_interior_color[LANGUAGE_NONE][0]['value'];
+      switch ($interior) {
+        case 'fekete':
+          $img = 'carpet-black_0.png';
+          break;
+        case 'fehér':
+          $img = '';
+          break;
+        case 'fehér-fehér':
+          $img = 'carpet-bw_2.png';
+          break;
+        case 'fekete kőrisfa betétekkel':
+          $img = 'all_black__FihuredAshWoodDecor.png';
+          break;
+        case 'fekete-fehér kőrisfa betétekkel':
+          $img = 'black_and_white__DarkAshWoodDecor.png';
+          break;
+        case 'bézs tölgyfa betétekkel':
+          $img = 'cream__OakWoodDecor.png';
+          break;
+        case 'fekete karbon betétekkel':
+          $img = 'all_black_CarbonFiberDecor.png';
+          break;
+        case 'fekete-fehér karbon betétekkel':
+          $img = 'black_and_white__CarbonFiberDecor.png';
+          break;
+      }
+      
+      $variables['interior_color_pic'] = file_create_url('public://' . $img);
+      $variables['interior_color_name'] = $interior;
+      
+      $exterior = $node->field_exterior_color[LANGUAGE_NONE][0]['value'];
+
+      switch ($exterior) {
+        case 'gyémánt metál':
+          $img = 'color-white.png';
+          break;
+        case 'fekete metál':
+          $img = 'color-black.png';
+          break;
+        case 'sötétszürke metál':
+          $img = 'color-grey.png';
+          break;
+        case 'mélykék metál':
+          $img = 'color-blue.png';
+          break;
+        case 'vörös metál':
+          $img = 'color-red.png';
+          break;
+      }
+      $variables['exterior_color_pic'] = file_create_url('public://' . $img);
+      $variables['exterior_color_name'] = $exterior;
+
+      $variables['model'] = taxonomy_term_load($node->field_model_one[LANGUAGE_NONE][0]['tid'])->name;
+      $model_parent = taxonomy_get_parents(taxonomy_term_load($node->field_model_one[LANGUAGE_NONE][0]['tid'])->tid);
+      $model_parent = reset($model_parent);
+      $variables['model_parent'] = $model_parent->name;
+      $variables['year'] = date('Y', strtotime($node->field_year[LANGUAGE_NONE][0]['value']));
+      $variables['km'] = number_format($node->field_km[LANGUAGE_NONE][0]['value'], 0, ',', ' ');
+      $variables['seats'] = $node->field_num_of_seats[LANGUAGE_NONE][0]['value'];
+      $variables['guarantee'] = render(field_view_field('node', $node, 'field_guarantee', array(
+        'label'=>'hidden', 
+      )));
+
+      $field_formatters = field_info_instances('node', 'po_tesla');
+      $prefix = $field_formatters['field_price']['settings']['prefix'];
+      $suffix = $field_formatters['field_price']['settings']['suffix'];
+      $variables['price'] = $prefix . number_format($node->field_price[LANGUAGE_NONE][0]['value'], 0, ',', ' ') . ' ' . $suffix;
+
+      $details_for_order = $node->title . ' ';
+
     }
   } else {
 

@@ -25,7 +25,9 @@
 			})
 		}
 
-		$('select#edit-field-model-one-tid option:nth-child(1)').html('Összes');
+		$('select#edit-term-node-tid-depth option:nth-child(1)').html('Összes');
+
+		
 
 
 	}}
