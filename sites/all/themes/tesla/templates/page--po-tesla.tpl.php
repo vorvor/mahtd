@@ -85,7 +85,7 @@
 			<div class="po-tesla-field-data">
 				<?php print $seats; ?>
 			</div>
-			<div style="clear: both;" />
+			<div style="clear: both;"></div>
 			<?php } ?>
 
 			<?php if (!empty($node->field_guarantee)) { ?>
@@ -93,7 +93,7 @@
 			<div class="po-tesla-field-data">
 				<?php print $guarantee; ?>
 			</div>
-			<div style="clear: both;" />
+			<div style="clear: both;"></div>
 			<?php } ?>
 
 			<div class="red-button red-button-wide">

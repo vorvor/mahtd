@@ -167,6 +167,20 @@ body.po-tesla-list #page-title h1 {
 
 @media screen and (max-width: 800px) {
 
+
+	.view-po-tesla .view-content {
+		display: block;
+	}
+
+	.view-po-tesla .view-content .views-row {
+		width: 100%;
+	}
+
+	.view-po-tesla select#edit-term-node-tid-depth {
+		width: 270px;
+		margin: 0 auto;
+	}
+
 	.view-po-tesla .views-row .views-field-field-image img {
 	    max-width: 100%;
 	    height: auto;

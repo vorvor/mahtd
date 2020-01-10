@@ -296,6 +296,7 @@ body.po-tesla .red-button {
 }
 
 @media screen and (max-width: 800px) {
+
 	#po-tesla-column-left,
 	#po-tesla-column-right {
 	    float: none;
@@ -325,7 +326,7 @@ body.po-tesla .red-button {
 
 	#po-tesla-counter-wrapper {
 		clear: both;
-		overflow: hidden;
+		padding-bottom: 55px;
 	}
 
 	.po-tesla-counter-title {
@@ -334,7 +335,7 @@ body.po-tesla .red-button {
 
 	.po-tesla-counter, 
 	body.po-tesla .red-button-wide {
-		width: 48%;
+		width: 100%;
 		float: left;
 		margin: 0;
 	}
@@ -348,7 +349,7 @@ body.po-tesla .red-button {
     }
 
 	body.po-tesla .red-button-wide {
-		margin-top: -10px;
+		margin-top: 10px;
 	}
 
 	body.po-tesla .red-button-wide a {
@@ -363,6 +364,26 @@ body.po-tesla .red-button {
 		font-size: 16px;
 		width: 100%;
 	}
+
+	.po-tesla-body h3,
+	.po-tesla-body ul li,
+	.po-tesla-extra h3,
+	.po-tesla-extra ul li {
+		font-size: 24px;
+	}
+
+	.po-tesla-field-data .color-pic {
+    	float: left;
+    	width: 25%;
+	}
+
+	.po-tesla-field-data .color-name {
+    	float: left;
+    	line-height: 31px;
+    	padding-left: 10px;
+    	width: 70%;
+	}
+
 
 }
 
