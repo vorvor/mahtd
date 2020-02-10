@@ -13,13 +13,14 @@
     <?php print $head; ?>
 
     <?php
+      global $user;
       $theme_path = drupal_get_path('theme', 'tesla');
     ?>
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/normalize.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/vars.css">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/fonts.css">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/fonts.css?a=5">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css?x=5">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=4">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/animation.css">
 
@@ -74,8 +75,11 @@
             <li><a href="/<?php print $articles_path; ?>">Tesla hírek</a></li>
             <li><a href="/<?php print $brand_story_path; ?>">Tesla márkatörténet</a></li>
             <li><a href="/<?php print $faq_page_path; ?>">Gy.i.k.</a></li>
-            <li><a href="/<?php print $energy_certificate; ?>">Energetikai tanusítvány</a></li>
+            <li><a href="/<?php print $governmental_support_path; ?>">Állami támogatás</a></li>
+            <li><a href="/<?php print $energy_certificate; ?>">TAO támogatás</a></li>
+            <li><a href="/<?php print $family_support_path; ?>">Nagycsaládos támogatás</a></li>
             <li><a href="/<?php print $accessories_path; ?>">Kiegészítők</a></li>
+            <li><a href="https://teslapilota.hu" target="_blank">Tesla Model S élményvezetés</a></li>
             <li><a href="/<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>
         </nav>
@@ -107,7 +111,15 @@
                 <?php print $main_menu; ?>
               </ol>
             </div>
-            <div id="footer-3" class="footer-block">© 2019 MAHZRT</div>
+            <div id="footer-3" class="footer-block">© 2019-2020 MAHZRT</div>
+        </div>
+        <div id="admin-navigation-bar">
+            <?php
+                if ($user->uid > 0) {
+                    $block = module_invoke('menu', 'block_view', 'navigation');
+                    print render($block);
+                }
+            ?>
         </div>
     </footer>
     <a id="scrolltop" href="#"></a>

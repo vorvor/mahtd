@@ -74,7 +74,9 @@
         width: 300px;
     }
 
-    #index-third-half-row .index-row #data-3 {
+    #index-third-half-row .index-row #data-3,
+    #index-third-half-second-row .index-row #data-3,
+    #index-third-half-pre-row .index-row #data-3 {
         width: 100%;
         padding-top: 0;
     }
@@ -470,9 +472,19 @@
         margin: 0;
     }
 
-    #index-third-half-row #spacer {
-        font-size: 45px;
+    #index-third-half-row #spacer,
+    #index-third-half-second-row #spacer,
+    #index-third-half-pre-row #spacer {
+        font-size: 38px;
         padding-top: 50px;
+    }
+
+    #spacer.desktop {
+        display: none;
+    }
+
+    #spacer.mobile {
+        display: block;
     }
 }
 /*375-800*/
@@ -616,7 +628,9 @@
         padding-top: 113px;
     }
 
-    #index-third-half-row .index-row #data-3 {
+    #index-third-half-row .index-row #data-3,
+    #index-third-half-second-row .index-row #data-3,
+    #index-third-half-pre-row .index-row #data-3 {
         width: 100%;
         padding-top: 0;
     }
@@ -869,13 +883,20 @@
         padding-top: 0;
     }
 
-    #index-third-half-row #spacer {
+    #index-third-half-row #spacer,
+    #index-third-half-second-row #spacer,
+    #index-third-half-pre-row #spacer {
         padding: 6vw 5vw;
         height: 310px;
     }
 
     #index-third-half-row.index-row #data-1,
-    #index-third-half-row.index-row #data-2 {
+    #index-third-half-row.index-row #data-2,
+    #index-third-half-second-row.index-row #data-1,
+    #index-third-half-second-row.index-row #data-2,
+    #index-third-half-pre-row.index-row #data-1,
+    #index-third-half-pre-row.index-row #data-2
+     {
         height: 0;
     }
     
@@ -978,7 +999,7 @@
     }
     
     #index-first-row #spacer {
-        height: 500px;
+        height: 77vh;
     }
     
     #index-second-row {
@@ -1034,7 +1055,7 @@
     #index-sixth-row .index-row .col-block .mah {
         font-size: 14px;
         font-weight: 500;
-        color: var(--red-text);
+        color: #CD0033;
         margin-bottom: 28px;
     }
 
@@ -1239,7 +1260,7 @@
     #index-sixth-row .index-row .col-block .mah {
         font-size: 14px;
         font-weight: 500;
-        color: var(--red-text);
+        color: #CD0033;
         margin-bottom: 28px;
     }
 
@@ -1288,7 +1309,9 @@
         font-size: 25px;
     }
 
-    #index-third-half-row #spacer {
+    #index-third-half-row #spacer,
+    #index-third-half-second-row #spacer,
+    #index-third-half-pre-row #spacer {
         padding: 6vw 5vw;
         height: 310px;
     }
@@ -1341,7 +1364,9 @@
         height: 80vh;
     }
 
-    #index-third-half-row #spacer {
+    #index-third-half-row #spacer,
+    #index-third-half-second-row #spacer,
+    #index-third-half-pre-row #spacer {
         padding: 6vw 5vw;
         height: 510px;
     }
@@ -1430,7 +1455,9 @@
         width:280px
     }
 
-    #index-third-half-row #spacer {
+    #index-third-half-row #spacer,
+    #index-third-half-second-row #spacer,
+    #index-third-half-pre-row #spacer {
         padding: 6vw 5vw;
         height: 510px;
     }

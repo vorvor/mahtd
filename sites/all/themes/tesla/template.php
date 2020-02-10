@@ -36,7 +36,6 @@ function tesla_preprocess_maintenance_page(&$variables, $hook) {
  */
 
 function tesla_preprocess_html(&$variables, $hook) {
-
   global $base_url;
   //$variables['sample_variable'] = t('Lorem ipsum.');
 
@@ -57,7 +56,9 @@ function tesla_preprocess_html(&$variables, $hook) {
   $variables['brand_story_path'] = drupal_get_path_alias('tesla/markatortenet');
   $variables['articles_path'] = drupal_get_path_alias('tesla/hirek');
   $variables['accessories_path'] = drupal_get_path_alias('tesla/kiegeszitok-listaja');
-  $variables['energy_certificate'] = drupal_get_path_alias('tesla/energetikai-tanusitvany');
+  $variables['energy_certificate'] = drupal_get_path_alias('tesla/TAO-tamogatas');
+  $variables['family_support_path'] = drupal_get_path_alias('tesla/autovasarlasi-tamogatas-nagycsaladosoknak-mah-zrt');
+  $variables['governmental_support_path'] = drupal_get_path_alias('tesla/elektromos-auto-tamogatas');
   $variables['po_tesla_path'] = drupal_get_path_alias('tesla/hasznalt-tesla');
 
   $variables['current_url'] = url(current_path(), array('absolute' => TRUE));
@@ -134,10 +135,22 @@ function tesla_preprocess_html(&$variables, $hook) {
     drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/accessories-list.css', 'file');
   }
 
-  if (drupal_get_path_alias(current_path()) == 'tesla/energetikai-tanusitvany') {
+  if (drupal_get_path_alias(current_path()) == 'tesla/TAO-tamogatas') {
     $variables['body_class'] = 'energetikai-tanusitvany';
     drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/energetikai-tanusitvany.js', 'file');
     drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/energetikai-tanusitvany.css', 'file');
+  }
+
+  if (drupal_get_path_alias(current_path()) == 'tesla/autovasarlasi-tamogatas-nagycsaladosoknak-mah-zrt') {
+    $variables['body_class'] = 'autovasarlasi-tamogatas';
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/autovasarlasi-tamogatas.js', 'file');
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/autovasarlasi-tamogatas.css', 'file');
+  }
+
+  if (drupal_get_path_alias(current_path()) == 'tesla/elektromos-auto-tamogatas') {
+    $variables['body_class'] = 'elektromos-auto-tamogatas';
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/elektromos-auto-tamogatas.js', 'file');
+    drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/elektromos-auto-tamogatas.css', 'file');
   }
 
   if (drupal_get_path_alias(current_path()) == 'tesla/adatkezelesi-tajekoztato') {

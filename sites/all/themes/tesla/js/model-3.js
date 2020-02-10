@@ -3,8 +3,7 @@
     attach: function (context, settings) {
 
     	$('#facility-block .config-option').click(function() {
-    		console.log('clack');
-    		if ($(this).data('title').toLowerCase().includes('performance')) {
+    		if ($(this).data('title').toLowerCase().indexOf('performance') > -1) {
     			$('#extra-block').hide();
     		} else {
     			$('#extra-block').show();

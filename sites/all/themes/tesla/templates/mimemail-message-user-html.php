@@ -100,8 +100,7 @@
           </div>
         </div><div id="funding-end"></div>  
      <br/>
-        <div style="text-align:center;"><span id="mail-spec-text-second">Kollégáink hamarosan jelentkeznek Önnél, hogy szerződéses
-formába foglalják a megrendelését.</span></div>
+        <div style="text-align:center;"><span id="mail-spec-text-second">Érdeklődése megérkezett a MAH Zrt. munkatársaihoz, kollégáink hamarosan felkeresik Önt elérhetőségei egyikén ajánlatainkkal. Amennyiben további kérdése merülne fel, írjon nekünk az <a href="mailto:info@tesla.hu">info@tesla.hu</a> email címre vagy keresse kollégáinkat <a href="https://www.tesla.hu/tesla/kapcsolat">egyéb elérhetőségeinken</a>.</span></div>
 <br/>
         <div style="text-align:center;"><strong>Magyar Autókereskedőház Zrt.</strong><br/>
 Budapest</div>

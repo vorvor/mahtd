@@ -98,10 +98,10 @@
             <div id="fifth-row-center-col1" class="fifth-row-center-col">
                 <?php print $node->field_text_8['und'][0]['value']; ?>
             </div>
-            <div id="fifth-row-center-col1" class="fifth-row-center-col">
+            <div id="fifth-row-center-col2" class="fifth-row-center-col">
                 <?php print $node->field_text_9['und'][0]['value']; ?>
             </div>
-            <div id="fifth-row-center-col1" class="fifth-row-center-col">
+            <div id="fifth-row-center-col3" class="fifth-row-center-col">
                 <?php print $node->field_text_10['und'][0]['value']; ?>
             </div>
         </div>
