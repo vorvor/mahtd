@@ -1,0 +1,127 @@
+body.elektromos-auto-tamogatas {
+	background: #fff;
+	color: #000;
+}
+
+img {
+	max-width: 100%;
+}
+
+#page-wrapper {
+	margin-top: -70px;
+	width: 100%;
+}
+
+.page-header {
+	background: url(../images/allamitamogatas_fejlec.jpg);
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	background-size: 100%;
+	background-position: 50%;
+}
+
+.page-title.mobile {
+	display: none;
+}
+
+.page-title {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: Din;
+	font-size: 60px;
+	letter-spacing: 8px;
+	width: auto;
+	font-weight: bold;
+	padding-top: 160px;
+	display: block;
+}
+
+h2 {
+	color: #CD0033;
+	text-transform: uppercase;
+	font-size: 42px;
+}
+
+.attachments a {
+	color: #CD0033;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.attachments a:hover {
+	text-decoration: underline;
+}
+
+.attachments h3 {
+	border-top: 2px solid #CD0033;
+	padding-top: 26px;
+	width: 100px;
+}
+
+.attachments ul {
+  list-style: none;
+}
+
+.attachments ul li::before {
+  content: "";
+  background-image: url(../images/nagycsalados-kedvezmeny-dokumentumok.png);;
+  float: left;
+  display: block; 
+  width: 30px;
+  height: 30px;
+  margin-left: -2em;
+  margin-right: 1em;
+}
+
+.attachments ul li {
+	margin-bottom: 10px;
+}
+
+
+h3 {
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.page-content {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.page-content p,
+.page-content li {
+	line-height: 1.6em;
+	font-size: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+
+	.page-header {
+		background-size: cover;
+		background-position: 40%;
+		height: 300px;
+	}
+
+	.page-title {
+		font-size: 29px;
+		padding-top: 100px;
+	}
+
+	.page-title.desktop {
+		display: none;
+	}
+
+	.page-title.mobile {
+		display: block;
+	}
+
+	h2 {
+		font-size: 22px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+}
