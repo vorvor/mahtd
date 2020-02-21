@@ -12,12 +12,16 @@ body {
     font-family: Montserrat;
 }
 
+body.model-3 {
+    background-image: url(../images/model-3.jpg);
+}
+
 body.model-s {
-    background-image: url(../images/tesla-model-s.jpg);
+    background-image: url(../images/model-s.jpg);
 }
 
 body.model-x {
-    background-image: url(../images/tesla-model-x.jpg);
+    background-image: url(../images/model-x.jpg);
 }
 
 body.model-y {
@@ -28,21 +32,6 @@ body.roadster {
     background-image: url(../images/tesla-model-roadster.jpg);
 }
 
-body.model-3 #video-bg,
-body.front #video-bg {
-    float: left;
-    z-index: -1;
-    position: absolute;
-    top: -80px;
-}
-
-body.model-3 #video-bg video,
-body.front #video-bg video,
-#tesla-yt-front-video {
-    width: 100%;
-    height: 880px !important;
-    object-fit: cover;
-}
 
 body::before {
     display: none !important;

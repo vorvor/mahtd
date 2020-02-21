@@ -2,6 +2,12 @@
   Drupal.behaviors.tesla = {
     attach: function (context, settings) {
 
+        
+        if (!$('body').hasClass('teslaConfLoaded')) {
+            
+        
+            console.log('loaded' + $('body').hasClass('teslaConfLoaded'));
+
         //init configurator buttons
         $('#facility-block .config-buttons .config-button:nth-child(1)').addClass('selected');
         $('.config-block .config-options div').each(function() {
@@ -221,55 +227,13 @@
 
         // fill order form with config data
         $('.send-order .order-model').val($('h2.row-title').html());
-        
-        // Frontpage video size correction
-        if ($('body').hasClass('front')) {
-            window.addEventListener('load', function() {
-                var video = document.querySelector('#mahtesla');
-
-                function checkVideoLoad() {
-                    if (video.readyState === 4) {
-                        frontVideoCorrection();
-                    } else {
-                        setTimeout(checkVideoLoad, 10);
-                    }
-                }
-                checkVideoLoad();
-            }, false);
-
-            $(window).resize(function() {
-                frontVideoCorrection();
-            })
-
-            function frontVideoCorrection() {
-                if ($('#video-bg').is(':visible')) {
-                    windowHeight = $(window).height();
-                    videoHeight = $('#video-bg video').height() - 50;
-
-                    //if (windowHeight > 894) {
-                        $('.front #index-first-row').css('margin-top', videoHeight + 'px');
-                        $('#front-jump-down a').css('top', (videoHeight - 20) + 'px');
-                    //}
-                } else {
-                    $('.front #index-first-row').css('margin-top', '-50px');
-                }
-            }
-        }
 
         $('#mobile-menu-block #submenu-parent').click(function() {
             $('#submenu').slideToggle();
         })
 
-        $(window).scroll(function() {
-            if ($('body').hasClass('front')) {
-                if ($(this).scrollTop() > 500) {
-                    $('#mahtesla').get(0).pause();
-                } else {
-                    $('#mahtesla').get(0).play();
-                }
-            }
-        })
-        
+    } // one load
+    $('body').addClass('teslaConfLoaded');
   
     }};
 }(jQuery));

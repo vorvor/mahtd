@@ -81,6 +81,32 @@ function base_config_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_category'.
+  $field_bases['field_category'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_category',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'accessories_categories',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_exta'.
   $field_bases['field_exta'] = array(
     'active' => 1,
@@ -97,17 +123,18 @@ function base_config_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        1 => 'Autopilot',
-        2 => 'FSD',
-        3 => 'vonóhorog',
-        5 => 'prémium hifi',
-        6 => 'nyitható tetőablak (csak az S-nél)',
-        7 => 'légrugós futómű (csak az S és X nél)',
-        8 => 'kerekek 18\'',
-        9 => 'kerekek 19\'',
-        10 => 'kerekek 20\'',
-        11 => 'kerekek 21\'',
-        12 => 'kerekek 22\'',
+        1 => 'Alap autopilot funkció',
+        2 => 'Full Self Driving (FSD)',
+        3 => 'Vonóhorog',
+        5 => 'Prémium hifi',
+        6 => 'Nyitható tetőablak',
+        7 => 'Smart Air légrugós futómű',
+        8 => '18\' könnyüfém felnik',
+        9 => '19\' Könnyüfém felnik',
+        10 => '20\' Könnyüfém felnik',
+        11 => '21\' Könnyüfém felnik',
+        12 => '22\' Könnyüfém felnik',
+        13 => 'Ludicrous mód',
       ),
       'allowed_values_function' => '',
     ),
@@ -593,6 +620,27 @@ function base_config_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_original_ad_url'.
+  $field_bases['field_original_ad_url'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_original_ad_url',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_performance_price'.
   $field_bases['field_performance_price'] = array(
     'active' => 1,
@@ -955,6 +1003,27 @@ function base_config_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_url'.
+  $field_bases['field_url'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_url',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
   );
 
   // Exported field_base: 'field_video'.

@@ -1,11 +1,13 @@
 <?php
     $theme_path = drupal_get_path('theme', 'tesla');
 ?>
-<div id="front-page-slide">
+
+<div id="front-page-slider">
     <?php
         print views_embed_view('front_slider', 'block');
     ?>
 </div>
+
 <div class="index-row-wrapper" id="index-first-row">
     <div id="spacer">
     </div>

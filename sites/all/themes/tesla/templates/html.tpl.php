@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=4">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/animation.css">
-
     
     <meta name="MobileOptimized" content="width">
     <meta name="HandheldFriendly" content="true">
@@ -52,15 +51,38 @@
     <meta name="dcterms.format" content="text/html" />
 
     <?php print $styles; ?>
+    <?php print 'AAA'; ?>
     <?php print $scripts; ?>
+    <?php print 'AAA'; ?>
     
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <!--  <script src="./js/script.js"></script>  -->
 </head>
 <body class="<?php print $body_class; ?>">
     <?php if (isset($messages)): ?>
       <div id="messages"><?php print $messages; ?></div>
     <?php endif; ?>
+    <?php print $page; ?>
+    <footer>
+        <div id="footer-inner">
+            <div id="footer-1" class="footer-block">
+                <img alt="logo mono" src="/<?php print $theme_path; ?>/images/logo-monochrome.jpg">
+            </div>
+            <div id="footer-2" class="footer-block">
+              <ol id="menu">
+                <?php print $main_menu; ?>
+              </ol>
+            </div>
+            <div id="footer-3" class="footer-block">© 2019-2020 MAHZRT</div>
+        </div>
+        <div id="admin-navigation-bar">
+            <?php
+                if ($user->uid > 0) {
+                    $block = module_invoke('menu', 'block_view', 'navigation');
+                    print render($block);
+                }
+            ?>
+        </div>
+    </footer>
+    <a id="scrolltop" href="#"></a>
     <div id="mobile-menu-block" class="invisible">
         <div id="mobile-menu-close-wrapper">
             <div id="mobile-menu-close"></div>
@@ -100,28 +122,5 @@
         <div id="mobile-menu" class="mobile-nav-button" aria-label="Menu" title="Menu">
         </div>
     </div>
-    <?php print $page; ?>
-    <footer>
-        <div id="footer-inner">
-            <div id="footer-1" class="footer-block">
-                <img alt="logo mono" src="/<?php print $theme_path; ?>/images/logo-monochrome.jpg">
-            </div>
-            <div id="footer-2" class="footer-block">
-              <ol id="menu">
-                <?php print $main_menu; ?>
-              </ol>
-            </div>
-            <div id="footer-3" class="footer-block">© 2019-2020 MAHZRT</div>
-        </div>
-        <div id="admin-navigation-bar">
-            <?php
-                if ($user->uid > 0) {
-                    $block = module_invoke('menu', 'block_view', 'navigation');
-                    print render($block);
-                }
-            ?>
-        </div>
-    </footer>
-    <a id="scrolltop" href="#"></a>
 </body>
 </html>

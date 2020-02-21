@@ -2,6 +2,7 @@
   Drupal.behaviors.anim = {
     attach: function (context, settings) {
     
+    	if (!$('body').hasClass('teslaConfLoaded')) {
 
     	// topmenu effect
 		$('#menu li').css({
@@ -104,25 +105,15 @@
 		$('.config-block').each(function() {
 			$('.config-option', this).hover(
 				function() {
-					$('.config-option').addClass('opacityOn').removeClass('opacityOff');
-					$('.config-title').addClass('opacityOn').removeClass('opacityOff');
-					$('.config-block-desc').addClass('opacityOn').removeClass('opacityOff');
-					$(this).removeClass('opacityOn').removeClass('opacityOff');
 					wrapper = $(this).data('wrapper');
-					$('#' + wrapper + '-block .config-title').removeClass('opacityOn').removeClass('opacityOff');
 					origDesc = $('#' + wrapper + '-block .config-block-desc').html();
-					$('#' + wrapper + '-block .config-block-desc')
-					.removeClass('opacityOn')
-					.removeClass('opacityOff');
+					$('#' + wrapper + '-block .config-block-desc');
 					if (!$(this).hasClass('config-button')) {
 						$('#' + wrapper + '-block .config-block-desc')
 						.html($(this).data('title'));
 					}
 				},
 				function() {
-					$('.config-option').addClass('opacityOff').removeClass('opacityOn');
-					$('.config-title').addClass('opacityOff').removeClass('opacityOn');
-					$('.config-block-desc').addClass('opacityOff').removeClass('opacityOn');
 					$('#' + wrapper + '-block .config-block-desc')
 					.html(origDesc);
 				}
@@ -138,6 +129,7 @@
 				$('.first-row-data').removeClass('downScaleS').removeClass('upScaleS').addClass('resetScaleS');
 			}
 		);	
+	}
 		
 
 
