@@ -51,9 +51,7 @@
     <meta name="dcterms.format" content="text/html" />
 
     <?php print $styles; ?>
-    <?php print 'AAA'; ?>
     <?php print $scripts; ?>
-    <?php print 'AAA'; ?>
     
 </head>
 <body class="<?php print $body_class; ?>">

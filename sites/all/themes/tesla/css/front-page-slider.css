@@ -49,6 +49,11 @@
 	margin-top:-82%;
 }
 
+#front-page-slider .views-field-title .field-content,
+#front-page-slider .views-field-field-body .field-content {
+
+}
+
 #views_slideshow_cycle_main_front_slider-block_1 {
 	height: 100vh;
 	clear: both;
