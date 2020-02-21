@@ -15,11 +15,10 @@
 #front-page-slider {
 	background: #777;
 	height: 100vh;
-	margin-top: 40px;
 }
 
 #front-page-slider .views-field-title {
-	margin-top: -90vh;
+	margin-top: -80vh;
 	margin-left: 50px;
 	width: 70%;
 }
@@ -60,7 +59,7 @@
 .view-front-slider .views-field-nothing {
 	display: block;
 	position: absolute;
-    top: 70vh;
+    top: 80vh;
     left: 65vw;
 }
 
