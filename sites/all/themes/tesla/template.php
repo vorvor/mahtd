@@ -65,6 +65,8 @@ function tesla_preprocess_html(&$variables, $hook) {
   if (drupal_is_front_page()) {
     $variables['current_url'] = $base_url;
     drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/front-page-slider.css', 'file');
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/typeit.min.js', 'file');
+    drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/front-page-slider.js', 'file');
   }
 
   $node = menu_get_object();
