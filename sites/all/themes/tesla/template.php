@@ -108,7 +108,6 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['meta_description'] = check_plain(strip_tags($node->field_lead[LANGUAGE_NONE][0]['value']));
       $variables['meta_img'] = file_create_url($node->field_main_image[LANGUAGE_NONE][0]['uri']);
       $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
-
     }
 
     if ($node->type == 'accessories') {
@@ -123,6 +122,11 @@ function tesla_preprocess_html(&$variables, $hook) {
       drupal_add_css(drupal_get_path('theme', 'tesla') .'/css/po-tesla.css', 'file');
       drupal_add_js(drupal_get_path('theme', 'tesla') .'/js/po-tesla.js', 'file');
       $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
+
+      $variables['meta_title'] = check_plain(strip_tags($node->title));
+      $variables['meta_description'] = check_plain(strip_tags($node->field_lead[LANGUAGE_NONE][0]['value']));
+      $variables['meta_img'] = file_create_url($node->field_image[LANGUAGE_NONE][0]['uri']);
+      
     }
 
   } 

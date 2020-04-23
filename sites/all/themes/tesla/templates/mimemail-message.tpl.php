@@ -49,7 +49,8 @@
       }
 
       $config_photo = motor_get_config_photo($body); 
-      $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body); 
+      $body = str_replace('###CONFIG-PHOTO###', $config_photo, $body);
+      watchdog('order template', 'mimemail-message.tpl.php');
       watchdog('order mail body', $body);
       ?>
     <?php } ?>

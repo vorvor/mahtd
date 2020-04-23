@@ -68,7 +68,7 @@
           $body = str_replace(' !', '!', $body);
 
           print $body;
-          watchdog('order template', 'mimemail-message--order-po-tesla.tpl.php');
+          watchdog('order template', 'mimemail-message--order-po-tesla-user.tpl.php');
           watchdog('po-order-mail-body', $body); 
         ?>
       </div>

@@ -4,9 +4,6 @@
 
         
         if (!$('body').hasClass('teslaConfLoaded')) {
-            
-        
-            console.log('loaded' + $('body').hasClass('teslaConfLoaded'));
 
         //init configurator buttons
         $('#facility-block .config-buttons .config-button:nth-child(1)').addClass('selected');
@@ -46,8 +43,6 @@
     	$('body.inner #third-row-wrapper .config-option').each(function() {
     		$(this).click(function() {
     			wrapper = $(this).data('wrapper');
-    			//$('#' + wrapper + '-block .price').html($(this).data('price'));
-				//$('#' + wrapper + '-block .config-block-desc').html($(this).data('title'));
 
 				if ($(this).data('range') !== null) {
 					$('#range').html($(this).data('range'));

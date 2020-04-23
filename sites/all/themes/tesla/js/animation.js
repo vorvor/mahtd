@@ -2,7 +2,7 @@
   Drupal.behaviors.anim = {
     attach: function (context, settings) {
     
-    	if (!$('body').hasClass('teslaConfLoaded')) {
+    	if (!$('body').hasClass('teslaAnimLoaded')) {
 
     	// topmenu effect
 		$('#menu li').css({
@@ -102,6 +102,7 @@
 		 	})
 		})
 
+		/*
 		$('.config-block').each(function() {
 			$('.config-option', this).hover(
 				function() {
@@ -119,6 +120,7 @@
 				}
 			)
 		})
+		*/
 
 		$('.first-row-data').hover(
 			function() {
@@ -129,6 +131,10 @@
 				$('.first-row-data').removeClass('downScaleS').removeClass('upScaleS').addClass('resetScaleS');
 			}
 		);	
+	
+		$('body').addClass('teslaAnimLoaded');
+
+
 	}
 		
 

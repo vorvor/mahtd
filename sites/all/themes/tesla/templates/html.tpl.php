@@ -95,7 +95,6 @@
             <li><a href="/<?php print $articles_path; ?>">Tesla hírek</a></li>
             <li><a href="/<?php print $brand_story_path; ?>">Tesla márkatörténet</a></li>
             <li><a href="/<?php print $faq_page_path; ?>">Gy.i.k.</a></li>
-            <li><a href="/<?php print $governmental_support_path; ?>">Állami támogatás</a></li>
             <li><a href="/<?php print $energy_certificate; ?>">TAO támogatás</a></li>
             <li><a href="/<?php print $family_support_path; ?>">Nagycsaládos támogatás</a></li>
             <li><a href="/<?php print $accessories_path; ?>">Kiegészítők</a></li>

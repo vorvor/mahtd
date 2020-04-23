@@ -41,6 +41,16 @@ body.front {
     background: #fff;
 }
 
+#top {
+    position: absolute;
+    top: 0;
+    z-index: 100000;
+}
+
+#mobile-menu-block {
+    z-index: 100001;
+}
+
 #front-jump-down a {
     width: 24px;
     height: 32px;
@@ -641,7 +651,7 @@ footer {
 }
 
 #index-third-half-pre-row {
-    background: url(../images/allamitamogatas_slide.jpg);
+    background: url(../images/allamitamogatas_slide_dark.jpg);
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;
@@ -1574,8 +1584,17 @@ body.front #index-third-half-pre-row {
 }
 
 body.front #index-third-half-row #spacer,
-body.front #index-third-half-second-row #spacer,
-body.front #index-third-half-pre-row #spacer {
+body.front #index-third-half-second-row #spacer {
     height: calc(100vh - 100px) !important;
     box-sizing: border-box;
+}
+
+body.front #index-third-half-pre-row #spacer {
+    height: calc(62vh - 170px) !important;
+    box-sizing: border-box;
+}
+
+body.front #index-third-half-pre-row .index-row-data {
+    font-size: 30px;
+    text-align: center;
 }

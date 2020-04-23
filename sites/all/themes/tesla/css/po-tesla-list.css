@@ -4,6 +4,14 @@ body.po-tesla-list {
 	background-size: contain;
 }
 
+body.po-tesla-list ol#menu li a {
+	color: #000;
+}
+
+body.po-tesla-list #mobile-menu {
+    background: url(../images/hamburger-black.png) no-repeat 50% 50%;
+}
+
 body.po-tesla-list #page-title {
 	height: 5vw;
 	padding: 5vw 0 0 0;

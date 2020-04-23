@@ -45,6 +45,8 @@
           $body = str_replace('###CONFIG_PHOTO###', $image_src, $body);
 
           print $body;
+          watchdog('order template', 'mimemail-message.tpl.php');
+          watchdog('accessories-order-mail-body', $body); 
         ?>
       </div>
     </div>

@@ -11,9 +11,6 @@
 					cursorSpeed: 100,
 					nextStringDelay: 0,
 					breakDelay: 0,
-					afterComplete: (instance) => {
-	    				//$('#views_slideshow_controls_text_next_front_slider-block_1 a').trigger("click");
-	    			},
 
 				})
 				.options({speed: 58500, deleteSpeed: 75})

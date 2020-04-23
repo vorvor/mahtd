@@ -47,16 +47,14 @@
 	<div id="accessories-column-right">
 		<div class="accessories-model">
 			<?php
-			if (empty($node->field_model)) {
-				print 'Összes modell';
-			} else {
-				foreach ($node->field_model[LANGUAGE_NONE] as $model) {
-					$model_term = taxonomy_term_load($model['tid']);
-					$models[] = $model_term->name;
-				}
 
-				print implode(' - ', $models);
+			foreach ($node->field_accessories_model[LANGUAGE_NONE] as $model) {
+				$model_term = taxonomy_term_load($model['tid']);
+				$models[] = $model_term->name;
 			}
+
+			print implode(' - ', $models);
+			
 			?>
 		</div>
 		<div class="accessories-title">

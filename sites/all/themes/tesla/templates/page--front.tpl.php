@@ -2,11 +2,7 @@
     $theme_path = drupal_get_path('theme', 'tesla');
 ?>
 
-<div id="front-page-slider">
-    <?php
-        print views_embed_view('front_slider', 'block');
-    ?>
-</div>
+
 
 <div class="index-row-wrapper" id="index-first-row">
     <div id="spacer">
@@ -100,7 +96,6 @@
             <div id="data-1" class="index-row-data">
                 <div class="data">
                     <div class="data-text">
-                        
                     </div>
                 </div>
             </div>
@@ -112,9 +107,7 @@
                 </div>
             </div>
             <div id="data-3" class="index-row-data">
-                <div class="red-button">
-                    <a href="/tesla/elektromos-auto-tamogatas" class="">Részletek</a>
-                </div>
+                Jelenleg a rendelkezésre álló támogatási keret kimerülése végett felfüggesztésre került a pályázat.
             </div>
         </div>
 
@@ -145,7 +138,7 @@
             </div>
             <div id="data-3" class="index-row-data">
                 <div class="red-button">
-                    <a href="/tesla/energetikai-tanusitvany" class="">Részletek</a>
+                    <a href="/tesla/tao-tamogatas" class="">Részletek</a>
                 </div>
             </div>
         </div>
@@ -307,7 +300,7 @@
             <div class="contact-first-part">
                 <div class="address"><span class="address-label">Székhely:</span> 1112 Bp., Repülőtéri út 6. A épület</div>
                 <div><br />Személyes találkozó esetén időpont egyeztetés szükséges.<br /><br /></div>
-                <div class="phone"><span class="phone-label">Telefonszám:</span> +36202578998 / +36203663447</div>
+                <div class="phone"><span class="phone-label">Telefonszám:</span> +36 20 666 8888</div>
                 <div class="email"><span class="email-label">Email:</span> info@mahzrt.hu</div>
             </div>
             <div class="contact-second-part">
