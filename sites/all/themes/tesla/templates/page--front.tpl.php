@@ -88,30 +88,6 @@
         </div>
 
 </div>
-<div class="index-row-wrapper" id="index-third-half-pre-row">
-        <div id="spacer" class="desktop">
-            Elektromos autó állami támogatás elérhető a Model 3-ra a MAH Zrt-nél!
-        </div>
-        <div class="index-row">
-            <div id="data-1" class="index-row-data">
-                <div class="data">
-                    <div class="data-text">
-                    </div>
-                </div>
-            </div>
-            <div id="data-2" class="index-row-data">
-                <div class="data">
-                    <div class="data-text">
-                        
-                    </div>
-                </div>
-            </div>
-            <div id="data-3" class="index-row-data">
-                Jelenleg a rendelkezésre álló támogatási keret kimerülése végett felfüggesztésre került a pályázat.
-            </div>
-        </div>
-
-</div>
 <div class="index-row-wrapper" id="index-third-half-row">
         <div id="spacer" class="desktop">
             Elektromos autó állami támogatás helyett, társasági adó jóváírás lehetősége

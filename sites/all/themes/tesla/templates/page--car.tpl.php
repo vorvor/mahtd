@@ -148,6 +148,29 @@
             </div>
         	<?php endif; ?>
 
+            <?php if (isset($interiors)): ?>
+            <div class="config-block" id="interior-block">
+                <div class="config-block-top">
+                    <div class="config-title">Belső szín</div>
+                    <div class="config-price"><span class="price">0</span> EUR</div>
+                </div>
+                <div class="config-block-desc">
+                </div>
+
+                <div class="config-options config-berries berries-5">
+                    <?php foreach ($interiors as $item) { ?>
+                        <div class="config-berry config-option" 
+                        data-title="<?php print $item['title']; ?>"
+                        data-price="<?php print $item['price']; ?>"
+                        data-performance-price="<?php print $item['performance-price']; ?>"
+                        data-wrapper="interior">
+                            <img src="<?php print file_create_url($item['image']) ?>">
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
         	<?php if (isset($exteriors)): ?>
             <div class="config-block" id="exterior-block">
                 <div class="config-block-top">
@@ -231,29 +254,6 @@
                 		data-title="<?php print $item['title']; ?>"
                 		data-price="<?php print $item['price']; ?>"
                 		data-wrapper="extra">
-                			<img src="<?php print file_create_url($item['image']) ?>">
-                		</div>
-                	<?php } ?>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <?php if (isset($interiors)): ?>
-            <div class="config-block" id="interior-block">
-                <div class="config-block-top">
-                    <div class="config-title">Belső szín</div>
-                    <div class="config-price"><span class="price">0</span> EUR</div>
-                </div>
-                <div class="config-block-desc">
-                </div>
-
-                <div class="config-options config-berries berries-5">
-                	<?php foreach ($interiors as $item) { ?>
-                		<div class="config-berry config-option" 
-                		data-title="<?php print $item['title']; ?>"
-                		data-price="<?php print $item['price']; ?>"
-                        data-performance-price="<?php print $item['performance-price']; ?>"
-                		data-wrapper="interior">
                 			<img src="<?php print file_create_url($item['image']) ?>">
                 		</div>
                 	<?php } ?>

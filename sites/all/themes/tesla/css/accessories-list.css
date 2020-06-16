@@ -181,6 +181,10 @@ body.accessories-list #page-title h1 {
 	#user-accessories-filter {
 		display: none;
 	}
+
+	.view-accessories .views-row {
+        width: 100%;
+    }
 	
 }
 
