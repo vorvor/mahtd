@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/vars.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/fonts.css?a=5">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css?x=5">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=4">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=5">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/animation.css">
     
@@ -97,7 +97,6 @@
             <li><a href="/<?php print $faq_page_path; ?>">Gy.i.k.</a></li>
             <li><a href="/<?php print $energy_certificate; ?>">TAO támogatás</a></li>
             <li><a href="/<?php print $family_support_path; ?>">Nagycsaládos támogatás</a></li>
-            <li><a href="/<?php print $accessories_path; ?>">Kiegészítők</a></li>
             <li><a href="https://teslapilota.hu" target="_blank">Tesla Model S élményvezetés</a></li>
             <li><a href="/<?php print $contact_page_path; ?>">Kapcsolat</a></li>
           </ol>

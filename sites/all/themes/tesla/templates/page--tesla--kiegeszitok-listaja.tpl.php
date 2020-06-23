@@ -7,8 +7,8 @@
 	<div id="page-lead">
 		<h2>
 			<?php
-				$node = node_load(35);
-				print $node->field_lead[LANGUAGE_NONE][0]['value'];
+				//$node = node_load(35);
+				//print $node->field_lead[LANGUAGE_NONE][0]['value'];
 			?>
 		</h2>
 	</div>

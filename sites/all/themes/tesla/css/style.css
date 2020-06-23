@@ -836,6 +836,11 @@ footer {
     letter-spacing: 3px;
 }
 
+.owner {
+    text-transform: none;
+    line-height: 2em;
+}
+
 #index-sixth-row .index-row .col-block .mah {
     
     

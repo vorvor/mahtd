@@ -398,6 +398,10 @@
         padding: 0;
     }
 
+    body.contact #first-row-wrapper {
+        height: 200px;
+    }
+
     body.contact #contact-form .contact-name,
     body.contact #contact-form .ce87325643,
     body.contact #contact-form .cp876453235,
