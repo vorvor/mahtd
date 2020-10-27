@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/normalize.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/vars.css">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/fonts.css?a=5">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css?x=5">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=5">
-    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/style.css?x=10">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/resp.css?y=10">
+    <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/articles.css?z=2">
     <link rel="stylesheet" href="/<?php print $theme_path; ?>/css/animation.css">
     
     <meta name="MobileOptimized" content="width">
@@ -30,8 +30,6 @@
 
     <meta name="description" content="<?php print $meta_description; ?>" />
     <meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
-    <link rel="canonical" href="https://www.tesla.hu/" />
-    <link rel="shortlink" href="https://www.tesla.hu/" />
     <meta property="fb:app_id" content="1192951680871368" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?php print $meta_title; ?>" />

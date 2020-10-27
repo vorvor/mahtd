@@ -1,3 +1,5 @@
+<?php if ($node->status == TRUE) { ?>
+
 <div id="first-row-wrapper">
             <div id="spacer">
             </div>
@@ -343,3 +345,8 @@
         </div>
     </div>
     <?php } //preorder ?> 
+<?php } 
+else { ?>
+    <div id="first-row-wrapper">
+    </div>
+<?php } //status ?>

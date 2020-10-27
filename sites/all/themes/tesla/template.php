@@ -102,6 +102,11 @@ function tesla_preprocess_html(&$variables, $hook) {
       $variables['body_class'] = 'faq brand-story';
     }
 
+    if ($node->type == 'faq') {
+      $variables['meta_title'] = check_plain(strip_tags($node->title));
+      $variables['meta_description'] = check_plain(strip_tags($node->field_lead[LANGUAGE_NONE][0]['value']));
+    }
+
     if ($node->type == 'article') {
       $variables['body_class'] = 'articles tesla-article';
       $variables['meta_title'] = check_plain(strip_tags($node->title));
@@ -132,6 +137,9 @@ function tesla_preprocess_html(&$variables, $hook) {
   } 
 
   if (current_path() == 'tesla/hirek') {
+    $variables['meta_title'] = 'Tesla hírek - ' . check_plain(strip_tags($_GET['page'])) . '. oldal';
+    $variables['meta_description'] = 'Tesla hírek - ' . check_plain(strip_tags($_GET['page'])) . '. oldal';
+
     $variables['body_class'] = 'articles';
     $variables['logo'] = '/' . $theme_path . '/images/logo-black-red.png';
   }

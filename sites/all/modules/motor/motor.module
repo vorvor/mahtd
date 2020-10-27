@@ -158,3 +158,18 @@ function motor_get_model_description($tid) {
   drupal_json_output($model->description);
 
 }
+
+function motor_html_head_alter(&$head_elements) {
+  global $base_url;
+  // Get our current uri.
+  $uri = drupal_get_path_alias();
+
+  // We try to match it by forming the right key with the info we have.
+  $key = 'drupal_add_html_head_link:canonical:</' . $uri . '>;';
+
+  // Check that it is set, then we re-set it to the correct full url.
+  if (isset($head_elements[$key])) {
+    // Alter our head_element.
+    $head_elements[$key]['#attributes']['href'] = $base_url . '/' .$uri;
+  }
+} 

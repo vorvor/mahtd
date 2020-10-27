@@ -152,7 +152,7 @@
 </div>
 <div class="index-row-wrapper" id="index-fourth-row">
     <div class="index-row">
-
+        <?php /*
         <div class="index-col index-col-left">
             <div class="col-block year-model">
                 <div class="year"><img src="/<?php print $theme_path; ?>/images/2020.png"></div>
@@ -203,8 +203,9 @@
                 </div>
             </div>
         </div>
+        */ ?>
 
-        <div class="index-col index-col-right">
+        <div class="index-col index-col-right" style="width: 100%">
             <div class="col-block year-model">
                 <div class="year"><img src="/<?php print $theme_path; ?>/images/2021.png"></div>
                 <div class="name-model">
@@ -269,14 +270,13 @@
 <div class="index-row-wrapper" id="index-sixth-row">
     <div class="index-row">
         <div class="col-block col-1">
-            <div class="owner">A TESLA.HU tulajdonosa a</div>
-            <div class="mah">Magyar Autókereskedőház Zrt.</div>
+            <?php /*<div class="owner">A TESLA.HU tulajdonosa a</div>
+            <div class="mah">Magyar Autókereskedőház Zrt.</div> */ ?>
             <div class="contact-title">Kapcsolat</div>
         </div>
         <div class="col-block col-2">
             <div class="contact-first-part">
-                <div class="address"><span class="address-label">Székhely:</span> 1112 Bp., Repülőtéri út 6. A épület</div>
-                <div class="address"><span class="address-label">Iroda:</span> 1112 Bp., Kánai út 3.</div>
+                <div class="address"><span class="address-label">Székhely/Iroda:</span> 1112 Bp., Kánai út 3.</div>
                 <div><br />Személyes találkozó esetén időpont egyeztetés szükséges.<br /><br /></div>
                 <div class="phone"><span class="phone-label">Telefonszám:</span> +36 20 666 8888</div>
                 <div class="email"><span class="email-label">Email:</span> info@mahzrt.hu</div>

@@ -807,7 +807,8 @@
     }
 
     body.services #second-row-wrapper {
-        height: 650px;
+        height: 380px;
+        background: none;
     }
 
     body.inner #third-row-left {
@@ -958,8 +959,8 @@
 
     body.model-x #second-half-row-wrapper {
         background-image: url(../images/modelx-more-details.jpg);
-        background-position-x: 1207px;
         background-repeat: no-repeat;
+        background-size: 70%;
     }
 
     body.inner #second-half-row-wrapper #second-half-row-right {
@@ -1033,7 +1034,7 @@
     }
     
     #index-fourth-row .index-row .index-col {
-        padding: 20% 40px 0;
+        padding: 5% 40px 0;
         background-position: center 3%;
     }
     
@@ -1120,9 +1121,6 @@
     }
 
     body.inner #third-row-left {
-        background: url(../images/configurator-bg-model-s.png) no-repeat #fff;
-        background-position: -420px 60%;
-        background-size: 1000px;
         width: 100%;
         float: left;
         position: relative;
@@ -1132,21 +1130,12 @@
     }
 
     body.model-3 #third-row-left {
-        background: url(../images/configurator-bg-model-3.jpg) no-repeat #fff;
-        background-size: 600px;
-        background-position: -70px 53%;
     }
 
     body.model-x #third-row-left {
-        background: url(../images/configurator-bg-model-x.jpg) no-repeat #fff;
-        background-size: 600px;
-        background-position: -70px 53%;
     }
 
     body.model-y #third-row-left {
-        background: url(../images/configurator-bg-model-y.png) no-repeat #fff;
-        background-size: 800px;
-        background-position: -240px 50%;
     }
 
 }
@@ -1231,7 +1220,7 @@
     }
     
     #index-fourth-row .index-row .index-col {
-        padding: 20% 40px 0;
+        padding: 5% 40px 0;
         background-position: center 3%;
     }
     

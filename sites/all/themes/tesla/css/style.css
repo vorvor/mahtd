@@ -134,7 +134,7 @@ ol#menu li a:visited {
 
 #mobile-menu {
     display: block;
-    background: url(../images/hamburger.png) no-repeat 50% 50%;
+    background: url(../images/hamburger-grey.png) no-repeat 50% 50%;
     width: 22px;
     height: 30px;
     cursor: pointer;
@@ -294,10 +294,10 @@ h3.row-title {
 
 /* */
 #second-row-wrapper {
-    background: url(../images/tech-bg-model-s.png) no-repeat #fff;
-    background-position:550px 0;
     width: 100%;
     box-sizing: border-box;
+    background: url(../images/tech-bg-model-s.jpg) no-repeat #fff;
+    background-position:550px 0;
 }
 
 body.model-3 #second-row-wrapper {
@@ -305,7 +305,8 @@ body.model-3 #second-row-wrapper {
 }
 
 body.model-x #second-row-wrapper {
-    background-image: url(../images/tech-bg-model-x.png);
+    background-image: url(../images/tech-bg-model-x.jpg);
+    background-position: 450px 0;
 }
 
 body.model-y #second-row-wrapper {
@@ -313,7 +314,9 @@ body.model-y #second-row-wrapper {
 }
 
 body.roadster #second-row-wrapper {
+    background-position: 300%;
     background-image: url(../images/tech-bg-roadster.jpg);
+    background-repeat: no-repeat;
 }
 
 #second-row-wrapper ul li {
@@ -374,9 +377,6 @@ body.model-x #second-half-row-wrapper {
 }
 
 #third-row-left {
-    background: url(../images/configurator-bg-model-s.png) no-repeat #fff;
-    background-position: -420px 60%;
-    background-size: 80%;
     width: 100%;
     float: left;
     position: relative;
@@ -386,21 +386,12 @@ body.model-x #second-half-row-wrapper {
 }
 
 body.model-3 #third-row-left {
-    background: url(../images/configurator-bg-model-3.jpg) no-repeat #fff;
-    background-size: 50%;
-    background-position: -70px 50%;
 }
 
 body.model-x #third-row-left {
-    background: url(../images/configurator-bg-model-x.jpg) no-repeat #fff;
-    background-size: 50%;
-    background-position: -70px 50%;
 }
 
 body.model-y #third-row-left {
-    background: url(../images/configurator-bg-model-y.png) no-repeat #fff;
-    background-size: 65%;
-    background-position: -240px 50%;
 }
 
 #third-row-left {
@@ -733,15 +724,11 @@ footer {
 
 #index-fourth-row .index-col-left,
 #index-fourth-row .index-col-right {
-    background-image: url(../images/roadster.png);
-    background-repeat:  no-repeat;
-    background-size: 100%;
-    background-position: center 10%;
-    padding-top: 45%;
+    padding-top: 5%;
 }
 
 #index-fourth-row .index-col-right {
-    background-image: url(../images/modelY.png);
+
 }
 
 #index-fourth-row .col-extra {
@@ -1148,11 +1135,10 @@ body.faq #top {
 body.services #second-row-wrapper {
     color: #000;
     clear: both;
-    background-image: url(../images/financing.png);
-    background-position: center bottom;
-    height: 700px;
+    height: 350px;
     box-sizing: border-box;
     width: 100%;
+    background: none;
 }
 
 body.services #second-row-wrapper #second-row {

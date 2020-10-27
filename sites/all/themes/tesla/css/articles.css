@@ -160,6 +160,11 @@ body.tesla-article .article-body a:hover {
 	text-decoration: underline;	
 }
 
+body.tesla-article .article-body img {
+	max-width: 100%;
+	height: auto !important;
+}
+
 body.tesla-article .article-main-image img {
 	max-width: 100%;
 	height: auto;

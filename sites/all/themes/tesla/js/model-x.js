@@ -32,6 +32,7 @@
                 $('input.order-interior').val($('#interior-block .config-block-desc').html());
             })
 
+            /*
             function secondHalfBgPos() {
                 secondHalfW = $('#second-half-row-right').width();
                 windowW = $(window).width();
@@ -43,6 +44,7 @@
             $(window).resize(function() {
                 secondHalfBgPos();  
             })
+            */
         }
 
     }};
